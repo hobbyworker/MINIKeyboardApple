@@ -1,0 +1,37 @@
+// The app target's build settings, in one place for every project that builds the app
+// from these sources. Paths are relative to the project that uses this file; one kept
+// elsewhere sets MINIKEYBOARD_ROOT to the path back here, ending in a slash.
+
+MINIKEYBOARD_ROOT =
+
+// The icon artwork is not in this repository; Signing.xcconfig names it when the build has
+// one. Empty, the app gets the system's generic icon.
+ASSETCATALOG_COMPILER_APPICON_NAME = $(BRAND_APP_ICON)
+ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor
+CODE_SIGN_STYLE = Automatic
+COMBINE_HIDPI_IMAGES = YES
+// The app opens the keyboard through IOKit HID and runs outside the App Sandbox. This setting
+// signs the sandbox entitlement in on its own, so it stays off here.
+ENABLE_APP_SANDBOX = NO
+ENABLE_HARDENED_RUNTIME = YES
+ENABLE_PREVIEWS = YES
+GENERATE_INFOPLIST_FILE = YES
+// Sparkle's keys and the copyright line, which Xcode can't generate.
+INFOPLIST_FILE = $(MINIKEYBOARD_ROOT)MINIKeyboard-Info.plist
+INFOPLIST_KEY_CFBundleDisplayName = $(BRAND_NAME)
+INFOPLIST_KEY_LSApplicationCategoryType = public.app-category.utilities
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks
+MACOSX_DEPLOYMENT_TARGET = 14.0
+PRODUCT_BUNDLE_IDENTIFIER = $(BRAND_BUNDLE_ID)
+PRODUCT_MODULE_NAME = MINIKeyboard
+PRODUCT_NAME = $(BRAND_NAME)
+SDKROOT = macosx
+// The code uses the English literals as keys, never generated symbols.
+STRING_CATALOG_GENERATE_SYMBOLS = NO
+SWIFT_EMIT_LOC_STRINGS = YES
+SWIFT_TREAT_WARNINGS_AS_ERRORS = YES
+SWIFT_VERSION = 6.0
+
+// The release bumps these two.
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1

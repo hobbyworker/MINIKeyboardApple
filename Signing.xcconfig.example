@@ -1,0 +1,21 @@
+// Copy to Signing.xcconfig and fill in your own values.
+// Without that file the build stops at "Unable to open base configuration reference file".
+
+// Apple Developer team ID — Xcode ▸ Settings ▸ Accounts, or Membership on developer.apple.com.
+DEVELOPMENT_TEAM = YOUR_TEAM_ID
+
+// Required: a name for the app and a bundle ID of your own.
+BRAND_NAME =
+BRAND_BUNDLE_ID =
+
+// Optional. Left empty, the build has no update checks and no copyright line.
+// Updates need both the Sparkle feed and its EdDSA public key.
+// `//` starts a comment in this file, so write addresses as `https:/$()/example.com`.
+BRAND_FEED_URL =
+BRAND_FEED_PUBLIC_KEY =
+BRAND_COPYRIGHT =
+
+// Optional. The name of your app icon — an app icon set in an asset catalog such as
+// MINIKeyboard/Private/Brand.xcassets/AppIcon.appiconset gives `AppIcon`. Left empty, the
+// app has the system's generic icon.
+BRAND_APP_ICON =

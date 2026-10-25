@@ -28,7 +28,42 @@ struct LayoutGeometry: Hashable, Sendable {
     /// The cross-platform app's own geometry for its layouts; an arrangement's is drawn from its counts.
     static func of(_ layout: KeyboardLayout) -> LayoutGeometry? {
         if let shape = GridShape(id: layout.id) { return LayoutGeometry(arrangement: shape) }
-        return app[layout.id]
+        return app[layout.id]?.withEvenTurns()
+    }
+
+    /// Room between a knob and its turns, in the app's layouts' space (a key there is 80 or so).
+    static let turnGap = 4.0
+
+    /// The turns redrawn: all one size, none touching its knob. The original app sizes a knob's turns by the
+    /// knob (0.6 of it), so a big knob's turns grow with it, and puts some over the edge of their knob. Here
+    /// every turn is as large as the layout's smallest — smaller still where one would come closer than
+    /// `turnGap` to its knob — and stands in its original direction from the knob's centre, `turnGap` off the
+    /// knob.
+    func withEvenTurns() -> LayoutGeometry {
+        var turns: [(control: ControlID, rect: LayoutRect, press: LayoutRect)] = []
+        for (control, rect) in rects {
+            guard case .knob(let number, let part) = control, part != .press,
+                  let press = rects[.knob(number: number, part: .press)] else { continue }
+            turns.append((control, rect, press))
+        }
+        let sizes = turns.map { turn in
+            min(turn.rect.width, 2 * (Self.distance(turn.rect, turn.press) - turn.press.width / 2 - Self.turnGap))
+        }
+        guard let size = sizes.min() else { return self }
+        var even = rects
+        for turn in turns {
+            let press = turn.press
+            let scale = (press.width / 2 + Self.turnGap + size / 2) / Self.distance(turn.rect, press)
+            let x = press.midX + (turn.rect.midX - press.midX) * scale
+            let y = press.midY + (turn.rect.midY - press.midY) * scale
+            even[turn.control] = LayoutRect(x: x - size / 2, y: y - size / 2, width: size, height: size)
+        }
+        return LayoutGeometry(frame: frame, rects: even)
+    }
+
+    static func distance(_ a: LayoutRect, _ b: LayoutRect) -> Double {
+        let dx = a.midX - b.midX, dy = a.midY - b.midY
+        return (dx * dx + dy * dy).squareRoot()
     }
 
     /// The body and every control.

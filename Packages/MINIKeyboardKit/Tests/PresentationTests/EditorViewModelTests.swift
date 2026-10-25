@@ -251,6 +251,39 @@ struct GeometryTests {
         }
     }
 
+    /// The app's layouts with their turns redrawn: one size in a layout, each turn the gap off its knob, none
+    /// over another control or out of the body.
+    @Test func turnsAreEvenAndClear() throws {
+        for layout in KeyboardLayout.all where GridShape(id: layout.id) == nil {
+            let geometry = try #require(LayoutGeometry.of(layout), "\(layout.id)")
+            let turns = geometry.rects.filter { control, _ in
+                if case .knob(_, let part) = control { return part != .press }
+                return false
+            }
+            for (control, turn) in turns {
+                let name = "\(layout.id) \(control)"
+                #expect(abs(turn.width - turns.first!.value.width) < 1e-9 && turn.height == turn.width, "\(name)")
+                guard case .knob(let number, _) = control else { continue }
+                let press = try #require(geometry.rects[.knob(number: number, part: .press)])
+                let gap = LayoutGeometry.distance(turn, press) - press.width / 2 - turn.width / 2
+                #expect(abs(gap - LayoutGeometry.turnGap) < 1e-6, "\(name)")
+                for (other, rect) in geometry.rects where other != control {
+                    if case .key = other {
+                        let x = min(max(turn.midX, rect.x), rect.maxX), y = min(max(turn.midY, rect.y), rect.maxY)
+                        let dx = turn.midX - x, dy = turn.midY - y
+                        #expect((dx * dx + dy * dy).squareRoot() >= turn.width / 2, "\(name) over \(other)")
+                    } else {
+                        let clear = LayoutGeometry.distance(turn, rect) >= (turn.width + rect.width) / 2 - 1e-6
+                        #expect(clear, "\(name) over \(other)")
+                    }
+                }
+                let frame = geometry.frame
+                let inside = turn.x >= frame.x && turn.y >= frame.y && turn.maxX <= frame.maxX && turn.maxY <= frame.maxY
+                #expect(inside, "\(name)")
+            }
+        }
+    }
+
     @Test func rotationTurnsTheGeometry() throws {
         let geometry = try #require(LayoutGeometry.of(KeyboardLayout.named("6add1")!))
         let quarter = geometry.rotated(.quarter)

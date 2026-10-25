@@ -121,6 +121,13 @@ In den **Einstellungen** (⌘,) wählst du die Sprache der Oberfläche (eine der
 oder Dunkel; unter „Über“ stehen die Version und die Open-Source-Lizenzen. Mit einem Update-Feed (siehe oben)
 steht **Nach Updates suchen…** im App-Menü direkt unter „Einstellungen…“.
 
+**Tastenwiederholung nach dem Ändern der Beleuchtung verhindern** (**Einstellungen ▸ Allgemein ▸ Tastatur**)
+ist standardmäßig aktiviert. Die Firmware der `1189:8890` wiederholt nach dem Sichern der Beleuchtung das
+erste Zeichen einer Taste endlos – die Software des Herstellers verhält sich genauso –, darum sendet die App
+nach der Beleuchtung noch einen Sicherungsbefehl ohne Taste. Ist die Option deaktiviert, sendet die App nur
+das, was auch die Software des Herstellers sendet. Diese Tastatur vergisst ihre Beleuchtung außerdem, wenn man
+sie absteckt.
+
 ## Aufbau
 
 Die Regeln stecken in einem lokalen Swift-Paket, aufgeteilt auf drei Module, deren Abhängigkeiten nach innen

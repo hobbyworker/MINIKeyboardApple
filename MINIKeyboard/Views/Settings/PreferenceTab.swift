@@ -6,11 +6,9 @@ enum PreferenceTab: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    /// The everyday panes, above a divider. General holds only the automatic update check, so a
-    /// build without updates leaves it out.
-    @MainActor static var primary: [PreferenceTab] {
-        Updates.isAvailable ? [.general, .ui] : [.ui]
-    }
+    /// The everyday panes, above a divider. General holds what the app sends a keyboard, and the update
+    /// check in a build with updates.
+    @MainActor static var primary: [PreferenceTab] { [.general, .ui] }
     static let secondary: [PreferenceTab] = [.about]
 
     var title: LocalizedStringKey {

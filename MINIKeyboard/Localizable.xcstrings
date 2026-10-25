@@ -1172,6 +1172,83 @@
         }
       }
     },
+    "After its lighting is saved, the 1189:8890 keyboard repeats a key's first stroke without end when the key is pressed (its maker's software does the same). With this on, the app sends one more save after the lighting to stop that; the keys stay as they were. Off, the app sends just what the maker's software sends." : {
+      "comment" : "Settings ▸ General ▸ Keyboard: what the switch above does.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nachdem die Beleuchtung gesichert wurde, wiederholt die Tastatur 1189:8890 beim Drücken einer Taste deren erstes Zeichen endlos (die Software des Herstellers verhält sich genauso). Ist diese Option aktiviert, sendet die App nach der Beleuchtung einen weiteren Sicherungsbefehl, um das zu verhindern; die Tastenbelegung bleibt unverändert. Ist sie deaktiviert, sendet die App nur das, was auch die Software des Herstellers sendet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Después de guardar la iluminación, el teclado 1189:8890 repite sin parar el primer carácter de una tecla al pulsarla (el software del fabricante hace lo mismo). Si está activado, la app envía una orden de guardado más después de la iluminación para evitarlo; la configuración de las teclas no cambia. Si está desactivado, la app envía solo lo mismo que el software del fabricante."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Après l’enregistrement de l’éclairage, le clavier 1189:8890 répète sans fin le premier caractère d’une touche lorsqu’on appuie dessus (le logiciel du fabricant fait de même). Activé, l’app envoie une commande d’enregistrement supplémentaire après l’éclairage pour l’empêcher ; les réglages des touches ne changent pas. Désactivé, l’app envoie uniquement ce qu’envoie le logiciel du fabricant."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setelah pencahayaan disimpan, papan ketik 1189:8890 mengulang karakter pertama sebuah tombol tanpa henti saat tombol itu ditekan (perangkat lunak pabrikannya juga begitu). Jika aktif, aplikasi mengirim satu perintah simpan lagi setelah pencahayaan untuk mencegahnya; pengaturan tombol tidak berubah. Jika nonaktif, aplikasi hanya mengirim hal yang sama dengan perangkat lunak pabrikan."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dopo il salvataggio dell’illuminazione, la tastiera 1189:8890 ripete all’infinito il primo carattere di un tasto quando lo premi (il software del produttore fa lo stesso). Se attivo, l’app invia un ulteriore comando di salvataggio dopo l’illuminazione per evitarlo; le impostazioni dei tasti non cambiano. Se disattivo, l’app invia solo ciò che invia il software del produttore."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1189:8890 キーボードは、ライティングを保存したあとにキーを押すと、最初の文字が止まらずに繰り返し入力されます（メーカーのソフトウェアでも同じです）。オンにすると、ライティングを保存したあとにもう一度保存コマンドを送ってこれを防ぎます。キーの設定は変わりません。オフにすると、メーカーのソフトウェアと同じ内容だけを送ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1189:8890 키보드는 조명을 저장한 뒤 키를 누르면 첫 글자가 끝없이 반복됩니다 (제조사 프로그램도 같습니다). 켜 두면 조명을 저장한 다음 저장 명령을 한 번 더 보내 이를 막습니다. 키 설정은 바뀌지 않습니다. 끄면 제조사 프로그램과 똑같이 보냅니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po zachowaniu podświetlenia klawiatura 1189:8890 po naciśnięciu klawisza bez końca powtarza jego pierwszy znak (oprogramowanie producenta działa tak samo). Gdy ta opcja jest włączona, aplikacja po podświetleniu wysyła jeszcze jedno polecenie zapisu, aby temu zapobiec; ustawienia klawiszy się nie zmieniają. Gdy jest wyłączona, aplikacja wysyła tylko to, co oprogramowanie producenta."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Depois que a iluminação é salva, o teclado 1189:8890 repete sem parar o primeiro caractere de uma tecla quando ela é pressionada (o software do fabricante faz o mesmo). Com esta opção ativada, o app envia mais um comando de salvar depois da iluminação para evitar isso; as configurações das teclas não mudam. Desativada, o app envia apenas o mesmo que o software do fabricante."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sau khi lưu đèn, bàn phím 1189:8890 sẽ lặp lại không ngừng ký tự đầu tiên của phím khi phím được nhấn (phần mềm của nhà sản xuất cũng vậy). Khi bật, ứng dụng gửi thêm một lệnh lưu sau đèn để ngăn điều này; cài đặt phím không thay đổi. Khi tắt, ứng dụng chỉ gửi đúng những gì phần mềm của nhà sản xuất gửi."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1189:8890 键盘在保存灯光后，按下按键时第一个字符会不停地重复（厂商软件也是如此）。开启后，应用会在保存灯光后再发送一次保存命令来防止这种情况，按键设置不会改变。关闭后，应用只发送与厂商软件相同的内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1189:8890 鍵盤在儲存燈光後，按下按鍵時第一個字元會不停重複（廠商軟體也一樣）。開啟後，App 會在儲存燈光後再送出一次儲存指令來防止這個問題，按鍵設定不會改變。關閉後，App 只會送出與廠商軟體相同的內容。"
+          }
+        }
+      }
+    },
     "Allow %@ in Privacy & Security ▸ Input Monitoring." : {
       "localizations" : {
         "de" : {
@@ -12304,6 +12381,83 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "上一首"
+          }
+        }
+      }
+    },
+    "Prevent key repeat after changing the lighting" : {
+      "comment" : "Settings ▸ General ▸ Keyboard: a switch, on by default.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tastenwiederholung nach dem Ändern der Beleuchtung verhindern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evitar la repetición de teclas tras cambiar la iluminación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empêcher la répétition des touches après un changement d’éclairage"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cegah pengulangan tombol setelah mengubah pencahayaan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evita la ripetizione dei tasti dopo aver cambiato l’illuminazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライティング変更後のキーの連続入力を防ぐ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조명을 바꾼 뒤 키 반복 막기"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapobiegaj powtarzaniu klawiszy po zmianie podświetlenia"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evitar a repetição de teclas após mudar a iluminação"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngăn lặp phím sau khi thay đổi đèn"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更改灯光后防止按键重复"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "變更燈光後防止按鍵重複"
           }
         }
       }

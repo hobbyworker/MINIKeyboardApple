@@ -9,6 +9,10 @@ public final class KeyboardDevice: KeyboardDeviceRepository {
     private let replyTimeout: Duration
     private let pause: @Sendable (Duration) async -> Void
 
+    /// Whether a lighting save on the 1189:8890 ends with the save that stops its key repeat — read at every
+    /// write, so a change in Settings applies at once (`K8890Packets.downloadLighting`).
+    public var preventsLightingKeyRepeat: () -> Bool = { true }
+
     public convenience init(connection: HardwareConnection, log: DeviceLogStore) {
         self.init(channels: connection, log: log)
     }
@@ -80,7 +84,8 @@ public final class KeyboardDevice: KeyboardDeviceRepository {
     }
 
     public func write(_ configuration: KeyboardConfiguration, commands: CommandSet, layout: KeyboardLayout) async throws(KeyboardDeviceError) {
-        let plan = try WritePlan(configuration, commands: commands, layout: layout)
+        let plan = try WritePlan(
+            configuration, commands: commands, layout: layout, preventLightingKeyRepeat: preventsLightingKeyRepeat())
         let channel = try channel()
         for step in plan.steps {
             try await send(step.payload, on: channel)

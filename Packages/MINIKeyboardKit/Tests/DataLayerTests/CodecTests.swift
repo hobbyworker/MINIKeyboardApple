@@ -47,8 +47,17 @@ struct K8890PacketTests {
             == [[4, 0x13, 0x02, 0, 0, 0x00, 0x00, 0]])
     }
 
+    /// The lights, their save, and a save with no key in it (it ends the key repeat the lights' save starts).
     @Test func lighting() {
         #expect(K8890Packets.downloadLighting(mode: 2, layer: 0, reportID: 3) == [
+            [0xA1, 0x01, 0, 0, 0, 0, 0, 0], [0xB0, 0x18, 0x02, 0, 0, 0, 0, 0], [0xAA, 0xA1, 0, 0, 0, 0, 0, 0],
+            [0xA1, 0x01, 0, 0, 0, 0, 0, 0], [0xAA, 0xAA, 0, 0, 0, 0, 0, 0],
+        ])
+    }
+
+    /// With the setting off, just what the vendor's tool sends.
+    @Test func lightingAsTheVendorsTool() {
+        #expect(K8890Packets.downloadLighting(mode: 2, layer: 0, reportID: 3, endsKeyRepeat: false) == [
             [0xA1, 0x01, 0, 0, 0, 0, 0, 0], [0xB0, 0x18, 0x02, 0, 0, 0, 0, 0], [0xAA, 0xA1, 0, 0, 0, 0, 0, 0],
         ])
     }
@@ -215,8 +224,9 @@ struct WritePlanTests {
         }
         let plan = try WritePlan(configuration, commands: .packets(reportID: 3), layout: Self.layout)
         #expect(plan.steps.map(\.payload) == [
-            [0xA1, 1, 0, 0, 0, 0, 0, 0], [15, 0x11, 1, 0, 0, 0, 0, 0], [15, 0x11, 1, 1, 0, 0x04, 0, 0], [0xAA, 0xAA, 0, 0, 0, 0, 0, 0],
             [0xA1, 1, 0, 0, 0, 0, 0, 0], [0xB0, 0x18, 1, 0, 0, 0, 0, 0], [0xAA, 0xA1, 0, 0, 0, 0, 0, 0],
+            [0xA1, 1, 0, 0, 0, 0, 0, 0], [0xAA, 0xAA, 0, 0, 0, 0, 0, 0],
+            [0xA1, 1, 0, 0, 0, 0, 0, 0], [15, 0x11, 1, 0, 0, 0, 0, 0], [15, 0x11, 1, 1, 0, 0x04, 0, 0], [0xAA, 0xAA, 0, 0, 0, 0, 0, 0],
         ])
     }
 

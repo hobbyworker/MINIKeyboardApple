@@ -125,6 +125,12 @@ l’apparence claire ou sombre ; la section À propos affiche la version et les
 de mises à jour (voir plus haut), **Rechercher les mises à jour…** se trouve juste sous Réglages… dans le menu
 de l’app.
 
+Dans **Réglages ▸ Général ▸ Clavier**, **Empêcher la répétition des touches après un changement d’éclairage**
+est activé par défaut. Après l’enregistrement de l’éclairage, le firmware du `1189:8890` répète sans fin le
+premier caractère d’une touche (le logiciel du fabricant fait de même) ; l’app envoie donc une commande
+d’enregistrement supplémentaire, sans touche, après l’éclairage. Désactivé, l’app envoie uniquement ce
+qu’envoie le logiciel du fabricant. Ce clavier oublie aussi son éclairage quand on le débranche.
+
 ## Structure
 
 Les règles se trouvent dans un paquet Swift local, réparties en trois modules dont les dépendances pointent

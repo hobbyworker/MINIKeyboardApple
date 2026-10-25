@@ -115,6 +115,12 @@ Em **Ajustes** (⌘,), você escolhe o idioma da interface (um dos 13 ou o do si
 Sobre vê a versão e as licenças de código aberto. Com um feed de atualizações (veja acima), **Buscar Atualizações…**
 aparece logo abaixo de Ajustes… no menu do app.
 
+Em **Ajustes ▸ Geral ▸ Teclado**, **Evitar a repetição de teclas após mudar a iluminação** vem ativado por
+padrão. O firmware do `1189:8890` repete sem parar o primeiro caractere de uma tecla depois que a iluminação é
+salva (o software do fabricante faz o mesmo), então o app envia mais um comando de salvar, sem nenhuma tecla,
+depois da iluminação. Desativado, o app envia apenas o mesmo que o software do fabricante. Esse teclado também
+esquece a iluminação quando é desconectado.
+
 ## Estrutura
 
 As regras ficam em um pacote Swift local, dividido em três módulos cujas dependências apontam só para dentro: uma

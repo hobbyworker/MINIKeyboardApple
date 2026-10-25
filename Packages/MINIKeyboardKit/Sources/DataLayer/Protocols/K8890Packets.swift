@@ -26,10 +26,14 @@ enum K8890Packets {
             + [pad([0xAA, 0xAA])]
     }
 
-    static func downloadLighting(mode: UInt8, layer: Int, reportID: UInt8) -> [[UInt8]] {
-        layerSwitch(layer, reportID: reportID)
+    /// The lights and their save — and, with `endsKeyRepeat`, a save with no key in it. After `AA A1` the
+    /// keyboard repeats a key's first stroke without end, until the next key save or until it is plugged in
+    /// again (the vendor's tool does the same); the bare `AA AA` ends that and leaves the keys as they were.
+    static func downloadLighting(mode: UInt8, layer: Int, reportID: UInt8, endsKeyRepeat: Bool = true) -> [[UInt8]] {
+        let lighting = layerSwitch(layer, reportID: reportID)
             + [pad([0xB0, typeByte(.lighting, layer: layer, reportID: reportID), mode])]
             + [pad([0xAA, 0xA1])]
+        return endsKeyRepeat ? lighting + layerSwitch(layer, reportID: reportID) + [pad([0xAA, 0xAA])] : lighting
     }
 
     static func layerSwitch(_ layer: Int, reportID: UInt8) -> [[UInt8]] {

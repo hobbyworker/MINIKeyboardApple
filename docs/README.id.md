@@ -114,6 +114,12 @@ Di **Pengaturan** (⌘,), Anda memilih bahasa antarmuka (salah satu dari 13 baha
 terang atau gelap, dan di Tentang, Anda bisa melihat versi dan lisensi sumber terbuka. Jika ada feed pembaruan (lihat di
 atas), **Periksa Pembaruan…** muncul tepat di bawah Pengaturan… di menu aplikasi.
 
+Di **Pengaturan ▸ Umum ▸ Papan ketik**, **Cegah pengulangan tombol setelah mengubah pencahayaan** aktif secara
+bawaan. Firmware `1189:8890` mengulang karakter pertama sebuah tombol tanpa henti setelah pencahayaannya
+disimpan (perangkat lunak pabrikannya juga begitu), jadi aplikasi mengirim satu perintah simpan lagi, tanpa
+tombol, setelah pencahayaan. Jika dinonaktifkan, aplikasi hanya mengirim hal yang sama dengan perangkat lunak
+pabrikan. Papan ketik ini juga melupakan pencahayaannya saat dicabut.
+
 ## Struktur
 
 Aturannya berada di paket Swift lokal. Ketergantungan ketiga modulnya hanya mengarah ke dalam, dan lapisan yang

@@ -33,18 +33,22 @@ struct WritePlan: Equatable, Sendable {
         return record
     }
 
-    init(_ configuration: KeyboardConfiguration, commands: CommandSet, layout: KeyboardLayout) throws(KeyboardDeviceError) {
+    /// `preventLightingKeyRepeat`: whether the 1189:8890's lighting save ends with the save that stops its key
+    /// repeat (`K8890Packets.downloadLighting`) — a setting, on unless the user turns it off.
+    init(_ configuration: KeyboardConfiguration, commands: CommandSet, layout: KeyboardLayout,
+         preventLightingKeyRepeat: Bool = true) throws(KeyboardDeviceError) {
         let layers = 0..<configuration.layerCount
         switch commands {
         case .packets(let reportID):
-            // One key at a time, each saved on its own (`Download_Click`).
+            // The lights, then one key at a time, each saved on its own (`Download_Click`).
             for layer in layers {
+                if configuration.layers[layer].lightingChanged, case .mode(let mode)? = configuration.lighting(layer: layer) {
+                    append(K8890Packets.downloadLighting(
+                        mode: mode, layer: layer, reportID: reportID, endsKeyRepeat: preventLightingKeyRepeat))
+                }
                 for (control, action) in Self.changes(configuration, layer: layer, layout: layout) {
                     guard let number = K8890Numbering.number(of: control) else { continue }
                     append(try K8890Packets.download(number: number, action: action, layer: layer, reportID: reportID))
-                }
-                if configuration.layers[layer].lightingChanged, case .mode(let mode)? = configuration.lighting(layer: layer) {
-                    append(K8890Packets.downloadLighting(mode: mode, layer: layer, reportID: reportID))
                 }
             }
 

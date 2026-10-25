@@ -112,6 +112,11 @@ Trong **Cài đặt** (⌘,), bạn chọn ngôn ngữ giao diện (một trong 
 tối; trong Giới thiệu, bạn xem được phiên bản và giấy phép nguồn mở. Nếu có feed cập nhật (xem ở trên),
 **Kiểm tra bản cập nhật…** nằm ngay dưới Cài đặt… trong menu ứng dụng.
 
+Trong **Cài đặt ▸ Chung ▸ Bàn phím**, **Ngăn lặp phím sau khi thay đổi đèn** được bật sẵn. Firmware của
+`1189:8890` lặp lại không ngừng ký tự đầu tiên của phím sau khi lưu đèn (phần mềm của nhà sản xuất cũng vậy),
+nên ứng dụng gửi thêm một lệnh lưu không kèm phím nào sau đèn. Khi tắt, ứng dụng chỉ gửi đúng những gì phần
+mềm của nhà sản xuất gửi. Bàn phím này cũng quên cài đặt đèn khi rút ra.
+
 ## Cấu trúc
 
 Các quy tắc nằm trong một Swift package cục bộ. Phụ thuộc giữa ba module chỉ hướng vào trong, và lớp nào vươn ra ngoài

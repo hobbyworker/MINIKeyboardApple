@@ -16,17 +16,21 @@ final class AppContainer {
         let connection: any KeyboardConnectionRepository
         let device: any KeyboardDeviceRepository
         var keyboardSource: KeyboardSourceUseCase?
+        let keyboardDevice: KeyboardDevice
         #if DEBUG
         // The keyboard on USB or a simulated one, switched from the Simulator menu.
         let source = KeyboardSourceSwitch(log: log, initial: Self.initialSource())
         connection = source
-        device = KeyboardDevice(source: source, log: log)
+        keyboardDevice = KeyboardDevice(source: source, log: log)
         keyboardSource = KeyboardSourceUseCase(repository: source)
         #else
         let hardware = HardwareConnection(log: log)
         connection = hardware
-        device = KeyboardDevice(connection: hardware, log: log)
+        keyboardDevice = KeyboardDevice(connection: hardware, log: log)
         #endif
+        // Settings ▸ General ▸ Keyboard.
+        keyboardDevice.preventsLightingKeyRepeat = { LightingKeyRepeatToggle.isOn }
+        device = keyboardDevice
 
         editor = KeyboardEditorViewModel(
             observeConnection: ObserveConnectionUseCase(repository: connection),

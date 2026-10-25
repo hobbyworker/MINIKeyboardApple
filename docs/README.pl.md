@@ -120,6 +120,12 @@ raporty i wszystkie odpowiedzi.
 a w sekcji Informacje znajdziesz wersję i licencje open source. Jeśli jest kanał uaktualnień (patrz wyżej), polecenie
 **Sprawdź uaktualnienia…** znajduje się tuż pod poleceniem Ustawienia… w menu aplikacji.
 
+Opcja **Zapobiegaj powtarzaniu klawiszy po zmianie podświetlenia** (**Ustawienia ▸ Ogólne ▸ Klawiatura**) jest
+domyślnie włączona. Oprogramowanie układowe `1189:8890` po zachowaniu podświetlenia bez końca powtarza
+pierwszy znak klawisza (oprogramowanie producenta działa tak samo), dlatego aplikacja po podświetleniu wysyła
+jeszcze jedno polecenie zapisu, bez żadnego klawisza. Gdy opcja jest wyłączona, aplikacja wysyła tylko to, co
+oprogramowanie producenta. Ta klawiatura zapomina też podświetlenie po odłączeniu.
+
 ## Struktura
 
 Reguły znajdują się w lokalnym pakiecie Swift, w trzech modułach, których zależności są skierowane tylko do środka —

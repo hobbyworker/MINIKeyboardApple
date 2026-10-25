@@ -90,10 +90,12 @@ Las pruebas de la app se ejecutan dentro de la propia app. Durante las pruebas, 
 conecta a él como siempre. Las pruebas del paquete usan objetos falsos y teclados simulados, y nunca abren un
 teclado.
 
-Las compilaciones Debug tienen un menú **Simulador** para probar la app sin el teclado en cuestión: elige un
-`1189:8890` con cualquier ID de informe, un teclado con cualquier disposición en cualquiera de los dos firmwares o
-uno que no indique su tipo, y la app actúa como si estuviera conectado, con los mismos comandos y sin enviar nada
-por USB. **Ventana ▸ Registro del dispositivo** muestra todos los informes escritos y todas las respuestas.
+El menú **Simulador** permite probar la app sin el teclado en cuestión: elige un `1189:8890`, una disposición del
+firmware más reciente o un teclado que no indique su tipo, y la app actúa como si estuviera conectado, con los mismos
+comandos y sin enviar nada por USB. Mientras se usa, una barra naranja en la parte superior de la ventana lo indica, y
+**Volver al teclado por USB** vuelve atrás. Las compilaciones Debug ofrecen todos los tipos (los otros ID de informe del
+`1189:8890` y el firmware antiguo). **Ventana ▸ Registro del dispositivo** muestra todos los informes escritos y todas las
+respuestas.
 
 ## Uso
 

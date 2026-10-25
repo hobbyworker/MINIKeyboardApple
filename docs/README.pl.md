@@ -89,11 +89,12 @@ Gdy Xcode otwiera projekt, zmienia nazwę produktu we współdzielonym schemacie
 Hostem testów aplikacji jest sama aplikacja. Podczas testów aplikacja jak zwykle szuka klawiatury i łączy się z nią.
 Testy pakietu korzystają z atrap oraz symulowanych klawiatur i nigdy nie otwierają żadnej klawiatury.
 
-Kompilacje Debug mają menu **Symulator**, w którym wypróbujesz aplikację bez danej klawiatury: wybierz `1189:8890`
-z dowolnym ID raportu, klawiaturę o dowolnym układzie z jednym z dwóch rodzajów oprogramowania sprzętowego albo taką,
-która nie podaje swojego typu, a aplikacja zachowa się tak, jakby klawiatura była podłączona — z tymi samymi
-poleceniami, bez wysyłania czegokolwiek przez USB. **Okno ▸ Dziennik urządzenia** pokazuje wszystkie zapisane
-raporty i wszystkie odpowiedzi.
+Menu **Symulator** pozwala wypróbować aplikację bez danej klawiatury: wybierz `1189:8890`, układ z nowszym
+oprogramowaniem sprzętowym albo klawiaturę, która nie podaje swojego typu, a aplikacja zachowa się tak, jakby klawiatura
+była podłączona — z tymi samymi poleceniami, bez wysyłania czegokolwiek przez USB. Gdy symulator jest w użyciu, mówi o tym
+pomarańczowy pasek u góry okna, a **Wróć do klawiatury przez USB** przywraca prawdziwą klawiaturę. Kompilacje Debug
+oferują każdy rodzaj (pozostałe ID raportu `1189:8890`, starsze oprogramowanie sprzętowe). **Okno ▸ Dziennik urządzenia**
+pokazuje wszystkie zapisane raporty i wszystkie odpowiedzi.
 
 ## Korzystanie
 

@@ -89,10 +89,12 @@ The app's tests are hosted by the app itself. While they run, the app looks for 
 connects to it as it always does. The package's tests use fakes and simulated keyboards, and never
 open one.
 
-Debug builds have a **Simulator** menu for trying the app without the keyboard in question: pick a
-`1189:8890` with any report ID, a keyboard of any layout on either firmware, or one that doesn't
-say what it is, and the app acts as if it were plugged in — through the same commands, nothing
-going to USB. **Window ▸ Device Log** shows every report written and every answer.
+The **Simulator** menu lets you try the app without the keyboard in question: pick a `1189:8890`,
+a layout on newer firmware, or a keyboard that doesn't say what it is, and the app acts as if it
+were plugged in — through the same commands, nothing going to USB. While one is in use, an orange
+bar at the top of the window says so, and **Back to the Keyboard on USB** returns. Debug builds
+offer every kind (the `1189:8890`'s other report IDs, older firmware). **Window ▸ Device Log**
+shows every report written and every answer.
 
 ## Using it
 

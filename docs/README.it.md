@@ -87,10 +87,12 @@ I test dell’app sono ospitati dall’app stessa. Mentre vengono eseguiti, l’
 collega come fa sempre. I test del pacchetto usano oggetti fittizi e tastiere simulate, e non aprono mai una
 tastiera vera.
 
-Le build Debug hanno un menu **Simulatore** per provare l’app senza la tastiera in questione: scegli una
-`1189:8890` con qualsiasi ID report, una tastiera con qualsiasi disposizione su uno dei due firmware oppure una
-che non indica il proprio tipo, e l’app si comporta come se fosse collegata – con gli stessi comandi, senza che
-nulla passi per l’USB. **Finestra ▸ Registro dispositivo** mostra ogni report scritto e ogni risposta.
+Il menu **Simulatore** permette di provare l’app senza la tastiera in questione: scegli una `1189:8890`, una
+disposizione del firmware più recente oppure una tastiera che non indica il proprio tipo, e l’app si comporta come se
+fosse collegata – con gli stessi comandi, senza che nulla passi per l’USB. Mentre è in uso, una barra arancione in cima
+alla finestra lo segnala, e **Torna alla tastiera via USB** riporta indietro. Le build Debug offrono ogni tipo (gli altri
+ID report della `1189:8890`, il firmware più vecchio). **Finestra ▸ Registro dispositivo** mostra ogni report scritto e
+ogni risposta.
 
 ## Utilizzo
 

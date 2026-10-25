@@ -86,10 +86,12 @@ Saat membuka proyek, Xcode menulis ulang nama produk di dalam skema bersama
 Host untuk tes aplikasi adalah aplikasi itu sendiri. Selama tes berjalan, aplikasi mencari papan ketik dan terhubung
 seperti biasa. Tes paket memakai objek tiruan dan papan ketik simulasi, dan tidak pernah membuka papan ketik.
 
-Build Debug memiliki menu **Simulator** untuk mencoba aplikasi tanpa papan ketik tersebut. Pilih `1189:8890` dengan ID
-laporan mana pun, tata letak apa pun dari kedua firmware, atau papan ketik yang tidak memberi tahu jenisnya, dan
-aplikasi akan bekerja seolah-olah papan ketik itu tercolok — dengan perintah yang sama, tanpa ada yang dikirim ke USB.
-Di **Jendela ▸ Log Perangkat**, Anda bisa melihat semua laporan yang ditulis dan semua jawaban yang diterima.
+Menu **Simulator** memungkinkan Anda mencoba aplikasi tanpa papan ketik tersebut. Pilih `1189:8890`, tata letak dari
+firmware baru, atau papan ketik yang tidak memberi tahu jenisnya, dan aplikasi akan bekerja seolah-olah papan ketik itu
+tercolok — dengan perintah yang sama, tanpa ada yang dikirim ke USB. Selama digunakan, bilah oranye di bagian atas jendela
+memberi tahu hal itu, dan **Kembali ke papan ketik di USB** mengembalikannya. Build Debug menawarkan semua jenis (ID laporan
+lain dari `1189:8890`, firmware lama). Di **Jendela ▸ Log Perangkat**, Anda bisa melihat semua laporan yang ditulis dan
+semua jawaban yang diterima.
 
 ## Cara menggunakan
 

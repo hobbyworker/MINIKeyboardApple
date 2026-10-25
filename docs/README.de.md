@@ -90,10 +90,11 @@ Die Tests der App laufen mit der App selbst als Host. Währenddessen sucht die A
 und verbindet sich mit ihr. Die Tests des Pakets verwenden Fakes und simulierte Tastaturen und öffnen nie eine
 echte Tastatur.
 
-Debug-Builds haben ein Menü **Simulator**, mit dem du die App ohne die betreffende Tastatur ausprobieren kannst:
-Wähle eine `1189:8890` mit beliebiger Report-ID, eine Tastatur mit beliebiger Anordnung auf einer der beiden
-Firmware-Varianten oder eine, die ihren Typ nicht angibt – dann verhält sich die App, als wäre sie angeschlossen,
-mit denselben Befehlen, nur dass nichts über USB hinausgeht. **Fenster ▸ Geräteprotokoll** zeigt jeden
+Im Menü **Simulator** kannst du die App ohne die betreffende Tastatur ausprobieren: Wähle eine `1189:8890`, eine
+Anordnung auf der neueren Firmware oder eine Tastatur, die ihren Typ nicht angibt – dann verhält sich die App, als wäre
+sie angeschlossen, mit denselben Befehlen, nur dass nichts über USB hinausgeht. Solange eine simulierte Tastatur aktiv ist,
+sagt das ein orangefarbener Balken oben im Fenster, und **Zurück zur Tastatur am USB** kehrt zurück. Debug-Builds bieten
+jede Art an (die anderen Report-IDs der `1189:8890`, die ältere Firmware). **Fenster ▸ Geräteprotokoll** zeigt jeden
 geschriebenen Report und jede Antwort.
 
 ## Verwendung

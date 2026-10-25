@@ -85,10 +85,11 @@ thành tên của bạn. Điều này là bình thường và không cần commi
 Host của kiểm thử ứng dụng chính là ứng dụng. Trong lúc kiểm thử, ứng dụng vẫn tìm và kết nối với bàn phím như bình
 thường. Kiểm thử package dùng đối tượng giả và bàn phím mô phỏng, và không mở bàn phím nào.
 
-Bản build Debug có menu **Trình mô phỏng** để dùng thử ứng dụng mà không cần bàn phím đó. Chọn `1189:8890` với
-ID báo cáo bất kỳ, một bố cục bất kỳ của một trong hai chương trình cơ sở, hoặc bàn phím không cho biết loại, ứng dụng
-sẽ hoạt động như thể bàn phím đang được cắm vào — với cùng các lệnh, không có gì được gửi qua USB. Trong
-**Cửa sổ ▸ Nhật ký thiết bị**, bạn có thể xem mọi báo cáo đã ghi và mọi phản hồi nhận được.
+Menu **Trình mô phỏng** giúp dùng thử ứng dụng mà không cần bàn phím đó. Chọn `1189:8890`, một bố cục của chương
+trình cơ sở mới, hoặc bàn phím không cho biết loại, ứng dụng sẽ hoạt động như thể bàn phím đang được cắm vào — với cùng
+các lệnh, không có gì được gửi qua USB. Trong lúc dùng, thanh màu cam ở đầu cửa sổ cho biết điều đó, và **Quay lại bàn
+phím qua USB** để trở lại. Bản build Debug cho chọn mọi loại (các ID báo cáo khác của `1189:8890`, chương trình cơ sở cũ).
+Trong **Cửa sổ ▸ Nhật ký thiết bị**, bạn có thể xem mọi báo cáo đã ghi và mọi phản hồi nhận được.
 
 ## Cách dùng
 

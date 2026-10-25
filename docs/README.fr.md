@@ -92,11 +92,12 @@ Les tests de l’app sont hébergés par l’app elle-même. Pendant leur exécu
 connecte comme d’habitude. Les tests du paquet utilisent des doublures et des claviers simulés, et n’ouvrent
 jamais de vrai clavier.
 
-Les compilations Debug comportent un menu **Simulateur** pour essayer l’app sans le clavier concerné : choisissez
-un `1189:8890` avec n’importe quel ID de rapport, un clavier de n’importe quelle disposition avec l’un ou l’autre
-programme interne, ou un clavier qui n’indique pas son type, et l’app se comporte comme s’il était branché –
-avec les mêmes commandes, sans que rien ne parte vers l’USB. **Fenêtre ▸ Journal de l’appareil** affiche chaque
-rapport écrit et chaque réponse.
+Le menu **Simulateur** permet d’essayer l’app sans le clavier concerné : choisissez un `1189:8890`, une disposition du
+programme interne récent ou un clavier qui n’indique pas son type, et l’app se comporte comme s’il était branché – avec
+les mêmes commandes, sans que rien ne parte vers l’USB. Tant qu’il est utilisé, une barre orange en haut de la fenêtre le
+signale, et **Revenir au clavier en USB** permet de revenir. Les compilations Debug proposent tous les types (les autres
+ID de rapport du `1189:8890`, l’ancien programme interne). **Fenêtre ▸ Journal de l’appareil** affiche chaque rapport
+écrit et chaque réponse.
 
 ## Utilisation
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+		The `MINIKeyboard MAS` target's hand-written keys, as in MINIKeyboard-Info.plist — without
+		Sparkle's SU* keys: the App Store owns updates.
+	-->
+
+	<!-- Only the operating system's standard encryption — passes App Store export compliance. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+
+	<key>BrandCopyright</key>
+	<string>$(BRAND_COPYRIGHT)</string>
+</dict>
+</plist>

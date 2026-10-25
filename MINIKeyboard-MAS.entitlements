@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+		The `MINIKeyboard MAS` target. The sandbox and USB devices come from the build settings
+		(ENABLE_APP_SANDBOX, ENABLE_RESOURCE_ACCESS_USB in MINIKeyboard-MAS.xcconfig); this file adds
+		what they can't.
+
+		The 1189:8890's configuration interface has no HID driver, so the app opens it through
+		IOUSBHost — and the sandbox refuses IOUSBHost's user client even with USB devices allowed.
+		This exception lets the app open it as the Developer ID build does.
+
+		(Xcode's capability editor rewrites this file and strips comments.)
+	-->
+	<key>com.apple.security.temporary-exception.iokit-user-client-class</key>
+	<array>
+		<string>AppleUSBHostFrameworkInterfaceClient</string>
+	</array>
+</dict>
+</plist>

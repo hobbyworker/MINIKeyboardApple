@@ -1,5 +1,5 @@
 import SwiftUI
-#if canImport(Sparkle)
+#if canImport(Sparkle) && !APP_STORE
 import Combine
 import Sparkle
 #endif
@@ -10,14 +10,14 @@ import Sparkle
 enum Updates {
     /// Called once at launch: starts Sparkle's scheduled checks.
     static func start() {
-        #if canImport(Sparkle)
+        #if canImport(Sparkle) && !APP_STORE
         if BrandInfo.hasUpdates { _ = UpdaterCoordinator.shared }
         #endif
     }
 
     /// Whether this build checks for updates at all.
     static var isAvailable: Bool {
-        #if canImport(Sparkle)
+        #if canImport(Sparkle) && !APP_STORE
         return BrandInfo.hasUpdates
         #else
         return false
@@ -30,7 +30,7 @@ struct CheckForUpdatesButton: View {
     var fillsWidth = false
 
     var body: some View {
-        #if canImport(Sparkle)
+        #if canImport(Sparkle) && !APP_STORE
         if BrandInfo.hasUpdates {
             SparkleCheckButton(updater: .shared, fillsWidth: fillsWidth)
         }
@@ -41,7 +41,7 @@ struct CheckForUpdatesButton: View {
 /// Settings ▸ General ▸ **Check for updates automatically**.
 struct AutomaticUpdatesToggle: View {
     var body: some View {
-        #if canImport(Sparkle)
+        #if canImport(Sparkle) && !APP_STORE
         if BrandInfo.hasUpdates {
             SparkleAutomaticToggle(updater: .shared)
         }
@@ -49,7 +49,7 @@ struct AutomaticUpdatesToggle: View {
     }
 }
 
-#if canImport(Sparkle)
+#if canImport(Sparkle) && !APP_STORE
 @MainActor
 @Observable
 final class UpdaterCoordinator {

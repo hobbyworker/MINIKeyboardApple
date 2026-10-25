@@ -11,6 +11,9 @@
 		4D4B10000000000000000102 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B10000000000000001002 /* Domain */; };
 		4D4B10000000000000000103 /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B10000000000000001003 /* DataLayer */; };
 		4D4B10000000000000000104 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B10000000000000001004 /* Presentation */; };
+		4D4B10000000000000000111 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B10000000000000001102 /* Domain */; };
+		4D4B10000000000000000112 /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B10000000000000001103 /* DataLayer */; };
+		4D4B10000000000000000113 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B10000000000000001104 /* Presentation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +31,26 @@
 		4D4B10000000000000000302 /* MINIKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MINIKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4B10000000000000000303 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
 		4D4B10000000000000000304 /* MINIKeyboard.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MINIKeyboard.xcconfig; sourceTree = "<group>"; };
+		4D4B10000000000000000311 /* MINIKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MINIKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4B10000000000000000305 /* MINIKeyboard-MAS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "MINIKeyboard-MAS.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4D4B10000000000000000401 /* Exceptions for "MINIKeyboard" folder in "MINIKeyboard MAS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/Licenses/Licenses-Sparkle.md",
+			);
+			target = 4D4B10000000000000000803 /* MINIKeyboard MAS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4D4B10000000000000000501 /* MINIKeyboard */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4D4B10000000000000000401 /* Exceptions for "MINIKeyboard" folder in "MINIKeyboard MAS" target */,
+			);
 			path = MINIKeyboard;
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,14 @@
 			files = (
 			);
 		};
+		4D4B10000000000000000603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				4D4B10000000000000000111 /* Domain in Frameworks */,
+				4D4B10000000000000000112 /* DataLayer in Frameworks */,
+				4D4B10000000000000000113 /* Presentation in Frameworks */,
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +92,7 @@
 			children = (
 				4D4B10000000000000000303 /* Signing.xcconfig */,
 				4D4B10000000000000000304 /* MINIKeyboard.xcconfig */,
+				4D4B10000000000000000305 /* MINIKeyboard-MAS.xcconfig */,
 				4D4B10000000000000000501 /* MINIKeyboard */,
 				4D4B10000000000000000502 /* MINIKeyboardTests */,
 				4D4B10000000000000000702 /* Products */,
@@ -77,6 +104,7 @@
 			children = (
 				4D4B10000000000000000301 /* MINIKeyboard.app */,
 				4D4B10000000000000000302 /* MINIKeyboardTests.xctest */,
+							4D4B10000000000000000311 /* MINIKeyboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +159,31 @@
 			productReference = 4D4B10000000000000000302 /* MINIKeyboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4D4B10000000000000000803 /* MINIKeyboard MAS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D4B10000000000000000E04 /* Build configuration list for PBXNativeTarget "MINIKeyboard MAS" */;
+			buildPhases = (
+				4D4B10000000000000000B03 /* Sources */,
+				4D4B10000000000000000603 /* Frameworks */,
+				4D4B10000000000000000A03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4D4B10000000000000000501 /* MINIKeyboard */,
+			);
+			name = "MINIKeyboard MAS";
+			packageProductDependencies = (
+				4D4B10000000000000001102 /* Domain */,
+				4D4B10000000000000001103 /* DataLayer */,
+				4D4B10000000000000001104 /* Presentation */,
+			);
+			productName = MINIKeyboard;
+			productReference = 4D4B10000000000000000311 /* MINIKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,6 +195,9 @@
 				LastUpgradeCheck = 2720;
 				TargetAttributes = {
 					4D4B10000000000000000801 = {
+						CreatedOnToolsVersion = 27.2;
+					};
+					4D4B10000000000000000803 = {
 						CreatedOnToolsVersion = 27.2;
 					};
 					4D4B10000000000000000802 = {
@@ -181,6 +237,7 @@
 			projectRoot = "";
 			targets = (
 				4D4B10000000000000000801 /* MINIKeyboard */,
+				4D4B10000000000000000803 /* MINIKeyboard MAS */,
 				4D4B10000000000000000802 /* MINIKeyboardTests */,
 			);
 		};
@@ -197,6 +254,11 @@
 			files = (
 			);
 		};
+		4D4B10000000000000000A03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -206,6 +268,11 @@
 			);
 		};
 		4D4B10000000000000000B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		4D4B10000000000000000B03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
 			);
@@ -397,6 +464,20 @@
 			};
 			name = Release;
 		};
+		4D4B10000000000000000D07 /* Debug configuration for PBXNativeTarget "MINIKeyboard MAS" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4B10000000000000000305 /* MINIKeyboard-MAS.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4D4B10000000000000000D08 /* Release configuration for PBXNativeTarget "MINIKeyboard MAS" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4B10000000000000000305 /* MINIKeyboard-MAS.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -421,6 +502,14 @@
 			buildConfigurations = (
 				4D4B10000000000000000D05 /* Debug configuration for PBXNativeTarget "MINIKeyboardTests" */,
 				4D4B10000000000000000D06 /* Release configuration for PBXNativeTarget "MINIKeyboardTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		4D4B10000000000000000E04 /* Build configuration list for PBXNativeTarget "MINIKeyboard MAS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D4B10000000000000000D07 /* Debug configuration for PBXNativeTarget "MINIKeyboard MAS" */,
+				4D4B10000000000000000D08 /* Release configuration for PBXNativeTarget "MINIKeyboard MAS" */,
 			);
 			defaultConfigurationName = Release;
 		};
@@ -461,6 +550,21 @@
 			productName = DataLayer;
 		};
 		4D4B10000000000000001004 /* Presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4B10000000000000000F02 /* XCLocalSwiftPackageReference "Packages/MINIKeyboardKit" */;
+			productName = Presentation;
+		};
+		4D4B10000000000000001102 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4B10000000000000000F02 /* XCLocalSwiftPackageReference "Packages/MINIKeyboardKit" */;
+			productName = Domain;
+		};
+		4D4B10000000000000001103 /* DataLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4B10000000000000000F02 /* XCLocalSwiftPackageReference "Packages/MINIKeyboardKit" */;
+			productName = DataLayer;
+		};
+		4D4B10000000000000001104 /* Presentation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4D4B10000000000000000F02 /* XCLocalSwiftPackageReference "Packages/MINIKeyboardKit" */;
 			productName = Presentation;

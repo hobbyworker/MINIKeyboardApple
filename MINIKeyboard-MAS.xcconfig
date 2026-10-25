@@ -1,0 +1,14 @@
+// The `MINIKeyboard MAS` target: the Mac App Store build. Everything not changed here comes from
+// MINIKeyboard.xcconfig; the `MINIKeyboard` target is the Developer ID build, with Sparkle.
+
+#include "MINIKeyboard.xcconfig"
+
+// The App Store requires the sandbox and owns updates: no Sparkle (the target doesn't link it, and
+// APP_STORE keeps its code out — App/Updates.swift), the sandbox with USB devices, and the keys of
+// the App Store's own Info.plist.
+ENABLE_APP_SANDBOX = YES
+ENABLE_RESOURCE_ACCESS_USB = YES
+CODE_SIGN_ENTITLEMENTS = $(MINIKEYBOARD_ROOT)MINIKeyboard-MAS.entitlements
+INFOPLIST_FILE = $(MINIKEYBOARD_ROOT)MINIKeyboard-MAS-Info.plist
+PRODUCT_BUNDLE_IDENTIFIER = $(BRAND_BUNDLE_ID_MAS)
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) APP_STORE

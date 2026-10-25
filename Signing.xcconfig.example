@@ -8,6 +8,9 @@ DEVELOPMENT_TEAM = YOUR_TEAM_ID
 BRAND_NAME =
 BRAND_BUNDLE_ID =
 
+// Only for the `MINIKeyboard MAS` target (the Mac App Store build): its bundle ID.
+BRAND_BUNDLE_ID_MAS =
+
 // Optional. Left empty, the build has no update checks and no copyright line.
 // Updates need both the Sparkle feed and its EdDSA public key.
 // `//` starts a comment in this file, so write addresses as `https:/$()/example.com`.

@@ -115,10 +115,11 @@ going to USB. **Window ▸ Device Log** shows every report written and every ans
 and has About — the version and the open source licenses. With an update feed (above), **Check
 for Updates…** sits right under Settings… in the app menu.
 
-**Settings ▸ General ▸ Keyboard** has **Prevent key repeat after changing the lighting**, on by default. After
-its lighting is saved, the `1189:8890`'s firmware repeats a key's first stroke without end — its maker's
-software does the same — so the app sends one more save, with no key in it, after the lighting. Off, the app
-sends just what the maker's software sends. That keyboard also forgets its lighting when it's unplugged.
+**Settings ▸ General ▸ Firmware Workarounds** has **Prevent key repeat after changing the lighting**, on by
+default. After its lighting is saved, the `1189:8890`'s firmware repeats a key's first stroke without end —
+its maker's software does the same — so the app sends one more save, with no key in it, after the lighting.
+Off, the app sends just what the maker's software sends. That keyboard also forgets its lighting when it's
+unplugged.
 
 ## Structure
 

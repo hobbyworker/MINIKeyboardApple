@@ -63,7 +63,7 @@ private struct GeneralPane: View {
             Section {
                 LightingKeyRepeatToggle()
             } header: {
-                Text("Keyboard")
+                Text("Firmware Workarounds")
             } footer: {
                 Text("After its lighting is saved, the 1189:8890 keyboard repeats a key's first stroke without end when the key is pressed (its maker's software does the same). With this on, the app sends one more save after the lighting to stop that; the keys stay as they were. Off, the app sends just what the maker's software sends.")
                     .font(.footnote)

@@ -28,7 +28,7 @@ final class AppContainer {
         connection = hardware
         keyboardDevice = KeyboardDevice(connection: hardware, log: log)
         #endif
-        // Settings ▸ General ▸ Keyboard.
+        // Settings ▸ General ▸ Firmware Workarounds.
         keyboardDevice.preventsLightingKeyRepeat = { LightingKeyRepeatToggle.isOn }
         device = keyboardDevice
 

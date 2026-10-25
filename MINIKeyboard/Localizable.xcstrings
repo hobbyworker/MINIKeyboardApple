@@ -1173,7 +1173,7 @@
       }
     },
     "After its lighting is saved, the 1189:8890 keyboard repeats a key's first stroke without end when the key is pressed (its maker's software does the same). With this on, the app sends one more save after the lighting to stop that; the keys stay as they were. Off, the app sends just what the maker's software sends." : {
-      "comment" : "Settings ▸ General ▸ Keyboard: what the switch above does.",
+      "comment" : "Settings ▸ General ▸ Firmware Workarounds: what the switch above does.",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5208,6 +5208,83 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "韌體"
+          }
+        }
+      }
+    },
+    "Firmware Workarounds" : {
+      "comment" : "Settings ▸ General: the heading over the ways the app works around keyboards' firmware bugs.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firmware-Fehler umgehen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soluciones para fallos del firmware"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contournements des bogues du firmware"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penanganan bug firmware"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soluzioni per i bug del firmware"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファームウェアの不具合への対処"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "펌웨어 버그 우회"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obejścia błędów oprogramowania układowego"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contornos para falhas do firmware"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khắc phục lỗi firmware"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "固件问题规避"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "韌體問題規避"
           }
         }
       }
@@ -12386,7 +12463,7 @@
       }
     },
     "Prevent key repeat after changing the lighting" : {
-      "comment" : "Settings ▸ General ▸ Keyboard: a switch, on by default.",
+      "comment" : "Settings ▸ General ▸ Firmware Workarounds: a switch, on by default.",
       "localizations" : {
         "de" : {
           "stringUnit" : {

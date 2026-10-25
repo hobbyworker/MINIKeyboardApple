@@ -117,10 +117,10 @@ Nelle **Impostazioni** (⌘,) scegli la lingua dell’interfaccia (una delle 13,
 l’aspetto chiaro o scuro; in Informazioni trovi la versione e le licenze open source. Con un feed degli
 aggiornamenti (vedi sopra), **Cerca aggiornamenti…** si trova subito sotto Impostazioni… nel menu dell’app.
 
-In **Impostazioni ▸ Generali ▸ Tastiera**, **Evita la ripetizione dei tasti dopo aver cambiato
-l’illuminazione** è attivo per impostazione predefinita. Dopo il salvataggio dell’illuminazione, il firmware
-della `1189:8890` ripete all’infinito il primo carattere di un tasto (il software del produttore fa lo
-stesso), quindi l’app invia un ulteriore comando di salvataggio, senza tasti, dopo l’illuminazione. Se lo
+In **Impostazioni ▸ Generali ▸ Soluzioni per i bug del firmware**, **Evita la ripetizione dei tasti dopo aver
+cambiato l’illuminazione** è attivo per impostazione predefinita. Dopo il salvataggio dell’illuminazione, il
+firmware della `1189:8890` ripete all’infinito il primo carattere di un tasto (il software del produttore fa
+lo stesso), quindi l’app invia un ulteriore comando di salvataggio, senza tasti, dopo l’illuminazione. Se lo
 disattivi, l’app invia solo ciò che invia il software del produttore. Questa tastiera, inoltre, dimentica
 l’illuminazione quando la scolleghi.
 

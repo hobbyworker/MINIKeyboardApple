@@ -16,6 +16,8 @@ się w wielu wersjach: od modeli z jednym pokrętłem po modele z 21 klawiszami,
 Dla każdego klawisza i każdej akcji pokrętła (obrót w lewo, naciśnięcie, obrót w prawo) aplikacja ustawia na
 warstwach 1–3 naciśnięcia klawiszy, klawisz multimedialny lub akcję myszy, a także podświetlenie klawiatury.
 
+<p align="center"><img src="../.github/devices.png" width="560" alt="Dwie małe klawiatury makr USB: sześć klawiszy i pokrętło, dwanaście klawiszy i dwa pokrętła"></p>
+
 | Klawiatura | Układ | Odczyt | Opóźnienie | Podświetlenie | Sprawdzono |
 |---|---|---|---|---|---|
 | `1189:8890` | ustawiasz go sam — klawisze (do 12), klawisze w rzędzie, pokrętła (do 2) | nie | nie | trzy tryby | tak — 6 klawiszy i pokrętło |

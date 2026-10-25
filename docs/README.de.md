@@ -16,6 +16,8 @@ vom einzelnen Drehknopf bis zu 21 Tasten und mit bis zu vier Drehknöpfen zu kau
 einer Taste oder eines Drehknopfs (nach links drehen, drücken, nach rechts drehen) legt sie auf den Ebenen
 1–3 Tastendrücke, eine Multimedia-Taste oder eine Mausaktion fest, außerdem die Beleuchtung der Tastatur.
 
+<p align="center"><img src="../.github/devices.png" width="560" alt="Zwei kleine USB-Makrotastaturen: sechs Tasten und ein Drehknopf, zwölf Tasten und zwei Drehknöpfe"></p>
+
 | Tastatur | Anordnung | Auslesen | Verzögerung | Beleuchtung | Getestet |
 |---|---|---|---|---|---|
 | `1189:8890` | legst du fest – Tasten (bis zu 12), Tasten pro Reihe, Drehknöpfe (bis zu 2) | nein | keine | drei Modi | ja – 6 Tasten und ein Drehknopf |

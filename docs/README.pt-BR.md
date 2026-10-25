@@ -16,6 +16,8 @@ vários tamanhos: desde os que têm só um botão giratório até os de 21 tecla
 cada tecla e cada ação de botão giratório (girar à esquerda, pressionar, girar à direita), o app define nas
 camadas 1–3 toques de teclas, uma tecla multimídia ou uma ação do mouse, além da iluminação do teclado.
 
+<p align="center"><img src="../.github/devices.png" width="560" alt="Dois pequenos teclados de macros USB: seis teclas e um botão giratório, doze teclas e dois botões giratórios"></p>
+
 | Teclado | Disposição | Leitura | Atraso | Iluminação | Testado |
 |---|---|---|---|---|---|
 | `1189:8890` | definida por você — teclas (até 12), teclas por fileira, botões giratórios (até 2) | não | não | três modos | sim — 6 teclas e um botão giratório |

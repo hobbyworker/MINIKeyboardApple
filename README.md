@@ -16,6 +16,8 @@ from a single knob to 21 keys, and up to four knobs. For each key and knob actio
 (rotate left, press, rotate right) it sets key presses, a media key or a mouse action on layers
 1–3, and the keyboard's lighting.
 
+<p align="center"><img src=".github/devices.png" width="560" alt="Two small USB macro keyboards: six keys and a knob, twelve keys and two knobs"></p>
+
 | Keyboard | Layout | Reads back | Waits | Lighting | Tried |
 |---|---|---|---|---|---|
 | `1189:8890` | arranged by you — keys (up to 12), keys per row, knobs (up to 2) | no | no | three modes | yes — 6 keys and a knob |

@@ -16,6 +16,8 @@ che vanno da una sola manopola fino a 21 tasti, con al massimo quattro manopole.
 di una manopola (ruota a sinistra, premi, ruota a destra) imposta sui livelli 1–3 pressioni di tasti, un tasto
 multimediale o un’azione del mouse, oltre all’illuminazione della tastiera.
 
+<p align="center"><img src="../.github/devices.png" width="560" alt="Due piccole tastiere macro USB: sei tasti e una manopola, dodici tasti e due manopole"></p>
+
 | Tastiera | Disposizione | Lettura | Ritardo | Illuminazione | Provata |
 |---|---|---|---|---|---|
 | `1189:8890` | la decidi tu – tasti (fino a 12), tasti per riga, manopole (fino a 2) | no | nessuno | tre modalità | sì – 6 tasti e una manopola |

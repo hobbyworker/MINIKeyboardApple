@@ -16,6 +16,8 @@ mulai dari yang hanya punya satu kenop hingga yang punya 21 tombol, dengan kenop
 tombol dan setiap tindakan kenop (putar ke kiri, tekan, putar ke kanan), Anda dapat mengatur tekanan tombol, tombol
 multimedia, atau tindakan tetikus di lapisan 1–3, serta pencahayaan papan ketik.
 
+<p align="center"><img src="../.github/devices.png" width="560" alt="Dua papan ketik makro USB kecil: 6 tombol dan 1 kenop, 12 tombol dan 2 kenop"></p>
+
 | Papan ketik | Tata letak | Membaca kembali | Tunda | Pencahayaan | Diuji langsung |
 |---|---|---|---|---|---|
 | `1189:8890` | Anda atur sendiri — tombol (hingga 12), tombol per baris, kenop (hingga 2) | tidak bisa | tidak ada | tiga mode | sudah — 6 tombol, 1 kenop |

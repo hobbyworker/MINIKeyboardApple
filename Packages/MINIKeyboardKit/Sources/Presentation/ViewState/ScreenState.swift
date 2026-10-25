@@ -326,7 +326,7 @@ public enum InterfaceRole: Hashable, Sendable {
     case keyboard, mouse, media, configuration, other
 }
 
-/// A keyboard the simulator can play (debug builds).
+/// A keyboard the simulator can play.
 public struct SimulatorChoice: Hashable, Sendable, Identifiable {
     public enum Group: CaseIterable, Hashable, Sendable {
         case k8890, standard, legacy, unidentified
@@ -345,6 +345,17 @@ public struct SimulatorChoice: Hashable, Sendable, Identifiable {
     public let group: Group
     public let kind: Kind
     let model: SimulatedModel
+
+    /// Whether everyone's menu has it, not only a debug build's: the 8890 as it ships (report ID 3), each 884x
+    /// layout on its standard records, and a 884x that doesn't answer. The 8890's other report IDs and the legacy
+    /// records are for testing the app.
+    public var isForEveryone: Bool {
+        switch group {
+        case .k8890: kind == .k8890(reportID: 3)
+        case .legacy: false
+        case .standard, .unidentified: true
+        }
+    }
 
     init(_ model: SimulatedModel) {
         self.model = model

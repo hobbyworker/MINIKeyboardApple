@@ -70,11 +70,11 @@ public enum DeviceLogEvent: Hashable, Sendable {
     case needsPermission
     case openFailed(code: Int32)
     case writeFailed(code: Int32)
-    /// A simulated keyboard took the place of the one on USB (debug builds).
+    /// A simulated keyboard took the place of the one on USB.
     case simulated(modelID: String)
 }
 
-/// Which keyboard the app talks to: the one on USB, or one that exists only in the app (debug builds).
+/// Which keyboard the app talks to: the one on USB, or one that exists only in the app.
 public enum KeyboardSource: Hashable, Sendable {
     case hardware
     case simulated(SimulatedModel)

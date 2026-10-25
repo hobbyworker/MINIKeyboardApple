@@ -98,6 +98,7 @@ struct ConnectionStatusView: View {
 
     private var color: Color {
         switch editor.status {
+        case .connected(_, _, _, _, true): .simulator
         case .connected(_, _, _, let isIdentified, _): isIdentified ? .green : .yellow
         case .needsPermission: .orange
         case .searching, .openFailed: .red

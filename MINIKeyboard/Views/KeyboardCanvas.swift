@@ -7,7 +7,8 @@ struct KeyboardCanvas: View {
 
     var body: some View {
         if let drawing = editor.drawing {
-            ScaledDrawing(frame: drawing.frame, bounds: drawing.bounds, items: drawing.controls, rect: \.rect) { control, scale in
+            ScaledDrawing(frame: drawing.frame, bounds: drawing.bounds, items: drawing.controls, rect: \.rect,
+                          simulated: editor.activeSimulatorID != nil) { control, scale in
                 ControlButton(control: control, scale: scale)
             }
             .opacity(editor.isReady ? 1 : 0.45)
@@ -25,13 +26,15 @@ struct KeyboardCanvas: View {
     }
 }
 
-/// A drawing scaled to fit: the keyboard's body, and a view for each item where `rect` puts it.
+/// A drawing scaled to fit: the keyboard's body, and a view for each item where `rect` puts it. A simulated
+/// keyboard's body has an orange outline and a badge on its top edge.
 struct ScaledDrawing<Item: Identifiable, Face: View>: View {
     let frame: LayoutRect
     let bounds: LayoutRect
     let items: [Item]
     let rect: KeyPath<Item, LayoutRect>
     var margin: Double = 14
+    var simulated = false
     @ViewBuilder let face: (Item, Double) -> Face
 
     var body: some View {
@@ -47,6 +50,12 @@ struct ScaledDrawing<Item: Identifiable, Face: View>: View {
                 RoundedRectangle(cornerRadius: 24 * scale, style: .continuous)
                     .fill(LinearGradient(colors: [Color(white: 0.28), Color(white: 0.19)], startPoint: .top, endPoint: .bottom))
                     .shadow(color: .black.opacity(0.3), radius: 8, y: 3)
+                    .overlay {
+                        if simulated {
+                            RoundedRectangle(cornerRadius: 24 * scale, style: .continuous)
+                                .strokeBorder(Color.simulator, lineWidth: 4)
+                        }
+                    }
                     .frame(width: frame.width * scale, height: frame.height * scale)
                     .position(place(frame))
                 ForEach(items) { item in
@@ -54,6 +63,16 @@ struct ScaledDrawing<Item: Identifiable, Face: View>: View {
                     face(item, scale)
                         .frame(width: itemRect.width * scale, height: itemRect.height * scale)
                         .position(place(itemRect))
+                }
+                if simulated {
+                    Text("Simulator")
+                        .font(.callout.weight(.semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 4)
+                        .background(Color.simulator, in: RoundedRectangle(cornerRadius: 6))
+                        .position(x: place(frame).x, y: place(frame).y - frame.height * scale / 2)
+                        .allowsHitTesting(false)
                 }
             }
         }

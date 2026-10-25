@@ -219,7 +219,8 @@ extension EditorTab {
 extension Notice {
     var message: LocalizedStringResource {
         switch self {
-        case .saved: "Saved to the keyboard."
+        case .saved(simulated: true): "Saved to the simulator — nothing was written to a keyboard."
+        case .saved(simulated: false): "Saved to the keyboard."
         case .readComplete: "Read from the keyboard."
         case .nothingToSave: "Nothing to save — no key has changed."
         case .identifyFailed: "The keyboard couldn’t be asked what it is."

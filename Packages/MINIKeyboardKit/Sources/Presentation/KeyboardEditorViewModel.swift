@@ -23,7 +23,7 @@ public final class KeyboardEditorViewModel {
     private(set) var selection: ControlID?
     /// Modifiers picked for the next key.
     private(set) var held: Modifiers = []
-    /// The keyboard on USB, or a simulated one (debug builds).
+    /// The keyboard on USB, or a simulated one.
     private(set) var source: KeyboardSource = .hardware
 
     @ObservationIgnored private let observeConnection: ObserveConnectionUseCase
@@ -191,7 +191,7 @@ public final class KeyboardEditorViewModel {
             switch try await saveKeyboard.execute(configuration, capabilities: capabilities, layout: layout) {
             case .saved(let saved):
                 configuration = saved
-                show(.saved)
+                show(.saved(simulated: activeSimulatorID != nil))
             case .nothingToSave:
                 show(.nothingToSave)
             }
@@ -337,7 +337,7 @@ public final class KeyboardEditorViewModel {
 
     public var canSelectSource: Bool { keyboardSource != nil }
 
-    /// Every keyboard the simulator plays, when it is wired in (debug builds).
+    /// Every keyboard the simulator plays, when it is wired in.
     public var simulatorChoices: [SimulatorChoice] {
         keyboardSource == nil ? [] : SimulatedModel.all.map(SimulatorChoice.init)
     }
@@ -374,7 +374,7 @@ public final class KeyboardEditorViewModel {
         self.notice = notice
         noticeTask?.cancel()
         noticeTask = Task { [weak self] in
-            try? await Task.sleep(for: .seconds(notice.isError ? 6 : 2.5))
+            try? await Task.sleep(for: notice.lifetime)
             guard !Task.isCancelled else { return }
             self?.notice = nil
         }

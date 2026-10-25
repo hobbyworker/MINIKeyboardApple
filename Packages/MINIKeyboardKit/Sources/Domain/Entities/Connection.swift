@@ -5,7 +5,7 @@ public struct ConnectedKeyboard: Hashable, Sendable {
         case usb(outEndpoint: UInt8)
         /// Written and read as a HID device.
         case hid
-        /// A keyboard that exists only in the app (debug builds).
+        /// A keyboard that exists only in the app.
         case simulated
     }
 

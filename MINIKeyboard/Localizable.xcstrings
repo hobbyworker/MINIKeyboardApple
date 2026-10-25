@@ -1705,6 +1705,83 @@
         }
       }
     },
+    "Back to the Keyboard on USB" : {
+      "comment" : "A button on the simulator's bar: leaves the simulator.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück zur Tastatur am USB"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver al teclado por USB"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revenir au clavier en USB"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembali ke papan ketik di USB"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torna alla tastiera via USB"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "USB に接続したキーボードに戻る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "USB에 꽂힌 키보드로 돌아가기"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wróć do klawiatury przez USB"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voltar ao teclado via USB"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay lại bàn phím qua USB"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "返回 USB 上的键盘"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "返回 USB 上的鍵盤"
+          }
+        }
+      }
+    },
     "Bass+" : {
       "localizations" : {
         "de" : {
@@ -14290,6 +14367,83 @@
         }
       }
     },
+    "Saved to the simulator — nothing was written to a keyboard." : {
+      "comment" : "The notice after saving while a simulated keyboard is in use.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Simulator gesichert – auf keine Tastatur wurde etwas geschrieben."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado en el simulador: no se escribió nada en ningún teclado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistré dans le simulateur — rien n’a été écrit sur un clavier."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disimpan ke simulator — tidak ada yang ditulis ke papan ketik."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvato nel simulatore — non è stato scritto nulla su una tastiera."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シミュレータに保存しました — キーボードには何も書き込んでいません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시뮬레이터에 저장했습니다 — 키보드에는 아무것도 쓰지 않았습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zachowano w symulatorze — na klawiaturę nic nie zapisano."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvo no simulador — nada foi gravado em um teclado."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã lưu vào trình mô phỏng — không ghi gì vào bàn phím."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存到模拟器 — 没有写入任何键盘。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已儲存到模擬器 — 沒有寫入任何鍵盤。"
+          }
+        }
+      }
+    },
     "Saving…" : {
       "localizations" : {
         "de" : {
@@ -15433,6 +15587,83 @@
         }
       }
     },
+    "Simulator in use" : {
+      "comment" : "The heading of the bar across the window while a simulated keyboard is in use.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulator aktiv"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulador en uso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulateur en cours d’utilisation"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulator sedang digunakan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulatore in uso"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シミュレータを使用中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시뮬레이터 사용 중"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symulator w użyciu"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulador em uso"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang dùng trình mô phỏng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在使用模拟器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在使用模擬器"
+          }
+        }
+      }
+    },
     "Stop" : {
       "localizations" : {
         "de" : {
@@ -16342,6 +16573,83 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "所選按鍵沒有輸入。"
+          }
+        }
+      }
+    },
+    "This isn't a real keyboard. Nothing you save here is written to any keyboard." : {
+      "comment" : "The bar across the window while a simulated keyboard is in use.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ist keine echte Tastatur. Was du hier sicherst, wird auf keine Tastatur geschrieben."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No es un teclado real. Lo que guardes aquí no se escribe en ningún teclado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce n’est pas un vrai clavier. Ce que vous enregistrez ici n’est écrit sur aucun clavier."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini bukan papan ketik sungguhan. Apa pun yang Anda simpan di sini tidak ditulis ke papan ketik mana pun."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non è una tastiera reale. Ciò che salvi qui non viene scritto su nessuna tastiera."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実際のキーボードではありません。ここで保存しても、どのキーボードにも書き込みません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "진짜 키보드가 아닙니다. 여기서 저장해도 어떤 키보드에도 쓰지 않습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To nie jest prawdziwa klawiatura. To, co tu zachowasz, nie zostanie zapisane na żadnej klawiaturze."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este não é um teclado de verdade. O que você salvar aqui não é gravado em nenhum teclado."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đây không phải bàn phím thật. Những gì bạn lưu ở đây sẽ không được ghi vào bàn phím nào."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这不是真实的键盘。在这里保存的内容不会写入任何键盘。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這不是真實的鍵盤。在這裡儲存的內容不會寫入任何鍵盤。"
           }
         }
       }

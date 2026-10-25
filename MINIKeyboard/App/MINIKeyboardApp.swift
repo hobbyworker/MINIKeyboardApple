@@ -32,11 +32,9 @@ struct MINIKeyboardApp: App {
             CommandGroup(after: .windowList) {
                 DeviceLogMenuItem()
             }
-            #if DEBUG
             CommandMenu(Text("Simulator")) {
                 SimulatorMenu(editor: editor)
             }
-            #endif
         }
 
         Window(Text("Device Log"), id: DeviceLogMenuItem.windowID) {

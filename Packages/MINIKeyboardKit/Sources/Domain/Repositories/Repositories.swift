@@ -39,7 +39,7 @@ public protocol DeviceLogRepository: Sendable {
     func clear() async
 }
 
-/// Choosing between the keyboard on USB and a simulated one (debug builds).
+/// Choosing between the keyboard on USB and a simulated one.
 public protocol KeyboardSourceRepository: Sendable {
     func current() async -> KeyboardSource
     func select(_ source: KeyboardSource) async

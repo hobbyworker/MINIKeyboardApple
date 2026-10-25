@@ -110,7 +110,7 @@ struct EditorViewModelTests {
         #expect(editor.hasUnsavedChanges)
 
         await editor.save()
-        #expect(editor.notice == .saved)
+        #expect(editor.notice == .saved(simulated: false))
         #expect(!editor.hasUnsavedChanges)
         #expect(device.writes.count == 1)
 

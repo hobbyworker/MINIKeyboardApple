@@ -1,4 +1,3 @@
-#if DEBUG
 import Domain
 
 /// The keyboard the app talks to, switchable while it runs: the one on USB or a simulated one. A switch
@@ -91,4 +90,3 @@ extension KeyboardDevice {
         self.init(channels: source, log: log)
     }
 }
-#endif

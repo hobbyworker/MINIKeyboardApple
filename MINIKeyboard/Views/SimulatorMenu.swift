@@ -1,29 +1,39 @@
-#if DEBUG
 import SwiftUI
 import Presentation
 
-/// Debug builds: the keyboard on USB, or a simulated one of every kind.
+/// The keyboard on USB, or a simulated one: the kinds users have, and in a debug build every kind (the 8890's
+/// other report IDs, the legacy records).
 struct SimulatorMenu: View {
     let editor: KeyboardEditorViewModel
 
     var body: some View {
+        #if DEBUG
         let choices = editor.simulatorChoices
+        #else
+        let choices = editor.simulatorChoices.filter(\.isForEveryone)
+        #endif
         Toggle(isOn: binding(nil)) { Text("Keyboard on USB") }
         Divider()
-        Menu {
-            toggles(choices, .k8890)
-        } label: { Text(verbatim: "1189:8890") }
-        Menu {
-            toggles(choices, .standard)
-        } label: { KeyboardInfo.Commands.standard.text }
-        Menu {
-            toggles(choices, .legacy)
-        } label: { KeyboardInfo.Commands.legacy.text }
-        toggles(choices, .unidentified)
+        group(choices, .k8890) { Text(verbatim: "1189:8890") }
+        group(choices, .standard) { KeyboardInfo.Commands.standard.text }
+        group(choices, .legacy) { KeyboardInfo.Commands.legacy.text }
+        toggles(choices.filter { $0.group == .unidentified })
     }
 
-    private func toggles(_ choices: [SimulatorChoice], _ group: SimulatorChoice.Group) -> some View {
-        ForEach(choices.filter { $0.group == group }) { choice in
+    /// A group of one is an item of its own, under the group's name; an empty one isn't there.
+    @ViewBuilder
+    private func group(_ choices: [SimulatorChoice], _ group: SimulatorChoice.Group,
+                       @ViewBuilder title: () -> some View) -> some View {
+        let members = choices.filter { $0.group == group }
+        if members.count == 1, let only = members.first {
+            Toggle(isOn: binding(only.id)) { title() }
+        } else if !members.isEmpty {
+            Menu { toggles(members) } label: { title() }
+        }
+    }
+
+    private func toggles(_ choices: [SimulatorChoice]) -> some View {
+        ForEach(choices) { choice in
             Toggle(isOn: binding(choice.id)) { choice.kind.title }
         }
     }
@@ -33,4 +43,3 @@ struct SimulatorMenu: View {
                 set: { on in if on { Task { await editor.selectSimulator(id) } } })
     }
 }
-#endif

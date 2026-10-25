@@ -15,19 +15,11 @@ final class AppContainer {
         let profiles = UserDefaultsLayoutProfiles()
         let connection: any KeyboardConnectionRepository
         let device: any KeyboardDeviceRepository
-        var keyboardSource: KeyboardSourceUseCase?
-        let keyboardDevice: KeyboardDevice
-        #if DEBUG
         // The keyboard on USB or a simulated one, switched from the Simulator menu.
         let source = KeyboardSourceSwitch(log: log, initial: Self.initialSource())
         connection = source
-        keyboardDevice = KeyboardDevice(source: source, log: log)
-        keyboardSource = KeyboardSourceUseCase(repository: source)
-        #else
-        let hardware = HardwareConnection(log: log)
-        connection = hardware
-        keyboardDevice = KeyboardDevice(connection: hardware, log: log)
-        #endif
+        let keyboardDevice = KeyboardDevice(source: source, log: log)
+        let keyboardSource = KeyboardSourceUseCase(repository: source)
         // Settings ▸ General ▸ Firmware Workarounds.
         keyboardDevice.preventsLightingKeyRepeat = { LightingKeyRepeatToggle.isOn }
         device = keyboardDevice
@@ -46,13 +38,16 @@ final class AppContainer {
         deviceLog.start()
     }
 
-    #if DEBUG
-    /// `-SimulatedKeyboard <model id>` starts on a simulated keyboard (`SimulatedModel.id`, e.g. `8890-3`).
+    /// A debug build started with `-SimulatedKeyboard <model id>` starts on a simulated keyboard
+    /// (`SimulatedModel.id`, e.g. `8890-3`); every other start is on the keyboard on USB.
     private static func initialSource() -> KeyboardSource {
+        #if DEBUG
         guard let id = UserDefaults.standard.string(forKey: "SimulatedKeyboard"),
               let model = SimulatedModel.all.first(where: { $0.id == id })
         else { return .hardware }
         return .simulated(model)
+        #else
+        return .hardware
+        #endif
     }
-    #endif
 }

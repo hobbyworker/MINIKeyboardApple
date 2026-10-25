@@ -1,4 +1,3 @@
-#if DEBUG
 import Domain
 
 /// A keyboard that exists only in the app, for trying every keyboard without owning it. It takes the
@@ -100,4 +99,3 @@ final class SimulatedKeyboard: ReportChannel, ChannelProvider, KeyboardConnectio
     private static let initialLighting: [UInt8] =
         [0] + KeyColor.defaultKeyColors.flatMap { [$0.red, $0.green, $0.blue] }
 }
-#endif

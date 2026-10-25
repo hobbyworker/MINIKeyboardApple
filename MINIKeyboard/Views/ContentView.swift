@@ -9,7 +9,11 @@ struct ContentView: View {
         @Bindable var editor = editor
         VStack(spacing: 0) {
             HeaderBar()
-            Divider()
+            if editor.activeSimulatorID != nil {
+                SimulatorBar()
+            } else {
+                Divider()
+            }
             KeyboardCanvas()
                 .frame(minHeight: 230, idealHeight: 300, maxHeight: .infinity)
                 .padding(.horizontal, 24)
@@ -38,6 +42,39 @@ struct ContentView: View {
             LayoutSheet()
         }
     }
+}
+
+/// While a simulated keyboard is in use, a bar across the window says so, loudly — nothing saved then reaches a
+/// keyboard — with the way back to the keyboard on USB.
+private struct SimulatorBar: View {
+    @Environment(KeyboardEditorViewModel.self) private var editor
+
+    var body: some View {
+        HStack(spacing: 14) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.title2)
+                .foregroundStyle(.white)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Simulator in use")
+                    .font(.headline.weight(.heavy))
+                Text("This isn't a real keyboard. Nothing you save here is written to any keyboard.")
+            }
+            .foregroundStyle(.white)
+            Spacer(minLength: 12)
+            Button("Back to the Keyboard on USB") {
+                Task { await editor.selectSimulator(nil) }
+            }
+        }
+        .padding(.leading, 20)
+        .padding(.trailing, 16)
+        .padding(.vertical, 10)
+        .background(Color.simulator)
+    }
+}
+
+extension Color {
+    /// The simulator's colour: the bar across the window, the keyboard's outline and badge, the header's dot.
+    static let simulator = Color(red: 0xC2 / 255, green: 0x41 / 255, blue: 0x0C / 255)
 }
 
 /// Rotation and the layout sheet, over the keyboard's corner.

@@ -15,7 +15,8 @@ public enum Activity: Hashable, Sendable {
 
 /// A message that comes and goes.
 public enum Notice: Hashable, Sendable {
-    case saved
+    /// Saved; to a simulated keyboard when `simulated` — nothing went to a real one.
+    case saved(simulated: Bool)
     case readComplete
     case nothingToSave
     case identifyFailed
@@ -34,6 +35,13 @@ public enum Notice: Hashable, Sendable {
         case .saved, .readComplete, .nothingToSave: false
         default: true
         }
+    }
+
+    /// How long it stays.
+    public var lifetime: Duration {
+        if isError { return .seconds(6) }
+        if case .saved(simulated: true) = self { return .seconds(4) }
+        return .seconds(2.5)
     }
 }
 

@@ -38,7 +38,9 @@ struct ContentView: View {
                 .padding(.top, 60)
                 .animation(.snappy, value: editor.notice)
         }
-        .sheet(isPresented: $editor.isChoosingLayout) {
+        // Only with a keyboard to choose for — an empty sheet has no way out.
+        .sheet(isPresented: Binding(get: { editor.isChoosingLayout && editor.hasLayout },
+                                    set: { editor.isChoosingLayout = $0 })) {
             LayoutSheet()
         }
     }

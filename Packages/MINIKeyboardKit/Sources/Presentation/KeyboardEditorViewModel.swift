@@ -127,6 +127,8 @@ public final class KeyboardEditorViewModel {
         identification = nil
         selection = nil
         held = []
+        // A sheet for the keyboard that went goes with it; the next one asks again if it needs to.
+        isChoosingLayout = false
         if let keyboard = state.keyboard {
             if keyboard.usb != previous?.usb { resolvedLayout = nil }
             await identify()
@@ -226,8 +228,9 @@ public final class KeyboardEditorViewModel {
         chooseLayout(shape.layout, rotation: Self.rotation(quarterTurns))
     }
 
-    /// Whether there is a layout to turn or change.
-    public var hasLayout: Bool { resolvedLayout != nil }
+    /// Whether there is a layout to turn or change — the connected keyboard's. With none connected the last one is
+    /// still drawn, dimmed, but there is nothing to change it on.
+    public var hasLayout: Bool { resolvedLayout != nil && keyboard != nil }
 
     public func rotate() {
         guard let resolved = resolvedLayout else { return }

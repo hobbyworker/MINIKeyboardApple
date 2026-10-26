@@ -216,6 +216,21 @@ struct EditorViewModelTests {
         #expect(editor.keyboardInfo == nil)
     }
 
+    /// Unplugged, the last keyboard is still drawn, but its shape can't be changed — and its sheet goes with it.
+    @Test func unpluggedTheShapeCantChange() async {
+        let editor = editor()
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.isReady }
+        #expect(editor.hasLayout)
+        #expect(editor.isChoosingLayout)
+        connection.continuation.yield(.searching)
+        await settle(editor) { editor.status == .searching }
+        #expect(editor.drawing != nil)
+        #expect(!editor.hasLayout)
+        #expect(!editor.isChoosingLayout)
+        #expect(editor.layoutSheet == nil)
+    }
+
     /// A 884x keyboard that doesn't answer picks one of the app's layouts; rotating turns the drawing.
     @Test func theLayoutSheet() async throws {
         let editor = editor()

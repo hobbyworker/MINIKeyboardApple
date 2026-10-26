@@ -41,6 +41,16 @@ Il codice sorgente di questo repository è distribuito con licenza MIT. Alcune p
 fanno parte di questo codice: il nome e l’icona. L’icona in alto è mostrata solo a titolo illustrativo: non è
 coperta dalla licenza MIT e non è inclusa nelle build ottenute da questo repository.
 
+## macOS, Windows e Linux
+
+MINIKeyboard esiste in tre edizioni costruite sulle stesse regole – le stesse tastiere, gli stessi comandi, le stesse 13 lingue.
+
+| Repository | Download |
+|---|---|
+| [**MINIKeyboardApple**](https://github.com/hobbyworker/MINIKeyboardApple)<br><img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-0A84FF?logo=apple&logoColor=white"> <img alt="Universal: Apple Silicon + Intel" src="https://img.shields.io/badge/Universal-Apple%20Silicon%20%2B%20Intel-5E5CE6"> <img alt="Swift 6" src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | `.dmg` dalla pagina [Releases](https://github.com/hobbyworker/MINIKeyboardApple/releases/latest) – si aggiorna da sola |
+| [**MINIKeyboardWin**](https://github.com/hobbyworker/MINIKeyboardWin)<br><img alt="Windows 10 (2004)+ · 11" src="https://img.shields.io/badge/Windows-10%20(2004)%2B%20·%2011-0078D4?logo=windows&logoColor=white"> <img alt="x64 · ARM64" src="https://img.shields.io/badge/x64%20·%20ARM64-5E5CE6"> <img alt=".NET 10 · WinUI 3" src="https://img.shields.io/badge/.NET%2010-WinUI%203-512BD4?logo=dotnet&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | `Setup.exe` dalla pagina [Releases](https://github.com/hobbyworker/MINIKeyboardWin/releases/latest) – si aggiorna da sola |
+| [**MINIKeyboardLinux**](https://github.com/hobbyworker/MINIKeyboardLinux)<br><img alt="Linux" src="https://img.shields.io/badge/Linux-GTK%204%20·%20libadwaita-4A86CF?logo=linux&logoColor=white"> <img alt="Flatpak: x86_64 · aarch64" src="https://img.shields.io/badge/Flatpak-x86__64%20·%20aarch64-4A90D9?logo=flatpak&logoColor=white"> <img alt="Rust" src="https://img.shields.io/badge/Rust-2024-B7410E?logo=rust&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Flatpak](https://github.com/hobbyworker/MINIKeyboardLinux#download) o un pacchetto dalla pagina [Releases](https://github.com/hobbyworker/MINIKeyboardLinux/releases/latest) – gli aggiornamenti arrivano dal centro software |
+
 ## Download
 
 L’app firmata e notarizzata si trova nella pagina [Releases](https://github.com/hobbyworker/MINIKeyboardApple/releases):

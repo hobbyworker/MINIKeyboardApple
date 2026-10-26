@@ -36,6 +36,16 @@
 이 저장소의 소스는 MIT 라이선스입니다. 배포되는 앱의 일부 — 이름과 아이콘 — 는 이 소스에 들어 있지 않습니다. 맨 위의
 아이콘은 보여 드리려고 둔 그림으로, MIT 라이선스에 포함되지 않고 이 저장소로 빌드한 앱에도 들어가지 않습니다.
 
+## macOS · Windows · 리눅스
+
+MINIKeyboard 는 같은 규칙으로 만든 세 판이 있습니다 — 같은 키보드, 같은 명령, 같은 13개 언어.
+
+| 저장소 | 내려받기 |
+|---|---|
+| [**MINIKeyboardApple**](https://github.com/hobbyworker/MINIKeyboardApple)<br><img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-0A84FF?logo=apple&logoColor=white"> <img alt="Universal: Apple Silicon + Intel" src="https://img.shields.io/badge/Universal-Apple%20Silicon%20%2B%20Intel-5E5CE6"> <img alt="Swift 6" src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Releases](https://github.com/hobbyworker/MINIKeyboardApple/releases/latest) 의 `.dmg` — 스스로 업데이트합니다 |
+| [**MINIKeyboardWin**](https://github.com/hobbyworker/MINIKeyboardWin)<br><img alt="Windows 10 (2004)+ · 11" src="https://img.shields.io/badge/Windows-10%20(2004)%2B%20·%2011-0078D4?logo=windows&logoColor=white"> <img alt="x64 · ARM64" src="https://img.shields.io/badge/x64%20·%20ARM64-5E5CE6"> <img alt=".NET 10 · WinUI 3" src="https://img.shields.io/badge/.NET%2010-WinUI%203-512BD4?logo=dotnet&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Releases](https://github.com/hobbyworker/MINIKeyboardWin/releases/latest) 의 `Setup.exe` — 스스로 업데이트합니다 |
+| [**MINIKeyboardLinux**](https://github.com/hobbyworker/MINIKeyboardLinux)<br><img alt="Linux" src="https://img.shields.io/badge/Linux-GTK%204%20·%20libadwaita-4A86CF?logo=linux&logoColor=white"> <img alt="Flatpak: x86_64 · aarch64" src="https://img.shields.io/badge/Flatpak-x86__64%20·%20aarch64-4A90D9?logo=flatpak&logoColor=white"> <img alt="Rust" src="https://img.shields.io/badge/Rust-2024-B7410E?logo=rust&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Flatpak](https://github.com/hobbyworker/MINIKeyboardLinux#download) 또는 [Releases](https://github.com/hobbyworker/MINIKeyboardLinux/releases/latest) 의 묶음 — 업데이트는 소프트웨어 센터가 합니다 |
+
 ## 내려받기
 
 서명과 공증을 거친 앱은 [Releases](https://github.com/hobbyworker/MINIKeyboardApple/releases) 에 있습니다.

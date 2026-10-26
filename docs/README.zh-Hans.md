@@ -28,6 +28,16 @@
 
 本仓库的源代码采用 MIT 许可证。所发布应用的一部分（名称和图标）不包含在此源代码中。顶部的图标仅供展示，不在 MIT 许可证的范围内，用本仓库构建的应用中也不包含它。
 
+## macOS、Windows 和 Linux
+
+MINIKeyboard 有三个按相同规则制作的版本——相同的键盘、相同的命令、相同的 13 种语言。
+
+| 仓库 | 下载 |
+|---|---|
+| [**MINIKeyboardApple**](https://github.com/hobbyworker/MINIKeyboardApple)<br><img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-0A84FF?logo=apple&logoColor=white"> <img alt="Universal: Apple Silicon + Intel" src="https://img.shields.io/badge/Universal-Apple%20Silicon%20%2B%20Intel-5E5CE6"> <img alt="Swift 6" src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Releases](https://github.com/hobbyworker/MINIKeyboardApple/releases/latest) 中的 `.dmg`——会自动更新 |
+| [**MINIKeyboardWin**](https://github.com/hobbyworker/MINIKeyboardWin)<br><img alt="Windows 10 (2004)+ · 11" src="https://img.shields.io/badge/Windows-10%20(2004)%2B%20·%2011-0078D4?logo=windows&logoColor=white"> <img alt="x64 · ARM64" src="https://img.shields.io/badge/x64%20·%20ARM64-5E5CE6"> <img alt=".NET 10 · WinUI 3" src="https://img.shields.io/badge/.NET%2010-WinUI%203-512BD4?logo=dotnet&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Releases](https://github.com/hobbyworker/MINIKeyboardWin/releases/latest) 中的 `Setup.exe`——会自动更新 |
+| [**MINIKeyboardLinux**](https://github.com/hobbyworker/MINIKeyboardLinux)<br><img alt="Linux" src="https://img.shields.io/badge/Linux-GTK%204%20·%20libadwaita-4A86CF?logo=linux&logoColor=white"> <img alt="Flatpak: x86_64 · aarch64" src="https://img.shields.io/badge/Flatpak-x86__64%20·%20aarch64-4A90D9?logo=flatpak&logoColor=white"> <img alt="Rust" src="https://img.shields.io/badge/Rust-2024-B7410E?logo=rust&logoColor=white"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"> | [Flatpak](https://github.com/hobbyworker/MINIKeyboardLinux#download)，或 [Releases](https://github.com/hobbyworker/MINIKeyboardLinux/releases/latest) 中的 Flatpak 包——通过软件中心更新 |
+
 ## 下载
 
 经过签名和公证的应用可在 [Releases](https://github.com/hobbyworker/MINIKeyboardApple/releases) 获取。打开 `MINIKeyboard-<版本>.dmg`，将 MINIKeyboard 拖到“应用程序”文件夹。应用会自动检查更新（设置 ▸ 通用），也可以在应用菜单中手动选择**检查更新…**。

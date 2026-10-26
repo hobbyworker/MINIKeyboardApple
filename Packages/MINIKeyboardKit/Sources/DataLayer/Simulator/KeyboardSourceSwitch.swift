@@ -30,7 +30,10 @@ public final class KeyboardSourceSwitch: KeyboardConnectionRepository, KeyboardS
     private var hardware: HardwareConnection?
     private var simulated: [SimulatedModel: SimulatedKeyboard] = [:]
     private let state = StateBroadcaster(ConnectionState.searching)
+    /// The keyboards on USB to choose from — none while a simulated keyboard is in use.
+    private let attached = StateBroadcaster(AttachedKeyboards.none)
     private var forwarding: Task<Void, Never>?
+    private var forwardingAttached: Task<Void, Never>?
 
     public init(log: DeviceLogStore, initial: KeyboardSource = .hardware) {
         self.log = log
@@ -46,11 +49,19 @@ public final class KeyboardSourceSwitch: KeyboardConnectionRepository, KeyboardS
         await backend(for: source).connection.retry()
     }
 
+    public func attachedKeyboards() async -> AsyncStream<AttachedKeyboards> {
+        attached.stream()
+    }
+
+    public func selectKeyboard(_ id: AttachedKeyboard.ID) async {
+        guard case .hardware = source, let hardware else { return }
+        await hardware.selectKeyboard(id)
+    }
+
     public func current() async -> KeyboardSource { source }
 
     public func select(_ new: KeyboardSource) async {
         guard new != source else { return }
-        forwarding?.cancel()
         source = new
         state.set(.searching)
         follow(backend(for: new))
@@ -75,11 +86,20 @@ public final class KeyboardSourceSwitch: KeyboardConnectionRepository, KeyboardS
     }
 
     private func follow(_ backend: Backend) {
+        forwarding?.cancel()
+        forwardingAttached?.cancel()
         let connection = backend.connection
+        attached.set(.none)
         forwarding = Task { [weak self] in
             for await state in await connection.connectionStates() {
                 guard let self, !Task.isCancelled else { return }
                 self.state.set(state)
+            }
+        }
+        forwardingAttached = Task { [weak self] in
+            for await keyboards in await connection.attachedKeyboards() {
+                guard let self, !Task.isCancelled else { return }
+                self.attached.set(keyboards)
             }
         }
     }

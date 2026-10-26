@@ -25,6 +25,8 @@ public final class KeyboardEditorViewModel {
     private(set) var held: Modifiers = []
     /// The keyboard on USB, or a simulated one.
     private(set) var source: KeyboardSource = .hardware
+    /// The keyboards on USB and the one open.
+    private(set) var attached: AttachedKeyboards = .none
 
     @ObservationIgnored private let observeConnection: ObserveConnectionUseCase
     @ObservationIgnored private let retryConnectionUseCase: RetryConnectionUseCase
@@ -34,6 +36,8 @@ public final class KeyboardEditorViewModel {
     @ObservationIgnored private let readKeyboard: ReadKeyboardUseCase
     @ObservationIgnored private let saveKeyboard: SaveKeyboardUseCase
     @ObservationIgnored private let keyboardSource: KeyboardSourceUseCase?
+    @ObservationIgnored private let observeAttachedKeyboards: ObserveAttachedKeyboardsUseCase?
+    @ObservationIgnored private let selectKeyboardUseCase: SelectKeyboardUseCase?
     @ObservationIgnored private let appendStroke = AppendStrokeUseCase()
     @ObservationIgnored private let removeLastStrokeUseCase = RemoveLastStrokeUseCase()
     @ObservationIgnored private let setAction = SetActionUseCase()
@@ -42,13 +46,15 @@ public final class KeyboardEditorViewModel {
     @ObservationIgnored private let clear = ClearUseCase()
     @ObservationIgnored private let setLighting = SetLightingUseCase()
     @ObservationIgnored private var connectionTask: Task<Void, Never>?
+    @ObservationIgnored private var attachedTask: Task<Void, Never>?
     @ObservationIgnored private var noticeTask: Task<Void, Never>?
 
     public init(
         observeConnection: ObserveConnectionUseCase, retryConnection: RetryConnectionUseCase,
         identifyKeyboard: IdentifyKeyboardUseCase, resolveLayout: ResolveLayoutUseCase,
         chooseLayout: ChooseLayoutUseCase, readKeyboard: ReadKeyboardUseCase, saveKeyboard: SaveKeyboardUseCase,
-        keyboardSource: KeyboardSourceUseCase? = nil
+        keyboardSource: KeyboardSourceUseCase? = nil, observeAttachedKeyboards: ObserveAttachedKeyboardsUseCase? = nil,
+        selectKeyboard: SelectKeyboardUseCase? = nil
     ) {
         self.observeConnection = observeConnection
         retryConnectionUseCase = retryConnection
@@ -58,11 +64,20 @@ public final class KeyboardEditorViewModel {
         self.readKeyboard = readKeyboard
         self.saveKeyboard = saveKeyboard
         self.keyboardSource = keyboardSource
+        self.observeAttachedKeyboards = observeAttachedKeyboards
+        selectKeyboardUseCase = selectKeyboard
     }
 
-    /// Follows the keyboard; one that comes is identified at once.
+    /// Follows the keyboard, and the keyboards plugged in; one that comes is identified at once.
     public func start() {
         guard connectionTask == nil else { return }
+        if let observeAttachedKeyboards {
+            attachedTask = Task { [weak self] in
+                for await keyboards in await observeAttachedKeyboards.execute() {
+                    self?.attached = keyboards
+                }
+            }
+        }
         let observeConnection = observeConnection
         let keyboardSource = keyboardSource
         connectionTask = Task { [weak self] in
@@ -349,6 +364,11 @@ public final class KeyboardEditorViewModel {
     public var activeSimulatorID: String? {
         if case .simulated(let model) = source { return model.id }
         return nil
+    }
+
+    /// Opens another of the keyboards plugged in. The switch reports "searching" first, as after re-plugging.
+    public func selectKeyboard(_ id: String) async {
+        await selectKeyboardUseCase?.execute(id)
     }
 
     /// Switches to a simulated keyboard, or with nil to the keyboard on USB. The switch reports "searching"

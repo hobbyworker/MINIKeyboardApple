@@ -3,8 +3,9 @@ import IOKit
 import IOKit.hid
 import Domain
 
-/// Finds a supported keyboard and keeps its configuration interface open, following IOKit's arrival and
-/// removal notifications where the vendor tools poll.
+/// Finds the supported keyboards plugged in and keeps one's configuration interface open — the one chosen
+/// (`KeyboardChoice`) — following IOKit's arrival and removal notifications where the vendor tools poll. The others
+/// are left alone, so another app can have them.
 ///
 /// - The 1189:8890's interface 1 has no driver; it is opened through IOUSBHost (`USBPipeChannel`).
 /// - A 884x keyboard's interface 0 is a HID device, opened through IOKit HID (`HIDDeviceChannel`), as the
@@ -12,9 +13,15 @@ import Domain
 @MainActor
 public final class HardwareConnection: KeyboardConnectionRepository, ChannelProvider {
     private let log: DeviceLogStore
+    private let defaults: UserDefaults
     private let state = StateBroadcaster(ConnectionState.searching)
+    private let attached = StateBroadcaster(AttachedKeyboards.none)
     private var channel: Channel?
     private var connectedEntry: UInt64?
+    /// The keyboard `channel` is open on.
+    private var connectedKeyboard: AttachedKeyboard.ID?
+    /// The one the user chose this session; nil once it is unplugged — the app doesn't go back to it by itself.
+    private var chosen: AttachedKeyboard.ID?
     private var opening = false
     private var failedEntries: Set<UInt64> = []
     private var notificationPort: IONotificationPortRef?
@@ -44,8 +51,12 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
     /// kIOReturnNotPermitted: Input Monitoring is not allowed.
     private static let notPermitted = IOReturn(bitPattern: 0xE000_02E2)
 
-    public init(log: DeviceLogStore) {
+    /// Where the keyboard chosen last time is kept (`KeyboardChoice.key`).
+    private static let rememberedKey = "SelectedKeyboard"
+
+    public init(log: DeviceLogStore, defaults: UserDefaults = .standard) {
         self.log = log
+        self.defaults = defaults
         let port = IONotificationPortCreate(kIOMainPortDefault)
         IONotificationPortSetDispatchQueue(port, .main)
         notificationPort = port
@@ -80,6 +91,21 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
         refresh()
     }
 
+    public func attachedKeyboards() async -> AsyncStream<AttachedKeyboards> {
+        attached.stream()
+    }
+
+    public func selectKeyboard(_ id: AttachedKeyboard.ID) async {
+        guard let keyboard = attached.value.keyboards.first(where: { $0.id == id }) else { return }
+        chosen = id
+        defaults.set(KeyboardChoice.key(keyboard), forKey: Self.rememberedKey)
+        guard connectedKeyboard != id else { return }
+        closeChannel()
+        failedEntries.removeAll()
+        setState(.searching)
+        refresh()
+    }
+
     var openChannel: (any ReportChannel)? { channel?.reportChannel }
 
     private func setState(_ new: ConnectionState) {
@@ -104,6 +130,8 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
         let usb: USBIdentity
         let family: KeyboardFamily
         let interfaceNumber: Int?
+        /// The keyboard it is on.
+        let keyboard: AttachedKeyboard
     }
 
     private func refresh() {
@@ -111,13 +139,29 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
         defer { candidates.forEach { IOObjectRelease($0.service) } }
         let present = Set(candidates.map(\.entry))
         failedEntries.formIntersection(present)
+        let keyboards = KeyboardChoice.ordered(candidates.map(\.keyboard))
+        if let chosen, !keyboards.contains(where: { $0.id == chosen }) { self.chosen = nil }
 
         if let connectedEntry {
-            if !present.contains(connectedEntry) { disconnect() }
+            if present.contains(connectedEntry) {
+                publish(keyboards, selected: connectedKeyboard)
+                return
+            }
+            closeChannel()
+            setState(.searching)
+        }
+        guard !opening else {
+            publish(keyboards, selected: attached.value.selected)
             return
         }
-        guard !opening else { return }
-        guard let candidate = candidates.first(where: { !failedEntries.contains($0.entry) }) else {
+        let failed = failedEntries
+        let target = KeyboardChoice.target(
+            keyboards, chosen: chosen, remembered: defaults.string(forKey: Self.rememberedKey),
+            canOpen: { keyboard in candidates.contains { $0.keyboard.id == keyboard.id && !failed.contains($0.entry) } })
+        publish(keyboards, selected: target?.id)
+        guard let target,
+              let candidate = candidates.first(where: { $0.keyboard.id == target.id && !failed.contains($0.entry) })
+        else {
             // A failure stays on screen while that keyboard is still plugged in.
             switch state.value {
             case .needsPermission, .openFailed: if !present.isEmpty { return }
@@ -167,6 +211,12 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
         switch result {
         case .success(let opened):
             let channel = USBPipeChannel.make(opened)
+            // Another keyboard was chosen while this one was opening.
+            if let chosen, chosen != candidate.keyboard.id {
+                channel.close()
+                refresh()
+                return
+            }
             var details = Self.deviceDetails(candidate.service)
             details?.maxPower = opened.maxPower
             connected(candidate, .usb(channel), keyboard: ConnectedKeyboard(
@@ -219,15 +269,19 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
     private func connected(_ candidate: Candidate, _ channel: Channel, keyboard: ConnectedKeyboard) {
         self.channel = channel
         connectedEntry = candidate.entry
+        connectedKeyboard = candidate.keyboard.id
         setState(.connected(keyboard))
     }
 
-    private func disconnect() {
+    private func closeChannel() {
         channel?.close()
         channel = nil
         connectedEntry = nil
-        setState(.searching)
-        refresh()
+        connectedKeyboard = nil
+    }
+
+    private func publish(_ keyboards: [AttachedKeyboard], selected: AttachedKeyboard.ID?) {
+        attached.set(AttachedKeyboards(keyboards: keyboards, selected: selected))
     }
 
     /// Once the user allows Input Monitoring, opens the keyboard without a relaunch.
@@ -258,16 +312,23 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
                   let number = registryNumber(interface, "bInterfaceNumber"), number == family.configurationInterface,
                   !hasDriver(interface)
             else { return }
+            guard let keyboard = attachedKeyboard(interface, usb: usb) else { return }
             IOObjectRetain(interface)
-            found.append(Candidate(kind: .usb, service: interface, entry: entryID(interface), usb: usb, family: family, interfaceNumber: number))
+            found.append(Candidate(
+                kind: .usb, service: interface, entry: entryID(interface), usb: usb, family: family,
+                interfaceNumber: number, keyboard: keyboard))
         }
         var hid: [Candidate] = []
         forEachService("IOHIDDevice") { device in
             guard let usb = usbIdentity(device), let family = KeyboardFamily(usb: usb), family == .k884x else { return }
             let number = interfaceNumber(of: device)
-            guard number == nil || number == family.configurationInterface else { return }
+            guard number == nil || number == family.configurationInterface,
+                  let keyboard = attachedKeyboard(device, usb: usb)
+            else { return }
             IOObjectRetain(device)
-            hid.append(Candidate(kind: .hid, service: device, entry: entryID(device), usb: usb, family: family, interfaceNumber: number))
+            hid.append(Candidate(
+                kind: .hid, service: device, entry: entryID(device), usb: usb, family: family, interfaceNumber: number,
+                keyboard: keyboard))
         }
         let order = KeyboardFamily.supported
         hid.sort { a, b in
@@ -275,6 +336,24 @@ public final class HardwareConnection: KeyboardConnectionRepository, ChannelProv
                 < ((b.interfaceNumber == nil ? 1 : 0), order.firstIndex(of: b.usb) ?? 99)
         }
         return found + hid
+    }
+
+    /// The keyboard `service` is on: the USB device above it in the registry, and the port it is plugged into
+    /// (`locationID`, which stays the same when the keyboard is plugged into the same port again).
+    nonisolated private static func attachedKeyboard(_ service: io_service_t, usb: USBIdentity) -> AttachedKeyboard? {
+        var entry = service
+        var owned: [io_registry_entry_t] = []
+        defer { owned.forEach { IOObjectRelease($0) } }
+        while IOObjectConformsTo(entry, "IOUSBHostDevice") == 0 {
+            var parent: io_registry_entry_t = 0
+            guard IORegistryEntryGetParentEntry(entry, kIOServicePlane, &parent) == KERN_SUCCESS else { return nil }
+            owned.append(parent)
+            entry = parent
+        }
+        let device = entryID(entry)
+        let hex = String(UInt32(truncatingIfNeeded: registryNumber(entry, "locationID") ?? 0), radix: 16)
+        let location = String(repeating: "0", count: max(0, 8 - hex.count)) + hex
+        return AttachedKeyboard(id: String(device), usb: usb, location: location)
     }
 
     nonisolated private static func forEachService(_ serviceClass: String, _ body: (io_service_t) -> Void) {

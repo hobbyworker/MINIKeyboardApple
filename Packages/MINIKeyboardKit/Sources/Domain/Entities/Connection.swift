@@ -34,6 +34,36 @@ public struct ConnectedKeyboard: Hashable, Sendable {
     }
 }
 
+/// A supported keyboard plugged in — one the app can open. Several can be plugged in; the app opens one at a time.
+public struct AttachedKeyboard: Hashable, Sendable, Identifiable {
+    /// Which keyboard it is while it stays plugged in.
+    public let id: String
+    public let usb: USBIdentity
+    /// Where it is plugged in — a USB port path. These keyboards carry no serial number, so this is what tells two
+    /// with the same USB ID apart, and what finds the one chosen last time again.
+    public let location: String
+
+    public init(id: String, usb: USBIdentity, location: String) {
+        self.id = id
+        self.usb = usb
+        self.location = location
+    }
+}
+
+/// The supported keyboards plugged in, in the order the app looks at them, and the one it opens.
+public struct AttachedKeyboards: Hashable, Sendable {
+    public var keyboards: [AttachedKeyboard]
+    /// The one open, being opened or that failed to open; nil when none is plugged in.
+    public var selected: AttachedKeyboard.ID?
+
+    public init(keyboards: [AttachedKeyboard], selected: AttachedKeyboard.ID?) {
+        self.keyboards = keyboards
+        self.selected = selected
+    }
+
+    public static let none = AttachedKeyboards(keyboards: [], selected: nil)
+}
+
 public enum ConnectionState: Hashable, Sendable {
     case searching
     case connected(ConnectedKeyboard)

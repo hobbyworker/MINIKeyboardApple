@@ -167,6 +167,21 @@ extension KeyboardEditorViewModel {
         }
     }
 
+    // MARK: - Keyboards on USB
+
+    /// The keyboards plugged in, to choose which is open — only when there is more than one.
+    public var keyboardChoices: [KeyboardChoice] {
+        let keyboards = attached.keyboards
+        guard keyboards.count > 1 else { return [] }
+        var seen: [USBIdentity: Int] = [:]
+        return keyboards.map { keyboard in
+            let sameID = keyboards.filter { $0.usb == keyboard.usb }.count
+            seen[keyboard.usb, default: 0] += 1
+            let title = sameID > 1 ? "\(keyboard.usb) (\(seen[keyboard.usb] ?? 1))" : keyboard.usb.description
+            return KeyboardChoice(id: keyboard.id, title: title, isSelected: keyboard.id == attached.selected)
+        }
+    }
+
     // MARK: - Layout sheet
 
     public var layoutSheet: LayoutSheetState? {

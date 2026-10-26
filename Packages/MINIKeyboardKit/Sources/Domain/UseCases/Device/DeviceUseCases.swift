@@ -11,6 +11,32 @@ public struct ObserveConnectionUseCase: Sendable {
     }
 }
 
+/// Follows the supported keyboards plugged in and the one the app opens.
+public struct ObserveAttachedKeyboardsUseCase: Sendable {
+    private let repository: any KeyboardConnectionRepository
+
+    public init(repository: any KeyboardConnectionRepository) {
+        self.repository = repository
+    }
+
+    public func execute() async -> AsyncStream<AttachedKeyboards> {
+        await repository.attachedKeyboards()
+    }
+}
+
+/// Opens another of the keyboards plugged in.
+public struct SelectKeyboardUseCase: Sendable {
+    private let repository: any KeyboardConnectionRepository
+
+    public init(repository: any KeyboardConnectionRepository) {
+        self.repository = repository
+    }
+
+    public func execute(_ id: AttachedKeyboard.ID) async {
+        await repository.selectKeyboard(id)
+    }
+}
+
 /// Looks for the keyboard again.
 public struct RetryConnectionUseCase: Sendable {
     private let repository: any KeyboardConnectionRepository

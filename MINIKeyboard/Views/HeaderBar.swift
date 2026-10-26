@@ -44,7 +44,8 @@ struct HeaderBar: View {
     }
 }
 
-/// A dot, what the app is doing with the keyboard, and the keyboard's USB ID.
+/// A dot, what the app is doing with the keyboard, and the keyboard's USB ID — with several plugged in, a menu to
+/// choose which one the app opens.
 struct ConnectionStatusView: View {
     @Environment(KeyboardEditorViewModel.self) private var editor
     @Environment(\.openURL) private var openURL
@@ -63,6 +64,26 @@ struct ConnectionStatusView: View {
                 detail
                     .font(.caption)
                     .foregroundStyle(.secondary)
+            }
+            let choices = editor.keyboardChoices
+            if !choices.isEmpty {
+                Menu {
+                    ForEach(choices) { choice in
+                        Toggle(isOn: Binding(
+                            get: { choice.isSelected },
+                            set: { if $0 { Task { await editor.selectKeyboard(choice.id) } } }
+                        )) {
+                            Text(verbatim: choice.title)
+                        }
+                    }
+                } label: {
+                    Image(systemName: "chevron.up.chevron.down")
+                }
+                .menuStyle(.borderlessButton)
+                .menuIndicator(.hidden)
+                .fixedSize()
+                .help(Text("Choose a Keyboard"))
+                .accessibilityLabel(Text("Choose a Keyboard"))
             }
             switch editor.status {
             case .connected(_, _, _, let isIdentified, _):

@@ -5,6 +5,24 @@ public protocol KeyboardConnectionRepository: Sendable {
 
     /// Looks for the keyboard again — after Input Monitoring was allowed, or another app let go of it.
     func retry() async
+
+    /// The supported keyboards plugged in and the one the app opens, then every change.
+    func attachedKeyboards() async -> AsyncStream<AttachedKeyboards>
+
+    /// Opens another of the keyboards plugged in, in place of the one open now, and keeps it for next time.
+    func selectKeyboard(_ id: AttachedKeyboard.ID) async
+}
+
+extension KeyboardConnectionRepository {
+    /// A connection with one keyboard only — a simulated one — has no others to choose from.
+    public func attachedKeyboards() async -> AsyncStream<AttachedKeyboards> {
+        AsyncStream { continuation in
+            continuation.yield(.none)
+            continuation.finish()
+        }
+    }
+
+    public func selectKeyboard(_ id: AttachedKeyboard.ID) async {}
 }
 
 /// Talking to the open keyboard.

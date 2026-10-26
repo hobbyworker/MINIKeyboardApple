@@ -326,6 +326,14 @@ public enum InterfaceRole: Hashable, Sendable {
     case keyboard, mouse, media, configuration, other
 }
 
+/// One of the keyboards plugged in, to choose which the app opens.
+public struct KeyboardChoice: Hashable, Sendable, Identifiable {
+    public let id: String
+    /// Its USB ID — "1189:8890" — numbered by port when more than one with that ID is plugged in: "1189:8890 (2)".
+    public let title: String
+    public let isSelected: Bool
+}
+
 /// A keyboard the simulator can play.
 public struct SimulatorChoice: Hashable, Sendable, Identifiable {
     public enum Group: CaseIterable, Hashable, Sendable {

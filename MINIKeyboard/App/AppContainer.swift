@@ -32,7 +32,9 @@ final class AppContainer {
             chooseLayout: ChooseLayoutUseCase(profiles: profiles),
             readKeyboard: ReadKeyboardUseCase(repository: device),
             saveKeyboard: SaveKeyboardUseCase(repository: device),
-            keyboardSource: keyboardSource)
+            keyboardSource: keyboardSource,
+            observeAttachedKeyboards: ObserveAttachedKeyboardsUseCase(repository: connection),
+            selectKeyboard: SelectKeyboardUseCase(repository: connection))
         deviceLog = DeviceLogViewModel(log: DeviceLogUseCase(repository: log))
         editor.start()
         deviceLog.start()

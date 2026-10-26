@@ -14,6 +14,13 @@ final class FakeConnection: KeyboardConnectionRepository, @unchecked Sendable {
 
     func connectionStates() async -> AsyncStream<ConnectionState> { stream }
     func retry() async {}
+
+    /// The keyboards plugged in, sent when a test says so.
+    let attached = AsyncStream.makeStream(of: AttachedKeyboards.self)
+    private(set) var selected: [AttachedKeyboard.ID] = []
+
+    func attachedKeyboards() async -> AsyncStream<AttachedKeyboards> { attached.stream }
+    func selectKeyboard(_ id: AttachedKeyboard.ID) async { selected.append(id) }
 }
 
 final class FakeDevice: KeyboardDeviceRepository, @unchecked Sendable {
@@ -67,7 +74,9 @@ struct EditorViewModelTests {
             retryConnection: RetryConnectionUseCase(repository: connection),
             identifyKeyboard: IdentifyKeyboardUseCase(repository: device, attempts: 1),
             resolveLayout: ResolveLayoutUseCase(profiles: profiles), chooseLayout: ChooseLayoutUseCase(profiles: profiles),
-            readKeyboard: ReadKeyboardUseCase(repository: device), saveKeyboard: SaveKeyboardUseCase(repository: device))
+            readKeyboard: ReadKeyboardUseCase(repository: device), saveKeyboard: SaveKeyboardUseCase(repository: device),
+            observeAttachedKeyboards: ObserveAttachedKeyboardsUseCase(repository: connection),
+            selectKeyboard: SelectKeyboardUseCase(repository: connection))
         editor.start()
         return editor
     }
@@ -214,6 +223,27 @@ struct EditorViewModelTests {
         #expect(editor.selectedControl == nil)
         #expect(!editor.isReady)
         #expect(editor.keyboardInfo == nil)
+    }
+
+    /// With several keyboards plugged in, each is a choice — those with the same USB ID numbered — and choosing one
+    /// asks the connection to open it. One keyboard alone is no choice.
+    @Test func severalKeyboardsAreChoices() async {
+        let editor = editor()
+        let first = AttachedKeyboard(id: "a", usb: Self.k8890.usb, location: "01100000")
+        let second = AttachedKeyboard(id: "b", usb: Self.k8890.usb, location: "02100000")
+        let third = AttachedKeyboard(id: "c", usb: Self.k8840.usb, location: "03100000")
+        connection.attached.continuation.yield(AttachedKeyboards(keyboards: [first], selected: "a"))
+        await settle(editor) { false }
+        #expect(editor.keyboardChoices.isEmpty)
+        connection.attached.continuation.yield(AttachedKeyboards(keyboards: [first, second, third], selected: "b"))
+        await settle(editor) { editor.keyboardChoices.count == 3 }
+        #expect(editor.keyboardChoices == [
+            KeyboardChoice(id: "a", title: "1189:8890 (1)", isSelected: false),
+            KeyboardChoice(id: "b", title: "1189:8890 (2)", isSelected: true),
+            KeyboardChoice(id: "c", title: "1189:8840", isSelected: false),
+        ])
+        await editor.selectKeyboard("c")
+        #expect(connection.selected == ["c"])
     }
 
     /// Unplugged, the last keyboard is still drawn, but its shape can't be changed — and its sheet goes with it.

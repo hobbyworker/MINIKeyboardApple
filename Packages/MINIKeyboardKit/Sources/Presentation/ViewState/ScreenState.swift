@@ -194,8 +194,9 @@ public struct LayoutChoice: Hashable, Sendable, Identifiable {
 /// the answer. Nothing is guessed: what the keyboard doesn't say is nil.
 public struct KeyboardInfo: Hashable, Sendable {
     public enum Firmware: Hashable, Sendable {
-        /// What a 884x keyboard answered: the type, keys and knobs.
-        case reported(type: Int, keys: Int, knobs: Int)
+        /// What a 884x keyboard answered: the type, keys and knobs, and whether the app knows a keyboard of that type
+        /// (`KeyboardIdentity.isKnownType`) — one it doesn't is shown as not tested yet.
+        case reported(type: Int, keys: Int, knobs: Int, isKnownType: Bool)
         /// `bcdDevice`, "1.02".
         case release(String)
         case unknown
@@ -231,7 +232,8 @@ public struct KeyboardInfo: Hashable, Sendable {
     public enum Commands: Hashable, Sendable {
         /// The 1189:8890's packets.
         case packets(reportID: Int)
-        /// A 884x keyboard's records: on the standard firmware, the legacy one, or one that doesn't answer.
+        /// A 884x keyboard's records: on the standard firmware (type 10 or above), the legacy one, or one that doesn't
+        /// answer.
         case standard, legacy, unidentified
         /// Not known yet.
         case unknown
@@ -257,7 +259,8 @@ public struct KeyboardInfo: Hashable, Sendable {
         manufacturer = details?.manufacturer
         serialNumber = details?.serialNumber
         if let identity = identification?.identity {
-            firmware = .reported(type: identity.type, keys: identity.keyCount, knobs: identity.knobCount)
+            firmware = .reported(type: identity.type, keys: identity.keyCount, knobs: identity.knobCount,
+                                 isKnownType: identity.isKnownType)
         } else if let release = details?.deviceRelease, release != 0 {
             firmware = .release(String(format: "%X.%02X", release >> 8, release & 0xFF))
         } else {

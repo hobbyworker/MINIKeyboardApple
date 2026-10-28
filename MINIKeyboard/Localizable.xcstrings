@@ -487,78 +487,79 @@
         }
       }
     },
-    "884x · Standard Firmware (Type 10)" : {
+    "884x · Standard Firmware" : {
+      "comment" : "Keyboard info, the commands a 884x keyboard of the standard record format takes (type 10 or above).",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Standard-Firmware (Typ 10)"
+            "value" : "884x · Standard-Firmware"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Firmware estándar (tipo 10)"
+            "value" : "884x · Firmware estándar"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Programme interne standard (type 10)"
+            "value" : "884x · Programme interne standard"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Firmware standar (jenis 10)"
+            "value" : "884x · Firmware standar"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Firmware standard (tipo 10)"
+            "value" : "884x · Firmware standard"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · 標準ファームウェア（種類 10）"
+            "value" : "884x · 標準ファームウェア"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · 표준 펌웨어 (종류 10)"
+            "value" : "884x · 표준 펌웨어"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Standardowe oprogramowanie sprzętowe (typ 10)"
+            "value" : "884x · Standardowe oprogramowanie sprzętowe"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Firmware padrão (tipo 10)"
+            "value" : "884x · Firmware padrão"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · Chương trình cơ sở chuẩn (loại 10)"
+            "value" : "884x · Chương trình cơ sở chuẩn"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · 标准固件（类型 10）"
+            "value" : "884x · 标准固件"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "884x · 標準韌體（類型 10）"
+            "value" : "884x · 標準韌體"
           }
         }
       }
@@ -2469,16 +2470,64 @@
     },
     "Changes you haven’t saved will be lost." : {
       "localizations" : {
-        "ko" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "저장하지 않은 변경 사항이 사라집니다."
+            "value" : "Nicht gesicherte Änderungen gehen verloren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los cambios sin guardar se perderán."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les modifications non enregistrées seront perdues."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perubahan yang belum disimpan akan hilang."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le modifiche non salvate andranno perse."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "保存していない変更は失われます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장하지 않은 변경 사항이 사라집니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niezachowane zmiany zostaną utracone."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As alterações não salvas serão perdidas."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các thay đổi chưa lưu sẽ bị mất."
           }
         },
         "zh-Hans" : {
@@ -2491,54 +2540,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未儲存的變更將會遺失。"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Los cambios sin guardar se perderán."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "As alterações não salvas serão perdidas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les modifications non enregistrées seront perdues."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicht gesicherte Änderungen gehen verloren."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le modifiche non salvate andranno perse."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Niezachowane zmiany zostaną utracone."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Perubahan yang belum disimpan akan hilang."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Các thay đổi chưa lưu sẽ bị mất."
           }
         }
       }
@@ -11093,6 +11094,83 @@
         }
       }
     },
+    "Not tested yet" : {
+      "comment" : "Keyboard info, under the firmware: the keyboard's type byte is one the app has not seen.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch nicht getestet"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no probado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore testé"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum diuji"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non ancora provato"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未テスト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 시험하지 못함"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze nie przetestowano"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ainda não testado"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa kiểm thử"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未测试"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未測試"
+          }
+        }
+      }
+    },
     "Nothing" : {
       "localizations" : {
         "de" : {
@@ -14597,6 +14675,160 @@
         }
       }
     },
+    "Saved, but some keys or knobs read back differently. Those changes stay unsaved." : {
+      "comment" : "Notice after saving: reading the saved layers back found keys or knobs that differ from what was written.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesichert, doch beim erneuten Lesen weichen einige Tasten oder Drehknöpfe ab. Diese Änderungen bleiben ungesichert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado, pero al volver a leerlo algunas teclas o botones giratorios son distintos. Esos cambios siguen sin guardar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistré, mais à la relecture certaines touches ou certains boutons rotatifs diffèrent. Ces modifications restent non enregistrées."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disimpan, tetapi saat dibaca ulang beberapa tombol atau kenop berbeda. Perubahan itu tetap belum disimpan."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvato, ma rileggendo alcuni tasti o manopole risultano diversi. Queste modifiche restano non salvate."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存しましたが、読み込み直すと一部のキーやノブが異なります。その変更は保存していないものとして残します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장했지만 다시 읽어 보니 일부 키와 노브가 다릅니다. 그 변경 사항은 저장하지 않은 것으로 남겨 둡니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zachowano, ale po ponownym odczycie niektóre klawisze lub pokrętła się różnią. Te zmiany pozostają niezachowane."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvo, mas ao ler de novo algumas teclas ou botões giratórios estão diferentes. Essas alterações continuam não salvas."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã lưu, nhưng khi đọc lại, một số phím hoặc núm xoay khác đi. Các thay đổi đó vẫn được giữ là chưa lưu."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存，但重新读取后部分按键或旋钮不一致。这些更改仍保留为未保存。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已儲存，但重新讀取後部分按鍵或旋鈕不一致。這些變更仍保留為未儲存。"
+          }
+        }
+      }
+    },
+    "Saved, but the keyboard couldn’t be read back to check." : {
+      "comment" : "Notice after saving: the saved layers could not be read back to compare.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesichert, aber die Tastatur ließ sich zur Kontrolle nicht erneut lesen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado, pero no se ha podido volver a leer el teclado para comprobarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistré, mais impossible de relire le clavier pour vérifier."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disimpan, tetapi papan ketik tidak dapat dibaca ulang untuk memeriksanya."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvato, ma non è stato possibile rileggere la tastiera per verificarlo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存しましたが、キーボードから読み込み直して確認することはできませんでした。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장했지만 키보드에서 다시 읽어 확인하지는 못했습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zachowano, ale nie udało się ponownie odczytać klawiatury, aby to sprawdzić."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvo, mas não foi possível ler o teclado de novo para conferir."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã lưu, nhưng không thể đọc lại bàn phím để kiểm tra."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存，但无法重新读取键盘进行核对。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已儲存，但無法重新讀取鍵盤進行核對。"
+          }
+        }
+      }
+    },
     "Saving…" : {
       "localizations" : {
         "de" : {
@@ -15817,6 +16049,83 @@
         }
       }
     },
+    "Some keys or knobs couldn’t be read. They’re shown as before." : {
+      "comment" : "Notice after reading: the keyboard stopped answering before every key and knob was read.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einige Tasten oder Drehknöpfe ließen sich nicht lesen. Sie werden wie zuvor angezeigt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se han podido leer algunas teclas o botones giratorios. Se muestran como antes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Certaines touches ou certains boutons rotatifs n’ont pas pu être lus. Ils sont affichés comme avant."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beberapa tombol atau kenop tidak dapat dibaca. Semuanya ditampilkan seperti sebelumnya."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non è stato possibile leggere alcuni tasti o manopole. Sono mostrati come prima."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一部のキーやノブを読み込めませんでした。それらは以前のまま表示しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일부 키와 노브를 읽지 못했습니다. 그 자리는 전과 같이 보입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się odczytać niektórych klawiszy lub pokręteł. Są pokazane tak jak wcześniej."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível ler algumas teclas ou botões giratórios. Eles aparecem como antes."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể đọc một số phím hoặc núm xoay. Chúng vẫn hiển thị như trước."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部分按键或旋钮未能读取，仍按之前的内容显示。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部分按鍵或旋鈕未能讀取，仍按之前的內容顯示。"
+          }
+        }
+      }
+    },
     "Stop" : {
       "localizations" : {
         "de" : {
@@ -15895,16 +16204,64 @@
     },
     "Switch" : {
       "localizations" : {
-        "ko" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "바꾸기"
+            "value" : "Wechseln"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambiar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changer"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganti"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambia"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "切り替える"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바꾸기"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmień"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trocar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển"
           }
         },
         "zh-Hans" : {
@@ -15918,69 +16275,69 @@
             "state" : "translated",
             "value" : "切換"
           }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cambiar"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trocar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Changer"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wechseln"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cambia"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zmień"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ganti"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chuyển"
-          }
         }
       }
     },
     "Switch Keyboards?" : {
       "localizations" : {
-        "ko" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "키보드를 바꿀까요?"
+            "value" : "Tastatur wechseln?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cambiar de teclado?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changer de clavier ?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganti Papan Ketik?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambiare tastiera?"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "キーボードを切り替えますか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "키보드를 바꿀까요?"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmienić klawiaturę?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trocar de Teclado?"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển bàn phím?"
           }
         },
         "zh-Hans" : {
@@ -15993,54 +16350,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "要切換鍵盤嗎？"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Cambiar de teclado?"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trocar de Teclado?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Changer de clavier ?"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tastatur wechseln?"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cambiare tastiera?"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zmienić klawiaturę?"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ganti Papan Ketik?"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chuyển bàn phím?"
           }
         }
       }
@@ -17107,6 +17416,83 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "此鍵盤無法設定該按鍵。"
+          }
+        }
+      }
+    },
+    "This keyboard’s firmware (type %lld) hasn’t been tested yet. If keys read or save wrong, please report it with the device log." : {
+      "comment" : "Notice when a keyboard identifies with a type byte the app has not seen. %lld is that type.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Firmware dieser Tastatur (Typ %lld) wurde noch nicht getestet. Werden Tasten falsch gelesen oder gesichert, melde es bitte mit dem Geräteprotokoll."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El firmware de este teclado (tipo %lld) aún no se ha probado. Si las teclas se leen o se guardan mal, avísanos con el registro del dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le programme interne de ce clavier (type %lld) n’a pas encore été testé. Si les touches sont mal lues ou mal enregistrées, signalez-le avec le journal de l’appareil."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firmware papan ketik ini (jenis %lld) belum pernah diuji. Jika tombol terbaca atau tersimpan dengan salah, laporkan bersama log perangkat."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il firmware di questa tastiera (tipo %lld) non è ancora stato provato. Se i tasti vengono letti o salvati in modo errato, segnalalo con il registro dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このキーボードのファームウェア（種類 %lld）はまだテストしていません。キーの読み込みや保存がおかしい場合は、デバイスログを添えてお知らせください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 키보드의 펌웨어(종류 %lld)는 아직 시험해 보지 못했습니다. 키를 읽거나 저장한 것이 이상하면 장치 기록과 함께 알려 주세요."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oprogramowanie sprzętowe tej klawiatury (typ %lld) nie zostało jeszcze przetestowane. Jeśli klawisze są źle odczytywane lub zachowywane, zgłoś to razem z dziennikiem urządzenia."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O firmware deste teclado (tipo %lld) ainda não foi testado. Se as teclas forem lidas ou salvas de forma errada, informe-nos com o registro do dispositivo."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chương trình cơ sở của bàn phím này (loại %lld) chưa được kiểm thử. Nếu phím được đọc hoặc lưu sai, hãy báo cho chúng tôi kèm nhật ký thiết bị."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此键盘的固件（类型 %lld）尚未经过测试。如果按键读取或保存有误，请附上设备日志告诉我们。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此鍵盤的韌體（類型 %lld）尚未經過測試。如果按鍵讀取或儲存有誤，請附上裝置日誌告訴我們。"
           }
         }
       }

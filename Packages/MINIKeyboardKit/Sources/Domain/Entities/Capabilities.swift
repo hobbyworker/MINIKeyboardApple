@@ -78,8 +78,7 @@ public struct KeyboardCapabilities: Hashable, Sendable {
 
     public var reading: ReadSupport {
         switch commands {
-        case .records(.standard): .onConnect
-        case .records(.legacy): .onRequest
+        case .records(.standard), .records(.legacy): .onConnect
         case .packets, .records(.unidentified): .never
         }
     }
@@ -119,8 +118,6 @@ public enum DelaySupport: Hashable, Sendable {
 /// Whether the keyboard tells what it holds.
 public enum ReadSupport: Hashable, Sendable {
     case never
-    /// Asked as soon as it is connected, as the cross-platform app does.
+    /// Asked as soon as it is connected, as the cross-platform app does, and whenever the user asks.
     case onConnect
-    /// Asked only when the user asks.
-    case onRequest
 }

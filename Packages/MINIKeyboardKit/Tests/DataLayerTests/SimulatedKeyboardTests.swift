@@ -22,8 +22,9 @@ struct SimulatedKeyboardTests {
 
         let layout = try #require(KeyboardLayout.named("6add1"))
         let fresh = try await device.readActions(layer: 0, format: .standard, layout: layout)
-        #expect(fresh.count == layout.controls.count)
-        #expect(fresh.values.allSatisfy { $0 == .unassigned })
+        #expect(fresh.actions.count == layout.controls.count)
+        #expect(fresh.actions.values.allSatisfy { $0 == .unassigned })
+        #expect(fresh.unread.isEmpty)
 
         var configuration = KeyboardConfiguration(layerCount: 3)
         let macro = KeyMacro([KeyStroke(modifiers: .command, key: 0x06, delay: 100), KeyStroke(key: 0x28, delay: 60)])
@@ -33,7 +34,7 @@ struct SimulatedKeyboardTests {
         configuration.setLighting(.perKey(mode: 5, colors: colors), layer: 1)
         try await device.write(configuration, commands: .records(.standard), layout: layout)
 
-        let read = try await device.readActions(layer: 1, format: .standard, layout: layout)
+        let read = try await device.readActions(layer: 1, format: .standard, layout: layout).actions
         #expect(read[.key(number: 3)] == .keys(macro))
         #expect(read[.knob(number: 1, part: .press)] == .mouse(.middleClick))
         #expect(read[.key(number: 1)] == .unassigned)
@@ -53,8 +54,64 @@ struct SimulatedKeyboardTests {
         configuration.setLighting(.colorMode(color: .purple, mode: 5), layer: 2)
         try await device.write(configuration, commands: .records(.legacy), layout: layout)
         let read = try await device.readActions(layer: 2, format: .legacy, layout: layout)
-        #expect(read[.key(number: 4)] == .keys(macro))
+        #expect(read.actions[.key(number: 4)] == .keys(macro))
+        #expect(read.unread.isEmpty)
         #expect(keyboard.records[3]?[0]?[11] == 0x75)
+    }
+
+    /// The legacy read asks for 24 records, so 16add3's third knob turning right, in record 25, is outside it — neither
+    /// read nor unread — and a save that changes only it matches.
+    @Test func aRecordBeyondTheLegacyRead() async throws {
+        let log = DeviceLogStore()
+        let keyboard = SimulatedKeyboard(model: Self.model("16add3", .legacy), log: log)
+        let device = Self.device(keyboard, log: log)
+        let layout = try #require(KeyboardLayout.named("16add3"))
+        let knob = ControlID.knob(number: 3, part: .rotateRight)
+        #expect(RecordNumbers.record(of: knob, in: layout) == 25)
+
+        let read = try await device.readActions(layer: 0, format: .legacy, layout: layout)
+        #expect(read.outside == [knob])
+        #expect(read.unread.isEmpty)
+        #expect(read.actions[knob] == nil)
+        #expect(read.actions.count == layout.controls.count - 1)
+
+        var configuration = KeyboardConfiguration(layerCount: 3)
+        configuration.set(.media(.mute), for: knob, layer: 0)
+        let outcome = try await SaveKeyboardUseCase(repository: device).execute(
+            configuration, capabilities: KeyboardCapabilities(commands: .records(.legacy)), layout: layout)
+        guard case .saved(let saved, let check) = outcome else {
+            Issue.record("not saved")
+            return
+        }
+        #expect(check == .matched)
+        #expect(!saved.hasUnsavedChanges)
+        #expect(keyboard.records[1]?[25]?[3] == 2)
+    }
+
+    /// Saving reads the changes back, and a simulated keyboard holds what was written — on either format.
+    @Test func savingReadsBackWhatWasWritten() async throws {
+        for (layoutID, format) in [("6add1", RecordFormat.standard), ("4add1", .legacy)] {
+            let log = DeviceLogStore()
+            let keyboard = SimulatedKeyboard(model: Self.model(layoutID, format), log: log)
+            let device = Self.device(keyboard, log: log)
+            let layout = try #require(KeyboardLayout.named(layoutID))
+            var configuration = KeyboardConfiguration(layerCount: 3)
+            configuration.set(.keys(KeyMacro([KeyStroke(modifiers: .command, key: 0x06)])), for: .key(number: 1), layer: 0)
+            configuration.set(.media(.volumeUp), for: .key(number: 2), layer: 2)
+            configuration.set(.mouse(.shiftWheelDown), for: .knob(number: 1, part: .rotateRight), layer: 2)
+            configuration.setLighting(
+                format == .standard ? .perKey(mode: 3, colors: KeyColor.defaultKeyColors.reversed())
+                    : .colorMode(color: .blue, mode: 2),
+                layer: 1)
+            let outcome = try await SaveKeyboardUseCase(repository: device).execute(
+                configuration, capabilities: KeyboardCapabilities(commands: .records(format)), layout: layout)
+            guard case .saved(let saved, let check) = outcome else {
+                Issue.record("not saved: \(format)")
+                continue
+            }
+            #expect(check == .matched, "\(format)")
+            #expect(!saved.hasUnsavedChanges, "\(format)")
+        }
     }
 
     @Test func anUnidentifiedKeyboardAnswersNothing() async throws {
@@ -107,6 +164,103 @@ struct SimulatedKeyboardTests {
         #expect(Set(SimulatedModel.all.map(\.id)).count == SimulatedModel.all.count)
         #expect(SimulatedModel.all.allSatisfy { KeyboardFamily(usb: $0.usb) != nil })
         #expect(SimulatedModel.identified(as: KeyboardLayout.named("4add1")!, format: .standard) == nil)
+    }
+}
+
+/// A keyboard that answers every request with the payloads it is given — as many as it gets to.
+@MainActor
+final class ScriptedKeyboard: ReportChannel, ChannelProvider {
+    let framing = ReportFraming(reportID: K884xCommands.reportID, length: K884xCommands.reportLength)
+    var answers: [[UInt8]] = []
+    private let replies = ReplyQueue()
+
+    var openChannel: (any ReportChannel)? { self }
+
+    func write(_ report: [UInt8]) async throws(KeyboardDeviceError) {
+        answers.forEach { replies.receive(framing.frame($0)) }
+    }
+
+    func discardPendingReplies() {
+        replies.discard()
+    }
+
+    func nextReply(timeout: Duration) async -> [UInt8]? {
+        await replies.next(timeout: timeout)
+    }
+}
+
+/// Reading a layer when the keyboard answers less than asked, and the form a record keeps an action in.
+@MainActor
+struct LayerReadTests {
+    static let layout = KeyboardLayout.named("6add1")!
+
+    static func records(_ ids: ClosedRange<Int>, format: RecordFormat = .standard) throws -> [[UInt8]] {
+        try ids.map { try RecordCodec.encode(.media(.mute), recordID: $0, layer: 0, format: format) }
+    }
+
+    static func read(_ keyboard: ScriptedKeyboard, format: RecordFormat = .standard) async throws(KeyboardDeviceError) -> LayerRead {
+        try await KeyboardDevice(channels: keyboard, log: DeviceLogStore(), replyTimeout: .milliseconds(30), pause: { _ in })
+            .readActions(layer: 0, format: format, layout: layout)
+    }
+
+    /// Answers that stop after four records: those four are read, the layout's other controls unread.
+    @Test func answersThatStopEarly() async throws {
+        let keyboard = ScriptedKeyboard()
+        keyboard.answers = try Self.records(1...4)
+        let read = try await Self.read(keyboard)
+        #expect(Set(read.actions.keys) == Set((1...4).map { ControlID.key(number: $0) }))
+        #expect(read.actions.values.allSatisfy { $0 == .media(.mute) })
+        #expect(read.unread == Set(Self.layout.controls).subtracting(read.actions.keys))
+        #expect(read.unread.count == 5)
+    }
+
+    /// A keyboard that answers as far as its last control's record has read everything.
+    @Test func answersAsFarAsTheLastControl() async throws {
+        let keyboard = ScriptedKeyboard()
+        keyboard.answers = try Self.records(1...18, format: .legacy)
+        let read = try await Self.read(keyboard, format: .legacy)
+        #expect(read.actions.count == Self.layout.controls.count)
+        #expect(read.unread.isEmpty)
+    }
+
+    @Test func noAnswer() async {
+        await #expect(throws: KeyboardDeviceError.noReply) { try await Self.read(ScriptedKeyboard()) }
+    }
+
+    /// A record of a kind the app doesn't know leaves its control unread.
+    @Test func anUnknownKind() async throws {
+        let keyboard = ScriptedKeyboard()
+        var answers = try Self.records(1...25)
+        answers[1][3] = 9
+        keyboard.answers = answers
+        let read = try await Self.read(keyboard)
+        #expect(read.unread == [.key(number: 2)])
+        #expect(read.actions.count == Self.layout.controls.count - 1)
+    }
+
+    /// Well-formed actions of every kind come back as they went, in what each format keeps of them.
+    @Test func storedForm() {
+        let device = KeyboardDevice(channels: ScriptedKeyboard(), log: DeviceLogStore())
+        let common: [KeyAction] = [.unassigned, .keys(KeyMacro([KeyStroke(modifiers: [.control, .option], key: 0)]))]
+            + MediaKey.all.map(KeyAction.media) + MouseAction.allCases.map(KeyAction.mouse)
+        let standard = common + [
+            .keys(KeyMacro([KeyStroke(modifiers: [.shift, .command], key: 0x1D, delay: 300), KeyStroke(key: 0x28, delay: 50)])),
+        ]
+        let legacy = common + [
+            .keys(KeyMacro([KeyStroke(modifiers: .control, key: 0x06), KeyStroke(modifiers: .rightShift, key: 0x19)], delay: 500)),
+        ]
+        for action in standard {
+            #expect(device.storedForm(of: action, format: .standard) == action, "\(action)")
+        }
+        for action in legacy {
+            #expect(device.storedForm(of: action, format: .legacy) == action, "\(action)")
+        }
+        // What a format doesn't keep is left out: legacy records keep no wait per press, standard ones none per key.
+        let press = KeyStroke(key: 0x04)
+        #expect(device.storedForm(of: .keys(KeyMacro([KeyStroke(key: 0x04, delay: 100)])), format: .legacy) == .keys(KeyMacro([press])))
+        #expect(device.storedForm(of: .keys(KeyMacro([press], delay: 100)), format: .standard) == .keys(KeyMacro([press])))
+        // More presses than a record holds.
+        #expect(device.storedForm(of: .keys(KeyMacro(Array(repeating: press, count: 19))), format: .standard) == nil)
     }
 }
 

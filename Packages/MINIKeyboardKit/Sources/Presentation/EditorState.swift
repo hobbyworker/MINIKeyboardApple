@@ -17,10 +17,18 @@ public enum Activity: Hashable, Sendable {
 public enum Notice: Hashable, Sendable {
     /// Saved; to a simulated keyboard when `simulated` — nothing went to a real one.
     case saved(simulated: Bool)
+    /// Saved, but some changes read back otherwise; they stay unsaved.
+    case savedButDiffers
+    /// Saved, but reading back to check failed.
+    case savedButUnchecked
     case readComplete
+    /// Read, but some controls' answers didn't come; they show what they did before.
+    case readIncomplete
     case nothingToSave
     case identifyFailed
     case readFailed
+    /// The keyboard answered with a type the app hasn't been tried on.
+    case untestedFirmware(type: Int)
     /// The IOReturn code of the failed write.
     case writeFailed(Int32)
     case keyboardGone
@@ -39,6 +47,7 @@ public enum Notice: Hashable, Sendable {
 
     /// How long it stays.
     public var lifetime: Duration {
+        if case .untestedFirmware = self { return .seconds(10) }
         if isError { return .seconds(6) }
         if case .saved(simulated: true) = self { return .seconds(4) }
         return .seconds(2.5)

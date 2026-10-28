@@ -144,7 +144,9 @@ struct RecordCodecTests {
         let reply: [UInt8] = [0x03, 0xB0, 4] + Array(repeating: 9, count: 48)
         #expect(K884xCommands.lighting(from: reply) == .perKey(mode: 4, colors: Array(repeating: KeyColor(red: 9, green: 9, blue: 9), count: 16)))
         #expect(K884xCommands.readRecords(layer: 0, format: .standard) == [0xFA, 25, 0, 1])
-        #expect(K884xCommands.readRecords(layer: 2, format: .legacy) == [0xFA, 0x18, 0, 3])
+        #expect(K884xCommands.readRecords(layer: 2, format: .legacy) == [0xFA, 0x0F, 0x03, 3])
+        #expect(K884xCommands.readReplyCount(.standard) == 25)
+        #expect(K884xCommands.readReplyCount(.legacy) == 24)
         #expect(K884xCommands.readRecords(layer: 0, format: .unidentified) == nil)
     }
 

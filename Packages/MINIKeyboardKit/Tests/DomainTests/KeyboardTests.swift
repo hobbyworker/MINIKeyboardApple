@@ -6,21 +6,44 @@ struct KeyboardFamilyTests {
         #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x1189, productID: 0x8890)) == .k8890)
         #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x1189, productID: 0x8840)) == .k884x)
         #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x514C, productID: 0x8851)) == .k884x)
-        // The cross-platform app looks for 8851 under 514C only.
-        #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x1189, productID: 0x8851)) == nil)
+        // The cross-platform app's 2025-06 builds look for 8851 under 1189 as well.
+        #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x1189, productID: 0x8851)) == .k884x)
         #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x05AC, productID: 0x8890)) == nil)
-        #expect(KeyboardFamily.supported.count == 16)
+        #expect(KeyboardFamily(usb: USBIdentity(vendorID: 0x1189, productID: 0x8860)) == nil)
+    }
+
+    /// The 1189:8890, then the cross-platform app's eight product IDs under 1189, then under 514C.
+    @Test func supportedIDsInOrder() {
+        let products = [0x8842, 0x8840, 0x8830, 0x8831, 0x8832, 0x8833, 0x8850, 0x8851]
+        #expect(KeyboardFamily.supported.count == 17)
+        #expect(KeyboardFamily.supported == [USBIdentity(vendorID: 0x1189, productID: 0x8890)]
+            + products.map { USBIdentity(vendorID: 0x1189, productID: $0) }
+            + products.map { USBIdentity(vendorID: 0x514C, productID: $0) })
     }
 
     @Test func usbIdentityPrintsAsHex() {
         #expect("\(USBIdentity(vendorID: 0x514C, productID: 0x8850))" == "514C:8850")
     }
 
+    /// Type 10 and above are the standard format, below 10 the legacy one.
     @Test func identityPicksTheRecordFormat() {
-        #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: 10).recordFormat == .standard)
-        #expect(KeyboardIdentity(keyCount: 12, knobCount: 2, type: 11).recordFormat == .standard)
-        #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: 0).recordFormat == .legacy)
-        #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: 1).recordFormat == .legacy)
+        for type in [10, 11, 12, 255] {
+            #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: type).recordFormat == .standard, "\(type)")
+        }
+        for type in [0, 1, 9] {
+            #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: type).recordFormat == .legacy, "\(type)")
+        }
+    }
+
+    /// The cross-platform app's 0, 1 and 10, and the 514C:8850's 11; any other is untried, though handled the same.
+    @Test func knownTypes() {
+        for type in [0, 1, 10, 11] {
+            #expect(KeyboardIdentity(keyCount: 12, knobCount: 2, type: type).isKnownType, "\(type)")
+        }
+        for type in [2, 9, 12, 255] {
+            #expect(!KeyboardIdentity(keyCount: 12, knobCount: 2, type: type).isKnownType, "\(type)")
+        }
+        #expect(KeyboardIdentity(keyCount: 12, knobCount: 2, type: 12).recordFormat == .standard)
     }
 }
 
@@ -67,7 +90,7 @@ struct CapabilitiesTests {
         #expect(standard.lighting == .perKeyColor(modes: 0...5, keys: 16))
         #expect(legacy.lighting == .colorAndMode(modes: 0...5))
         #expect(standard.reading == .onConnect)
-        #expect(legacy.reading == .onRequest)
+        #expect(legacy.reading == .onConnect)
         #expect(k8890.reading == .never)
         #expect(unidentified.reading == .never)
     }

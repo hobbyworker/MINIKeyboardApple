@@ -15,14 +15,13 @@ enum K884xCommands {
     static let commit: [UInt8] = [0xFD, 0xFE, 0xFF]
     static let commitPause: Duration = .milliseconds(200)
 
-    /// `FA <records> <knob records> <layer + 1>` — the standard format reads its 25 records (`Read_CurKeyBoard_Data`),
-    /// the legacy one all 24 — 15 keys, then 3 knobs of 3 — as `FA 18 00`. The cross-platform app asks `FA 0F 03`
-    /// (`Read_configuration_clicked`) and waits for 24, but a legacy keyboard answers as many records as the first
-    /// number says (514C:8850, type 11: 15). Counted either way, `FA 18 00` comes to 24.
+    /// `FA <key records> <knobs> <layer + 1>`, as every build of the cross-platform app asks: the standard format its
+    /// 25 records as `FA 19 00` (`Read_CurKeyBoard_Data`), the legacy one 15 key records and 3 knobs as `FA 0F 03`
+    /// (`read_Hidkey_Data`), and waits for 24 answers — the keys, then the knobs' records 16…24.
     static func readRecords(layer: Int, format: RecordFormat) -> [UInt8]? {
         switch format {
         case .standard: [0xFA, 25, 0, UInt8(layer + 1)]
-        case .legacy: [0xFA, 24, 0, UInt8(layer + 1)]
+        case .legacy: [0xFA, 15, 3, UInt8(layer + 1)]
         case .unidentified: nil
         }
     }

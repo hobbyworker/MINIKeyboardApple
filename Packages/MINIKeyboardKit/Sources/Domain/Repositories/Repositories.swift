@@ -30,9 +30,14 @@ public protocol KeyboardDeviceRepository: Sendable {
     /// Asks a 884x keyboard who it is (`FB FB FB`) once. Nil when no answer comes in time.
     func askIdentity() async throws(KeyboardDeviceError) -> KeyboardIdentity?
 
-    /// The actions one layer holds, for the controls of `layout` — standard and legacy formats only.
+    /// The actions one layer holds, for the controls of `layout` — standard and legacy formats only. Answers that
+    /// stop coming after the first end the read with what came; none at all is `noReply`.
     func readActions(layer: Int, format: RecordFormat, layout: KeyboardLayout)
-        async throws(KeyboardDeviceError) -> [ControlID: KeyAction]
+        async throws(KeyboardDeviceError) -> LayerRead
+
+    /// `action` as the keyboard's records of `format` hold it — what reading it back gives. Nil when the records
+    /// can't hold it.
+    func storedForm(of action: KeyAction, format: RecordFormat) -> KeyAction?
 
     /// One layer's lights — the standard format only.
     func readLighting(layer: Int) async throws(KeyboardDeviceError) -> LayerLighting

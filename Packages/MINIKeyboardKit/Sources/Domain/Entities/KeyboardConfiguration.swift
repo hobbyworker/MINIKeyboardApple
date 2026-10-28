@@ -62,9 +62,30 @@ public struct KeyboardConfiguration: Hashable, Sendable {
 
     /// Everything was written.
     public mutating func markSaved() {
+        markSaved(except: [:], lighting: [])
+    }
+
+    /// Everything was written, but these controls (by layer) and these layers' lights read back otherwise: they
+    /// stay changed, with the values the user gave them.
+    public mutating func markSaved(except controls: [Int: Set<ControlID>], lighting: Set<Int>) {
         for index in layers.indices {
-            layers[index].changedControls = []
-            layers[index].lightingChanged = false
+            layers[index].changedControls.formIntersection(controls[index] ?? [])
+            layers[index].lightingChanged = layers[index].lightingChanged && lighting.contains(index)
         }
+    }
+}
+
+/// What reading one layer brought back: the actions that came, and the controls the read asked for that didn't —
+/// their answer never came, or came in a kind the app doesn't know.
+public struct LayerRead: Hashable, Sendable {
+    public var actions: [ControlID: KeyAction]
+    public var unread: Set<ControlID>
+    /// The layout's controls in records beyond those the read asks for: neither read nor unread.
+    public var outside: Set<ControlID>
+
+    public init(actions: [ControlID: KeyAction], unread: Set<ControlID> = [], outside: Set<ControlID> = []) {
+        self.actions = actions
+        self.unread = unread
+        self.outside = outside
     }
 }

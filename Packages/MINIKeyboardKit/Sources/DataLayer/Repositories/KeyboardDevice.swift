@@ -58,20 +58,36 @@ public final class KeyboardDevice: KeyboardDeviceRepository {
         return identity
     }
 
-    public func readActions(layer: Int, format: RecordFormat, layout: KeyboardLayout) async throws(KeyboardDeviceError) -> [ControlID: KeyAction] {
+    /// Answers that stop after the first end the read: the controls of the records asked for that didn't come are
+    /// unread, as are those of records in a kind the codec doesn't know. A keyboard with fewer controls than the
+    /// request covers may answer fewer records and leave nothing unread. Controls in records beyond those asked
+    /// for (16add3's record 25 on the legacy read) are outside the read.
+    public func readActions(layer: Int, format: RecordFormat, layout: KeyboardLayout) async throws(KeyboardDeviceError) -> LayerRead {
         guard let request = K884xCommands.readRecords(layer: layer, format: format) else { throw .unsupported }
         let channel = try channel()
         channel.discardPendingReplies()
         try await send(request, on: channel)
+        let records = 1...K884xCommands.readReplyCount(format)
         var actions: [ControlID: KeyAction] = [:]
-        for recordID in 1...K884xCommands.readReplyCount(format) {
-            guard let reply = await channel.nextReply(timeout: replyTimeout) else { throw .noReply }
+        for recordID in records {
+            guard let reply = await channel.nextReply(timeout: replyTimeout) else {
+                if recordID == 1 { throw .noReply }
+                break
+            }
             guard let control = RecordNumbers.control(inRecord: recordID, of: layout),
                   let action = RecordCodec.decode(K884xCommands.record(from: reply), format: format)
             else { continue }
             actions[control] = action
         }
-        return actions
+        let asked = Set(layout.controls.filter { RecordNumbers.record(of: $0, in: layout).map(records.contains) ?? false })
+        return LayerRead(
+            actions: actions, unread: asked.subtracting(actions.keys), outside: Set(layout.controls).subtracting(asked))
+    }
+
+    /// The action written into a record and decoded again.
+    public nonisolated func storedForm(of action: KeyAction, format: RecordFormat) -> KeyAction? {
+        guard let record = try? RecordCodec.encode(action, recordID: 1, layer: 0, format: format) else { return nil }
+        return RecordCodec.decode(record, format: format)
     }
 
     public func readLighting(layer: Int) async throws(KeyboardDeviceError) -> LayerLighting {

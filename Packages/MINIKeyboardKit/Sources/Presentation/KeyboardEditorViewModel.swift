@@ -165,7 +165,8 @@ public final class KeyboardEditorViewModel {
         await retryConnectionUseCase.execute()
     }
 
-    /// Settles the keyboard's commands and layout, then reads it if it reads back on its own.
+    /// Settles the keyboard's commands and layout, then reads it if it reads back on its own. A keyboard of a type
+    /// the app hasn't been tried on is then said to be one, in place of what the read said.
     public func identify() async {
         guard let keyboard, identification == nil, activity == nil else { return }
         let serial = connectionSerial
@@ -196,6 +197,9 @@ public final class KeyboardEditorViewModel {
         if capabilities.reading == .onConnect {
             await read(announce: false)
         }
+        if let identity = identified.identity, !identity.isKnownType, serial == connectionSerial {
+            show(.untestedFirmware(type: identity.type))
+        }
     }
 
     // MARK: - Reading and saving
@@ -213,6 +217,8 @@ public final class KeyboardEditorViewModel {
         configuration = outcome.configuration
         if outcome.error != nil {
             show(.readFailed)
+        } else if !outcome.unread.isEmpty {
+            show(.readIncomplete)
         } else if announce {
             show(.readComplete)
         }
@@ -232,16 +238,20 @@ public final class KeyboardEditorViewModel {
         } catch {
             outcome = .failure(error)
         }
-        // Not saved to the keyboard there now; the changes stay marked.
+        // Not saved to the keyboard there now; the changes stay marked. The read back after writing is part of the save.
         guard serial == connectionSerial else {
             await keyboardChangedDuringWork()
             return
         }
         activity = nil
         switch outcome {
-        case .success(.saved(let saved)):
+        case .success(.saved(let saved, let check)):
             configuration = saved
-            show(.saved(simulated: activeSimulatorID != nil))
+            switch check {
+            case .notChecked, .matched: show(.saved(simulated: activeSimulatorID != nil))
+            case .differs: show(.savedButDiffers)
+            case .couldNotCheck: show(.savedButUnchecked)
+            }
         case .success(.nothingToSave):
             show(.nothingToSave)
         case .failure(.writeFailed(let code)):

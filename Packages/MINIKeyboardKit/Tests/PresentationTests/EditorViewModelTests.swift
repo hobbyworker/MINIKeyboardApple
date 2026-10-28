@@ -29,18 +29,23 @@ final class FakeConnection: KeyboardConnectionRepository, KeyboardSourceReposito
     func select(_ source: KeyboardSource) async { sources.append(source) }
 }
 
-/// The open keyboard, whichever it is. The calls in `holds` wait until the test lets them go, so it can change the
-/// connection in the middle of one.
+/// The open keyboard, whichever it is. It keeps what is written to it — as `keeps` turns it. The calls in `holds` wait
+/// until the test lets them go, so it can change the connection in the middle of one.
 @MainActor
 final class FakeDevice: KeyboardDeviceRepository {
     enum Call { case identity, read, write }
 
     var identity: KeyboardIdentity?
+    /// What every layer holds, under what was written to it.
     var actions: [ControlID: KeyAction] = [:]
+    /// Controls whose answers don't come.
+    var unread: Set<ControlID> = []
     var failWrite: KeyboardDeviceError?
+    var keeps: (KeyAction) -> KeyAction = { $0 }
     var holds: Set<Call> = []
     private(set) var writes: [KeyboardConfiguration] = []
     private(set) var reads = 0
+    private var written: [Int: [ControlID: KeyAction]] = [:]
     private var waiting: [CheckedContinuation<Void, Never>] = []
 
     /// Whether a call is waiting to be let go.
@@ -63,11 +68,14 @@ final class FakeDevice: KeyboardDeviceRepository {
         return identity
     }
 
-    func readActions(layer: Int, format: RecordFormat, layout: KeyboardLayout) async throws(KeyboardDeviceError) -> [ControlID: KeyAction] {
+    func readActions(layer: Int, format: RecordFormat, layout: KeyboardLayout) async throws(KeyboardDeviceError) -> LayerRead {
         reads += 1
         await wait(.read)
-        return actions
+        let held = actions.merging(written[layer] ?? [:]) { $1 }.filter { !unread.contains($0.key) }
+        return LayerRead(actions: held, unread: unread)
     }
+
+    nonisolated func storedForm(of action: KeyAction, format: RecordFormat) -> KeyAction? { action }
 
     func readLighting(layer: Int) async throws(KeyboardDeviceError) -> LayerLighting {
         .perKey(mode: 0, colors: KeyColor.defaultKeyColors)
@@ -77,6 +85,11 @@ final class FakeDevice: KeyboardDeviceRepository {
         await wait(.write)
         if let failWrite { throw failWrite }
         writes.append(configuration)
+        for layer in 0..<configuration.layerCount {
+            for control in layout.controls where configuration.isChanged(control, layer: layer) {
+                written[layer, default: [:]][control] = configuration.action(control, layer: layer).map(keeps)
+            }
+        }
     }
 }
 
@@ -532,6 +545,133 @@ struct EditorViewModelTests {
         await editor.selectSimulator(Self.simulated8890.id)
         #expect(editor.pendingSwitch == nil)
         #expect(connection.sources == [.simulated(Self.simulated8890)])
+    }
+
+    /// A read whose answers stop early says so — the read on connecting too — and the keys not read show what they
+    /// did before.
+    @Test func aReadThatStopsEarlySaysSo() async {
+        device.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: 10)
+        device.actions = [.key(number: 1): .media(.mute), .key(number: 6): .media(.volumeUp)]
+        device.unread = [.key(number: 6)]
+        let editor = editor()
+        connection.continuation.yield(.connected(Self.k8840))
+        await settle(editor) { editor.isReady && device.reads > 0 }
+        #expect(editor.notice == .readIncomplete)
+        #expect(Notice.readIncomplete.isError)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(1) }?.caption == .media(.mute))
+        #expect(editor.drawing?.controls.first { $0.ref == .key(6) }?.caption == .unknown)
+
+        device.unread = []
+        await editor.read()
+        #expect(editor.notice == .readComplete)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(6) }?.caption == .media(.volumeUp))
+        device.unread = [.key(number: 6)]
+        await editor.read()
+        #expect(editor.notice == .readIncomplete)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(6) }?.caption == .media(.volumeUp))
+    }
+
+    /// A keyboard that reads back is read after saving: what it holds otherwise stays changed, and the notice says
+    /// which way it went.
+    @Test func savingReadsBack() async {
+        device.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: 10)
+        let editor = editor()
+        connection.continuation.yield(.connected(Self.k8840))
+        await settle(editor) { editor.isReady && device.reads > 0 }
+        let readsOnConnect = device.reads
+
+        editor.select(.key(1))
+        editor.press(Self.a)
+        await editor.save()
+        #expect(editor.notice == .saved(simulated: false))
+        #expect(device.reads == readsOnConnect + 1)
+        #expect(!editor.hasUnsavedChanges)
+
+        device.keeps = { $0 == .keys(KeyMacro([KeyStroke(key: 0x06)])) ? .unassigned : $0 }
+        editor.press(Self.c)
+        editor.select(.key(2))
+        editor.press(Self.c)
+        await editor.save()
+        #expect(editor.notice == .savedButDiffers)
+        #expect(editor.hasUnsavedChanges)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(1) }?.isChanged == false)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(2) }?.isChanged == true)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(2) }?.caption == .presses("C"))
+
+        device.keeps = { $0 }
+        device.unread = [.key(number: 2)]
+        await editor.save()
+        #expect(editor.notice == .savedButUnchecked)
+        #expect(!editor.hasUnsavedChanges)
+    }
+
+    /// An editor on a keyboard of its own, connected to `keyboard`, for tests that try several.
+    func connected(_ device: FakeDevice, _ keyboard: ConnectedKeyboard = k8840) -> KeyboardEditorViewModel {
+        let connection = FakeConnection()
+        let editor = KeyboardEditorViewModel(
+            observeConnection: ObserveConnectionUseCase(repository: connection),
+            retryConnection: RetryConnectionUseCase(repository: connection),
+            identifyKeyboard: IdentifyKeyboardUseCase(repository: device, attempts: 1),
+            resolveLayout: ResolveLayoutUseCase(profiles: profiles), chooseLayout: ChooseLayoutUseCase(profiles: profiles),
+            readKeyboard: ReadKeyboardUseCase(repository: device), saveKeyboard: SaveKeyboardUseCase(repository: device))
+        editor.start()
+        connection.continuation.yield(.connected(keyboard))
+        return editor
+    }
+
+    /// A keyboard of a type the app hasn't been tried on — standard (12) or legacy (9) — is said to be one once it is
+    /// connected and read, in place of what the read said, for longer than an error; its information says so.
+    @Test func anUntestedType() async throws {
+        for (type, commands) in [(12, KeyboardInfo.Commands.standard), (9, .legacy)] {
+            let device = FakeDevice()
+            device.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: type)
+            device.unread = [.key(number: 6)]
+            let editor = connected(device)
+            await settle(editor) { editor.isReady && device.reads > 0 }
+            #expect(device.reads > 0, "\(type)")
+            #expect(editor.notice == .untestedFirmware(type: type), "\(type)")
+            let info = try #require(editor.keyboardInfo)
+            #expect(info.firmware == .reported(type: type, keys: 6, knobs: 1, isKnownType: false))
+            #expect(info.commands == commands)
+        }
+        #expect(Notice.untestedFirmware(type: 12).lifetime == .seconds(10))
+        #expect(Notice.untestedFirmware(type: 12).lifetime > Notice.readFailed.lifetime)
+    }
+
+    /// Types 10 and 11 are both the standard firmware, and known.
+    @Test func knownTypes() async throws {
+        for type in [10, 11] {
+            let device = FakeDevice()
+            device.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: type)
+            let editor = connected(device)
+            await settle(editor) { editor.isReady && device.reads > 0 }
+            #expect(editor.notice == nil, "\(type)")
+            let info = try #require(editor.keyboardInfo)
+            #expect(info.firmware == .reported(type: type, keys: 6, knobs: 1, isKnownType: true))
+            #expect(info.commands == .standard)
+        }
+    }
+
+    /// Every keyboard that says what it is is read as it connects, legacy firmware too, without a notice; one that
+    /// doesn't say isn't read.
+    @Test func identifiedKeyboardsAreReadOnConnecting() async throws {
+        let legacy = FakeDevice()
+        legacy.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: 0)
+        legacy.actions = [.key(number: 3): .media(.mute)]
+        let editor = connected(legacy)
+        await settle(editor) { editor.isReady && legacy.reads > 0 }
+        #expect(legacy.reads == 3)
+        #expect(editor.keyboardInfo?.commands == .legacy)
+        #expect(editor.readsBack)
+        #expect(editor.notice == nil)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(3) }?.caption == .media(.mute))
+
+        let unidentified = FakeDevice()
+        let other = connected(unidentified)
+        await settle(other) { other.isReady }
+        #expect(other.keyboardInfo?.commands == .unidentified)
+        #expect(!other.readsBack)
+        #expect(unidentified.reads == 0)
     }
 }
 

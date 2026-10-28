@@ -139,7 +139,7 @@ public struct SimulatedModel: Hashable, Sendable, Identifiable {
         for candidate in candidates {
             let identity = KeyboardIdentity(keyCount: layout.keyCount, knobCount: layout.knobCount, type: candidate.type)
             guard KeyboardLayout.identifiedID(for: identity, productID: candidate.productID) == layout.id else { continue }
-            // 1189:8851 is not among the IDs the app looks for; 514C:8851 is.
+            // 8851 under 514C, so the simulator plays that vendor too.
             let vendor = candidate.productID == 0x8851 ? 0x514C : 0x1189
             return SimulatedModel(usb: USBIdentity(vendorID: vendor, productID: candidate.productID), kind: .identified(identity))
         }

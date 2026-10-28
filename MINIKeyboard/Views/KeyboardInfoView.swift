@@ -56,12 +56,17 @@ struct KeyboardInfoView: View {
 
     @ViewBuilder private var firmware: some View {
         switch info.firmware {
-        case .reported(let type, let keys, let knobs):
+        case .reported(let type, let keys, let knobs, let isKnownType):
             VStack(alignment: .leading, spacing: 2) {
                 Text(verbatim: "\(type)")
                 Text("Keys: \(keys) · Knobs: \(knobs)")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+                if !isKnownType {
+                    Text("Not tested yet")
+                        .font(.caption)
+                        .foregroundStyle(.orange)
+                }
             }
         case .release(let release):
             Text(verbatim: release)

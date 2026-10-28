@@ -221,10 +221,15 @@ extension Notice {
         switch self {
         case .saved(simulated: true): "Saved to the simulator — nothing was written to a keyboard."
         case .saved(simulated: false): "Saved to the keyboard."
+        case .savedButDiffers: "Saved, but some keys or knobs read back differently. Those changes stay unsaved."
+        case .savedButUnchecked: "Saved, but the keyboard couldn’t be read back to check."
         case .readComplete: "Read from the keyboard."
+        case .readIncomplete: "Some keys or knobs couldn’t be read. They’re shown as before."
         case .nothingToSave: "Nothing to save — no key has changed."
         case .identifyFailed: "The keyboard couldn’t be asked what it is."
         case .readFailed: "Reading from the keyboard failed."
+        case .untestedFirmware(let type):
+            "This keyboard’s firmware (type \(type)) hasn’t been tested yet. If keys read or save wrong, please report it with the device log."
         case .writeFailed(let code): "Writing to the keyboard failed (\(String(format: "0x%08X", UInt32(bitPattern: code))))."
         case .keyboardGone: "The keyboard is no longer connected."
         case .full(let limit): "A key holds up to \(limit) presses."
@@ -330,7 +335,7 @@ extension KeyboardInfo.Commands {
     var text: Text {
         switch self {
         case .packets(let reportID): Text("8890 Packets · \(Text("Report ID \(reportID)"))")
-        case .standard: Text("884x · Standard Firmware (Type 10)")
+        case .standard: Text("884x · Standard Firmware")
         case .legacy: Text("884x · Legacy Firmware")
         case .unidentified: Text("884x · Doesn’t Answer Identification")
         case .unknown: Text(verbatim: "—")

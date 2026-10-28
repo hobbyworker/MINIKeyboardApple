@@ -14,11 +14,14 @@ struct Inspector: View {
                     .foregroundStyle(.secondary)
             }
             Spacer(minLength: 0)
-            HStack {
-                Button("Clear") { editor.clearSelected() }
-                    .disabled(!editor.isReady || editor.selectedControl == nil)
-                Button("Clear Layer") { editor.clearLayer() }
-                    .disabled(!editor.isReady)
+            // They clear what keys and knobs do, not their lights, so the lighting page goes without them.
+            if editor.tab != .lighting {
+                HStack {
+                    Button("Clear") { editor.clearSelected() }
+                        .disabled(!editor.isReady || editor.selectedControl == nil)
+                    Button("Clear Layer") { editor.clearLayer() }
+                        .disabled(!editor.isReady)
+                }
             }
             unsavedState
         }

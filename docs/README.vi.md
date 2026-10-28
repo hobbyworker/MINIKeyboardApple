@@ -154,11 +154,14 @@ Tiêu chuẩn là không có cảnh báo nào với Swift 6. Cảnh báo đượ
 
 ## Hạn chế
 
-- Đến nay, việc ghi mới chỉ được kiểm tra trên một bàn phím là `1189:8890` có 6 phím và 1 núm xoay — bàn phím này hóa
-  ra chỉ có một lớp, nên ghi vào lớp nào cũng vào cùng một chỗ. Các bàn phím còn lại được ghi đúng theo cách ứng dụng
-  của nhà sản xuất ghi. Kiểm thử giữ đúng từng byte, nhưng chưa bàn phím nào được thử trên thiết bị thật.
+- Đến nay, việc ghi đã được kiểm tra trên hai bàn phím: `1189:8890` có 6 phím và 1 núm xoay — bàn
+  phím này hóa ra chỉ có một lớp, nên ghi vào lớp nào cũng vào cùng một chỗ — và `514C:8850` có 12
+  phím và 2 núm xoay, chạy chương trình cơ sở mới. Các bàn phím còn lại được ghi đúng theo cách ứng
+  dụng của nhà sản xuất ghi. Kiểm thử giữ đúng từng byte, nhưng chưa bàn phím nào được thử trên
+  thiết bị thật.
 - `1189:8890` và các bàn phím không cho biết loại không báo lại thiết lập hiện tại, nên chỉ thấy được những gì đã đặt
   trong ứng dụng.
-- Mỗi lần chỉ một bàn phím. Nếu cắm nhiều bàn phím, ứng dụng dùng bàn phím tìm thấy đầu tiên — `1189:8890` được ưu
-  tiên.
+- Mỗi lần chỉ mở một bàn phím. Nếu cắm nhiều bàn phím, nút bên cạnh trạng thái kết nối dùng để chọn;
+  ứng dụng mở bàn phím đã chọn lần trước, nếu không thì bàn phím tìm thấy đầu tiên — `1189:8890`
+  được ưu tiên.
 - Không hỗ trợ di chuyển chuột và kéo thả.

@@ -159,11 +159,13 @@ Zero warnings under Swift 6 is the bar. Warnings are fixed, not switched off.
 
 ## Limitations
 
-- Writing has been tried on one keyboard so far, a `1189:8890` with six keys and a knob — which
-  turned out to have a single layer: what is written to any layer applies. The other keyboards are
-  written as their vendor's app writes them; tests pin the bytes, but none has been tried yet.
+- Writing has been tried on two keyboards so far: a `1189:8890` with six keys and a knob — which
+  turned out to have a single layer: what is written to any layer applies — and a `514C:8850` with
+  twelve keys and two knobs, on newer firmware. The other keyboards are written as their vendor's
+  app writes them; tests pin the bytes, but none has been tried yet.
 - The `1189:8890`, and keyboards that don't say what they are, can't report their settings, so the
   app shows only what was set in it.
-- One keyboard at a time. With several plugged in, the app takes the first it finds, a `1189:8890`
+- One keyboard is open at a time. With several plugged in, the button beside the connection status
+  chooses which; the app opens the one chosen last time, or else the first it finds, a `1189:8890`
   first.
 - Mouse movement and dragging are not offered.

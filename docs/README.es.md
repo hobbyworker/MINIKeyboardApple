@@ -164,11 +164,14 @@ El objetivo es cero advertencias con Swift 6. Las advertencias se corrigen, no s
 
 ## Limitaciones
 
-- Hasta ahora, la escritura solo se ha probado en un teclado: un `1189:8890` con seis teclas y un botón giratorio,
-  que resultó tener una sola capa, así que lo que se escribe en cualquier capa va al mismo sitio. Los demás teclados
-  se escriben tal como lo hace la app de su fabricante; las pruebas fijan los bytes, pero todavía no se ha
-  comprobado ninguno con un teclado real.
+- Hasta ahora, la escritura se ha probado en dos teclados: un `1189:8890` con seis teclas y un botón
+  giratorio, que resultó tener una sola capa, así que lo que se escribe en cualquier capa va al
+  mismo sitio, y un `514C:8850` con doce teclas y dos botones giratorios, con firmware nuevo. Los
+  demás teclados se escriben tal como lo hace la app de su fabricante; las pruebas fijan los bytes,
+  pero todavía no se ha comprobado ninguno con un teclado real.
 - El `1189:8890` y los teclados que no indican su tipo no pueden informar de su configuración, así que la app solo
   muestra lo que se ha definido en ella.
-- Un teclado cada vez. Si hay varios conectados, la app usa el primero que encuentra, empezando por un `1189:8890`.
+- Un teclado abierto cada vez. Si hay varios conectados, el botón junto al estado de conexión elige
+  cuál; la app abre el que se eligió la última vez o, si no, el primero que encuentra, empezando por
+  un `1189:8890`.
 - No hay acciones para mover el ratón ni para arrastrar.

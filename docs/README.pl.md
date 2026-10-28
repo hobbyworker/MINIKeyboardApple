@@ -164,12 +164,15 @@ Zero ostrzeżeń w Swift 6 to standard. Ostrzeżenia się poprawia, a nie wyłą
 
 ## Ograniczenia
 
-- Zapis sprawdzono dotąd tylko na jednej klawiaturze — `1189:8890` z sześcioma klawiszami i pokrętłem — która
-  okazała się mieć tylko jedną warstwę: to, co zapiszesz na dowolnej warstwie, trafia w to samo miejsce. Pozostałe
-  klawiatury są zapisywane tak, jak robi to aplikacja ich producenta; testy pilnują bajtów, ale żadnej z nich nie
-  sprawdzono jeszcze na prawdziwej klawiaturze.
+- Zapis sprawdzono dotąd na dwóch klawiaturach: `1189:8890` z sześcioma klawiszami i pokrętłem —
+  która okazała się mieć tylko jedną warstwę: to, co zapiszesz na dowolnej warstwie, trafia w to
+  samo miejsce — oraz `514C:8850` z dwunastoma klawiszami i dwoma pokrętłami, z nowszym
+  oprogramowaniem sprzętowym. Pozostałe klawiatury są zapisywane tak, jak robi to aplikacja ich
+  producenta; testy pilnują bajtów, ale żadnej z nich nie sprawdzono jeszcze na prawdziwej
+  klawiaturze.
 - Klawiatura `1189:8890` i klawiatury, które nie podają swojego typu, nie przekazują swoich bieżących ustawień, więc
   aplikacja pokazuje tylko to, co w niej ustawiono.
-- Jedna klawiatura naraz. Jeśli podłączonych jest kilka, aplikacja używa pierwszej znalezionej — w pierwszej
-  kolejności `1189:8890`.
+- Naraz otwarta jest jedna klawiatura. Jeśli podłączonych jest kilka, przycisk obok stanu połączenia
+  wybiera którą; aplikacja otwiera ostatnio wybraną, a jeśli takiej nie ma, pierwszą znalezioną — w
+  pierwszej kolejności `1189:8890`.
 - Nie ma akcji ruchu myszy ani przeciągania.

@@ -165,12 +165,15 @@ Null Warnungen unter Swift 6 ist der Maßstab. Warnungen werden behoben, nicht a
 
 ## Einschränkungen
 
-- Geschrieben wurde bisher nur auf eine einzige Tastatur, eine `1189:8890` mit sechs Tasten und einem
-  Drehknopf – die sich als Tastatur mit nur einer Ebene herausstellte: Egal, auf welche Ebene man schreibt, es
-  landet an derselben Stelle. Die übrigen Tastaturen werden so beschrieben, wie die App ihres Herstellers sie
-  beschreibt; Tests halten die Bytes fest, aber an einer echten Tastatur wurde noch keine davon ausprobiert.
+- Geschrieben wurde bisher auf zwei Tastaturen: eine `1189:8890` mit sechs Tasten und einem
+  Drehknopf – die sich als Tastatur mit nur einer Ebene herausstellte: Egal, auf welche Ebene man
+  schreibt, es landet an derselben Stelle – und eine `514C:8850` mit zwölf Tasten und zwei
+  Drehknöpfen auf neuerer Firmware. Die übrigen Tastaturen werden so beschrieben, wie die App ihres
+  Herstellers sie beschreibt; Tests halten die Bytes fest, aber an einer echten Tastatur wurde noch
+  keine davon ausprobiert.
 - Die `1189:8890` und Tastaturen, die ihren Typ nicht angeben, können ihre Einstellungen nicht melden; die App
   zeigt daher nur, was in ihr festgelegt wurde.
-- Immer nur eine Tastatur. Sind mehrere angeschlossen, nimmt die App die erste, die sie findet – eine `1189:8890`
-  zuerst.
+- Immer nur eine Tastatur ist geöffnet. Sind mehrere angeschlossen, wählt die Schaltfläche neben dem
+  Verbindungsstatus, welche; die App öffnet die zuletzt gewählte, sonst die erste, die sie findet –
+  eine `1189:8890` zuerst.
 - Mausbewegungen und Ziehen werden nicht angeboten.

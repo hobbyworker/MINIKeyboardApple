@@ -158,12 +158,14 @@ Standarnya adalah nol peringatan di Swift 6. Peringatan diperbaiki, bukan dimati
 
 ## Batasan
 
-- Sejauh ini, penulisan baru diperiksa pada satu papan ketik, yaitu `1189:8890` dengan 6 tombol dan 1 kenop — papan
-  ketik ini ternyata hanya punya satu lapisan, jadi apa pun yang ditulis ke lapisan mana pun masuk ke tempat yang sama.
-  Papan ketik lainnya ditulis persis seperti cara aplikasi produsennya menulis. Tes menjaga byte-nya, tetapi belum ada
-  satu pun yang diperiksa langsung pada perangkatnya.
+- Sejauh ini, penulisan sudah diperiksa pada dua papan ketik: `1189:8890` dengan 6 tombol dan 1
+  kenop — papan ketik ini ternyata hanya punya satu lapisan, jadi apa pun yang ditulis ke lapisan
+  mana pun masuk ke tempat yang sama — dan `514C:8850` dengan 12 tombol dan 2 kenop, dengan firmware
+  baru. Papan ketik lainnya ditulis persis seperti cara aplikasi produsennya menulis. Tes menjaga
+  byte-nya, tetapi belum ada satu pun yang diperiksa langsung pada perangkatnya.
 - `1189:8890` dan papan ketik yang tidak memberi tahu jenisnya tidak melaporkan pengaturan saat ini, jadi yang terlihat
   hanya apa yang diatur di aplikasi.
-- Hanya satu papan ketik dalam satu waktu. Jika beberapa papan ketik tercolok, aplikasi memakai yang pertama ditemukan —
-  `1189:8890` didahulukan.
+- Hanya satu papan ketik yang dibuka dalam satu waktu. Jika beberapa papan ketik tercolok, tombol di
+  samping status sambungan memilih yang mana; aplikasi membuka yang terakhir dipilih, atau jika
+  tidak ada, yang pertama ditemukan — `1189:8890` didahulukan.
 - Gerakan dan seret tetikus tidak tersedia.

@@ -169,12 +169,14 @@ Zéro avertissement avec Swift 6 : c’est la règle. Les avertissements sont c
 
 ## Limites
 
-- L’écriture n’a été essayée jusqu’ici que sur un seul clavier, un `1189:8890` à six touches et un bouton
-  rotatif – qui s’est révélé n’avoir qu’une seule couche : quelle que soit la couche où l’on écrit, tout arrive
-  au même endroit. Les autres claviers sont écrits comme l’app de leur fabricant les écrit ; des tests figent les
-  octets, mais aucun n’a encore été essayé sur un vrai clavier.
+- L’écriture a été essayée jusqu’ici sur deux claviers : un `1189:8890` à six touches et un bouton
+  rotatif – qui s’est révélé n’avoir qu’une seule couche : quelle que soit la couche où l’on écrit,
+  tout arrive au même endroit – et un `514C:8850` à douze touches et deux boutons rotatifs, au
+  programme interne récent. Les autres claviers sont écrits comme l’app de leur fabricant les
+  écrit ; des tests figent les octets, mais aucun n’a encore été essayé sur un vrai clavier.
 - Le `1189:8890` et les claviers qui n’indiquent pas leur type ne peuvent pas communiquer leurs réglages ;
   seuls ceux définis dans l’app sont donc affichés.
-- Un seul clavier à la fois. Si plusieurs sont branchés, l’app prend le premier qu’elle trouve – un `1189:8890`
-  en priorité.
+- Un seul clavier ouvert à la fois. Si plusieurs sont branchés, le bouton à côté de l’état de
+  connexion choisit lequel ; l’app ouvre celui choisi la dernière fois, sinon le premier qu’elle
+  trouve – un `1189:8890` en priorité.
 - Le déplacement de la souris et le glissement ne sont pas proposés.

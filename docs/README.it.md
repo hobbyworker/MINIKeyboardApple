@@ -162,12 +162,14 @@ Zero avvisi con Swift 6 è il requisito. Gli avvisi si correggono, non si disatt
 
 ## Limiti
 
-- Finora la scrittura è stata provata su una sola tastiera, una `1189:8890` con sei tasti e una manopola – che
-  si è rivelata avere un solo livello: su qualunque livello si scriva, finisce tutto nello stesso posto. Le altre
-  tastiere vengono scritte come le scrive l’app del loro produttore; i test fissano i byte, ma nessuna è stata
-  ancora provata su una tastiera reale.
+- Finora la scrittura è stata provata su due tastiere: una `1189:8890` con sei tasti e una manopola
+  – che si è rivelata avere un solo livello: su qualunque livello si scriva, finisce tutto nello
+  stesso posto – e una `514C:8850` con dodici tasti e due manopole, con firmware recente. Le altre
+  tastiere vengono scritte come le scrive l’app del loro produttore; i test fissano i byte, ma
+  nessuna è stata ancora provata su una tastiera reale.
 - La `1189:8890` e le tastiere che non indicano il proprio tipo non possono riferire le loro impostazioni,
   quindi si vede solo ciò che è stato impostato nell’app.
-- Una tastiera alla volta. Se ne sono collegate diverse, l’app prende la prima che trova – prima una
-  `1189:8890`.
+- Una tastiera aperta alla volta. Se ne sono collegate diverse, il pulsante accanto allo stato della
+  connessione sceglie quale; l’app apre quella scelta l’ultima volta, altrimenti la prima che trova
+  – prima una `1189:8890`.
 - Lo spostamento del mouse e il trascinamento non sono disponibili.

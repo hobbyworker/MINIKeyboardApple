@@ -159,11 +159,14 @@ Zero avisos no Swift 6 é o padrão. Avisos são corrigidos, não desativados.
 
 ## Limitações
 
-- Até agora, a gravação só foi testada em um teclado, um `1189:8890` com seis teclas e um botão giratório — que
-  acabou tendo uma única camada: o que é gravado em qualquer camada vai para o mesmo lugar. Os demais teclados são
-  gravados como o app do fabricante os grava; os testes fixam os bytes, mas nenhum deles foi testado em um teclado
-  real ainda.
+- Até agora, a gravação foi testada em dois teclados: um `1189:8890` com seis teclas e um botão
+  giratório — que acabou tendo uma única camada: o que é gravado em qualquer camada vai para o mesmo
+  lugar — e um `514C:8850` com doze teclas e dois botões giratórios, com firmware novo. Os demais
+  teclados são gravados como o app do fabricante os grava; os testes fixam os bytes, mas nenhum
+  deles foi testado em um teclado real ainda.
 - O `1189:8890` e os teclados que não informam o tipo não conseguem informar a configuração atual, então o app
   mostra só o que foi definido nele.
-- Um teclado por vez. Com vários conectados, o app usa o primeiro que encontrar — um `1189:8890` primeiro.
+- Um teclado aberto por vez. Com vários conectados, o botão ao lado do status da conexão escolhe
+  qual; o app abre o escolhido da última vez ou, se não houver, o primeiro que encontrar — um
+  `1189:8890` primeiro.
 - Não há ações para mover o mouse nem para arrastar.

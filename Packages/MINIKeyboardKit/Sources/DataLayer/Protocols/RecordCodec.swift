@@ -62,6 +62,8 @@ enum RecordCodec {
             record[11] = UInt8(key.usage >> 8)
         case .mouse(let mouse):
             record[3] = Kind.mouse.rawValue
+            // 1 for a mouse action; the cross-platform app's 2025-06 builds put 4 here for a gesture.
+            record[4] = 1
             record[5] = 4
             record[8] = modifierCodes(mouse.modifiers).first ?? 0
             record[11] = mouse.buttons
@@ -194,6 +196,8 @@ enum RecordCodec {
             let usage = UInt16(byte(10)) | UInt16(byte(11)) << 8
             return usage == 0 ? .unassigned : .media(MediaKey(usage: usage))
         case (.standard, .mouse):
+            // A gesture, which the app doesn't make, isn't read as a mouse action.
+            guard byte(4) != 4 else { return nil }
             return mouse(buttons: byte(11), wheel: byte(20), modifiers: modifiers(fromCode: byte(8)) ?? [])
         case (_, .mouse):
             let held = Modifiers(rawValue: byte(10)).members.first ?? []

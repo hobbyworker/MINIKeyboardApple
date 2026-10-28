@@ -82,6 +82,7 @@ struct ConnectionStatusView: View {
                 .menuStyle(.borderlessButton)
                 .menuIndicator(.hidden)
                 .fixedSize()
+                .disabled(!editor.canSwitchKeyboard)
                 .help(Text("Choose a Keyboard"))
                 .accessibilityLabel(Text("Choose a Keyboard"))
             }

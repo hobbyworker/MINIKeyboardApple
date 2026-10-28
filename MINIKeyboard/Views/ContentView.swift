@@ -43,6 +43,15 @@ struct ContentView: View {
                                     set: { editor.isChoosingLayout = $0 })) {
             LayoutSheet()
         }
+        // A switch that would drop changes not saved asks first. Only the buttons answer: the alert closing must not
+        // forget the switch before Switch makes it.
+        .alert(Text("Switch Keyboards?"),
+               isPresented: Binding(get: { editor.pendingSwitch != nil }, set: { _ in })) {
+            Button("Switch", role: .destructive) { Task { await editor.confirmSwitch() } }
+            Button("Cancel", role: .cancel) { editor.cancelSwitch() }
+        } message: {
+            Text("Changes you haven’t saved will be lost.")
+        }
     }
 }
 
@@ -66,6 +75,7 @@ private struct SimulatorBar: View {
             Button("Back to the Keyboard on USB") {
                 Task { await editor.selectSimulator(nil) }
             }
+            .disabled(!editor.canSwitchKeyboard)
         }
         .padding(.leading, 20)
         .padding(.trailing, 16)

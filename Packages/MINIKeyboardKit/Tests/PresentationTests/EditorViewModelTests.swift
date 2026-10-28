@@ -2,8 +2,8 @@ import Testing
 @testable import Presentation
 import Domain
 
-/// A keyboard that is plugged in when asked.
-final class FakeConnection: KeyboardConnectionRepository, @unchecked Sendable {
+/// A keyboard that is plugged in when asked, and the switch to the simulator.
+final class FakeConnection: KeyboardConnectionRepository, KeyboardSourceRepository, @unchecked Sendable {
     let continuation: AsyncStream<ConnectionState>.Continuation
     let stream: AsyncStream<ConnectionState>
 
@@ -21,19 +21,51 @@ final class FakeConnection: KeyboardConnectionRepository, @unchecked Sendable {
 
     func attachedKeyboards() async -> AsyncStream<AttachedKeyboards> { attached.stream }
     func selectKeyboard(_ id: AttachedKeyboard.ID) async { selected.append(id) }
+
+    /// The keyboard on USB until a test switches; the switches, in order.
+    private(set) var sources: [KeyboardSource] = []
+
+    func current() async -> KeyboardSource { .hardware }
+    func select(_ source: KeyboardSource) async { sources.append(source) }
 }
 
-final class FakeDevice: KeyboardDeviceRepository, @unchecked Sendable {
+/// The open keyboard, whichever it is. The calls in `holds` wait until the test lets them go, so it can change the
+/// connection in the middle of one.
+@MainActor
+final class FakeDevice: KeyboardDeviceRepository {
+    enum Call { case identity, read, write }
+
     var identity: KeyboardIdentity?
     var actions: [ControlID: KeyAction] = [:]
     var failWrite: KeyboardDeviceError?
+    var holds: Set<Call> = []
     private(set) var writes: [KeyboardConfiguration] = []
     private(set) var reads = 0
+    private var waiting: [CheckedContinuation<Void, Never>] = []
 
-    func askIdentity() async throws(KeyboardDeviceError) -> KeyboardIdentity? { identity }
+    /// Whether a call is waiting to be let go.
+    var isHolding: Bool { !waiting.isEmpty }
+
+    /// Lets the calls waiting go on, and holds none from now on.
+    func letGo() {
+        holds = []
+        waiting.forEach { $0.resume() }
+        waiting = []
+    }
+
+    private func wait(_ call: Call) async {
+        guard holds.contains(call) else { return }
+        await withCheckedContinuation { waiting.append($0) }
+    }
+
+    func askIdentity() async throws(KeyboardDeviceError) -> KeyboardIdentity? {
+        await wait(.identity)
+        return identity
+    }
 
     func readActions(layer: Int, format: RecordFormat, layout: KeyboardLayout) async throws(KeyboardDeviceError) -> [ControlID: KeyAction] {
         reads += 1
+        await wait(.read)
         return actions
     }
 
@@ -42,6 +74,7 @@ final class FakeDevice: KeyboardDeviceRepository, @unchecked Sendable {
     }
 
     func write(_ configuration: KeyboardConfiguration, commands: CommandSet, layout: KeyboardLayout) async throws(KeyboardDeviceError) {
+        await wait(.write)
         if let failWrite { throw failWrite }
         writes.append(configuration)
     }
@@ -67,6 +100,12 @@ struct EditorViewModelTests {
         reportID: 3, reportLength: 65, details: nil)
     static let c = KeyUsage.named(0x06)!
     static let a = KeyUsage.named(0x04)!
+    /// The 8890 and a 884x keyboard, plugged in together.
+    static let plugged = AttachedKeyboards(keyboards: [
+        AttachedKeyboard(id: "a", usb: k8890.usb, location: "01100000"),
+        AttachedKeyboard(id: "b", usb: k8840.usb, location: "02100000"),
+    ], selected: "a")
+    static let simulated8890 = SimulatedModel.all.first { $0.id == "8890-3" }!
 
     func editor() -> KeyboardEditorViewModel {
         let editor = KeyboardEditorViewModel(
@@ -75,6 +114,7 @@ struct EditorViewModelTests {
             identifyKeyboard: IdentifyKeyboardUseCase(repository: device, attempts: 1),
             resolveLayout: ResolveLayoutUseCase(profiles: profiles), chooseLayout: ChooseLayoutUseCase(profiles: profiles),
             readKeyboard: ReadKeyboardUseCase(repository: device), saveKeyboard: SaveKeyboardUseCase(repository: device),
+            keyboardSource: KeyboardSourceUseCase(repository: connection),
             observeAttachedKeyboards: ObserveAttachedKeyboardsUseCase(repository: connection),
             selectKeyboard: SelectKeyboardUseCase(repository: connection))
         editor.start()
@@ -279,6 +319,219 @@ struct EditorViewModelTests {
         #expect(editor.previewDrawing(keys: 0, columns: 1, knobs: 0, quarterTurns: 0) == nil)
         editor.rotate()
         #expect(editor.layoutSheet?.quarterTurns == 2)
+    }
+
+    /// A read whose keyboard goes in the middle brings back nothing — its later layers would be the next keyboard's.
+    /// A keyboard that comes meanwhile waits for the read to end, then is identified.
+    @Test func aReadWhoseKeyboardChangedIsDropped() async {
+        device.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: 10)
+        device.actions = [.key(number: 2): .media(.mute)]
+        let editor = editor()
+        connection.continuation.yield(.connected(Self.k8840))
+        await settle(editor) { editor.isReady && device.reads > 0 }
+
+        // Unplugged while the user's read is under way.
+        device.actions = [.key(number: 2): .media(.volumeUp)]
+        device.holds = [.read]
+        let reading = Task { await editor.read() }
+        await settle(editor) { device.isHolding }
+        #expect(editor.activity == .reading)
+        connection.continuation.yield(.searching)
+        await settle(editor) { editor.status == .searching }
+        device.letGo()
+        await reading.value
+        #expect(editor.activity == nil)
+        #expect(editor.notice == .keyboardGone)
+        #expect(editor.drawing?.controls.first { $0.ref == .key(2) }?.caption == .media(.mute))
+        #expect(!editor.hasUnsavedChanges)
+
+        // Another keyboard comes while the read on connecting is under way.
+        device.holds = [.read]
+        connection.continuation.yield(.connected(Self.k8840))
+        await settle(editor) { device.isHolding }
+        #expect(editor.activity == .reading)
+        connection.continuation.yield(.searching)
+        connection.continuation.yield(.connected(Self.k8890))
+        let waiting = ConnectionStatus.connected(usb: "1189:8890", keys: nil, knobs: nil, isIdentified: false, isSimulated: false)
+        await settle(editor) { editor.status == waiting }
+        #expect(editor.status == waiting)
+        #expect(editor.activity == .reading)
+        device.letGo()
+        await settle(editor) { editor.isReady }
+        #expect(editor.notice == .keyboardGone)
+        #expect(editor.status == .connected(usb: "1189:8890", keys: nil, knobs: nil, isIdentified: true, isSimulated: false))
+    }
+
+    /// A save whose keyboard changes in the middle isn't taken for saved — not even when the next keyboard has the
+    /// same USB ID, and so looks the same.
+    @Test func aSaveWhoseKeyboardChangedIsNotSaved() async {
+        let editor = editor()
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.isReady }
+        editor.select(.key(1))
+        editor.press(Self.a)
+
+        device.holds = [.write]
+        let saving = Task { await editor.save() }
+        await settle(editor) { device.isHolding }
+        #expect(editor.activity == .saving)
+        connection.continuation.yield(.searching)
+        await settle(editor) { editor.status == .searching }
+        device.letGo()
+        await saving.value
+        #expect(editor.activity == nil)
+        #expect(editor.notice == .keyboardGone)
+        #expect(editor.hasUnsavedChanges)
+
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.isReady }
+        editor.select(.key(1))
+        editor.press(Self.a)
+        device.holds = [.write]
+        let again = Task { await editor.save() }
+        await settle(editor) { device.isHolding }
+        connection.continuation.yield(.searching)
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.status == .connected(usb: "1189:8890", keys: nil, knobs: nil, isIdentified: false, isSimulated: false) }
+        device.letGo()
+        await again.value
+        #expect(editor.notice == .keyboardGone)
+        #expect(editor.isReady)
+    }
+
+    /// The app stays on a keyboard while it identifies, reads or saves it: choosing another keyboard or a simulated
+    /// one does nothing then.
+    @Test func noSwitchingWhileBusy() async {
+        device.identity = KeyboardIdentity(keyCount: 6, knobCount: 1, type: 10)
+        let editor = editor()
+        connection.attached.continuation.yield(Self.plugged)
+        await settle(editor) { editor.keyboardChoices.count == 2 }
+        #expect(editor.canSwitchKeyboard)
+
+        device.holds = [.identity]
+        connection.continuation.yield(.connected(Self.k8840))
+        await settle(editor) { device.isHolding }
+        #expect(editor.activity == .identifying)
+        #expect(!editor.canSwitchKeyboard)
+        device.letGo()
+        await settle(editor) { editor.isReady }
+        #expect(editor.canSwitchKeyboard)
+
+        device.holds = [.read]
+        let reading = Task { await editor.read() }
+        await settle(editor) { device.isHolding }
+        #expect(editor.activity == .reading)
+        #expect(!editor.canSwitchKeyboard)
+        await editor.selectKeyboard("b")
+        await editor.selectSimulator(Self.simulated8890.id)
+        #expect(connection.selected.isEmpty)
+        #expect(connection.sources.isEmpty)
+        #expect(editor.pendingSwitch == nil)
+        device.letGo()
+        await reading.value
+        #expect(editor.canSwitchKeyboard)
+
+        editor.select(.key(1))
+        editor.press(Self.a)
+        device.holds = [.write]
+        let saving = Task { await editor.save() }
+        await settle(editor) { device.isHolding }
+        #expect(editor.activity == .saving)
+        #expect(!editor.canSwitchKeyboard)
+        device.letGo()
+        await saving.value
+        #expect(editor.canSwitchKeyboard)
+        #expect(editor.notice == .saved(simulated: false))
+
+        await editor.selectKeyboard("b")
+        #expect(connection.selected == ["b"])
+    }
+
+    /// Going to another keyboard, or to a simulated one, with changes not saved asks first: cancelling keeps the
+    /// keyboard and the changes, agreeing switches. A question is forgotten when the keyboard goes.
+    @Test func switchingWithUnsavedChangesAsksFirst() async {
+        let editor = editor()
+        connection.attached.continuation.yield(Self.plugged)
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.isReady && editor.keyboardChoices.count == 2 }
+        editor.select(.key(1))
+        editor.press(Self.a)
+
+        await editor.selectKeyboard("b")
+        #expect(editor.pendingSwitch == .keyboard("b"))
+        #expect(connection.selected.isEmpty)
+        editor.cancelSwitch()
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.selected.isEmpty)
+        #expect(editor.hasUnsavedChanges)
+        #expect(editor.isReady)
+
+        await editor.selectKeyboard("b")
+        await editor.confirmSwitch()
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.selected == ["b"])
+
+        await editor.selectSimulator(Self.simulated8890.id)
+        #expect(editor.pendingSwitch == .simulator(Self.simulated8890.id))
+        #expect(connection.sources.isEmpty)
+        #expect(editor.activeSimulatorID == nil)
+        await editor.confirmSwitch()
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.sources == [.simulated(Self.simulated8890)])
+        #expect(editor.activeSimulatorID == Self.simulated8890.id)
+
+        await editor.selectSimulator(nil)
+        #expect(editor.pendingSwitch == .simulator(nil))
+        connection.continuation.yield(.searching)
+        await settle(editor) { editor.status == .searching }
+        #expect(editor.pendingSwitch == nil)
+        await editor.confirmSwitch()
+        #expect(connection.sources == [.simulated(Self.simulated8890)])
+    }
+
+    /// Without changes not saved there is nothing to ask; choosing what is open already does nothing.
+    @Test func switchingWithoutChangesDoesntAsk() async {
+        let editor = editor()
+        connection.attached.continuation.yield(Self.plugged)
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.isReady && editor.keyboardChoices.count == 2 }
+
+        await editor.selectKeyboard("a")
+        #expect(connection.selected.isEmpty)
+        await editor.selectKeyboard("b")
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.selected == ["b"])
+
+        await editor.selectSimulator(nil)
+        #expect(connection.sources.isEmpty)
+        await editor.selectSimulator(Self.simulated8890.id)
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.sources == [.simulated(Self.simulated8890)])
+    }
+
+    /// Once the keyboard with the changes has gone they can't be saved anywhere, so choosing another keyboard, or a
+    /// simulated one, switches at once.
+    @Test func changesWhoseKeyboardWentDontAsk() async {
+        let editor = editor()
+        connection.attached.continuation.yield(Self.plugged)
+        connection.continuation.yield(.connected(Self.k8890))
+        await settle(editor) { editor.isReady && editor.keyboardChoices.count == 2 }
+        editor.select(.key(1))
+        editor.press(Self.a)
+
+        connection.continuation.yield(.searching)
+        connection.attached.continuation.yield(AttachedKeyboards(keyboards: [
+            AttachedKeyboard(id: "b", usb: Self.k8840.usb, location: "02100000"),
+            AttachedKeyboard(id: "c", usb: Self.k8840.usb, location: "03100000"),
+        ], selected: "b"))
+        await settle(editor) { editor.status == .searching && editor.keyboardChoices.map(\.id) == ["b", "c"] }
+        #expect(editor.hasUnsavedChanges)
+        await editor.selectKeyboard("c")
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.selected == ["c"])
+        await editor.selectSimulator(Self.simulated8890.id)
+        #expect(editor.pendingSwitch == nil)
+        #expect(connection.sources == [.simulated(Self.simulated8890)])
     }
 }
 

@@ -2,7 +2,7 @@ import SwiftUI
 import Presentation
 
 /// The keyboard on USB, or a simulated one: the kinds users have, and in a debug build every kind (the 8890's
-/// other report IDs, the legacy records).
+/// other report IDs, the legacy records). Not while the keyboard is being identified, read or saved.
 struct SimulatorMenu: View {
     let editor: KeyboardEditorViewModel
 
@@ -12,12 +12,15 @@ struct SimulatorMenu: View {
         #else
         let choices = editor.simulatorChoices.filter(\.isForEveryone)
         #endif
-        Toggle(isOn: binding(nil)) { Text("Keyboard on USB") }
-        Divider()
-        group(choices, .k8890) { Text(verbatim: "1189:8890") }
-        group(choices, .standard) { KeyboardInfo.Commands.standard.text }
-        group(choices, .legacy) { KeyboardInfo.Commands.legacy.text }
-        toggles(choices.filter { $0.group == .unidentified })
+        Group {
+            Toggle(isOn: binding(nil)) { Text("Keyboard on USB") }
+            Divider()
+            group(choices, .k8890) { Text(verbatim: "1189:8890") }
+            group(choices, .standard) { KeyboardInfo.Commands.standard.text }
+            group(choices, .legacy) { KeyboardInfo.Commands.legacy.text }
+            toggles(choices.filter { $0.group == .unidentified })
+        }
+        .disabled(!editor.canSwitchKeyboard)
     }
 
     /// A group of one is an item of its own, under the group's name; an empty one isn't there.

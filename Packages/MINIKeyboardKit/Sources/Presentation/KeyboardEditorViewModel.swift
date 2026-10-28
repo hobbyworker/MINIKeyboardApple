@@ -11,6 +11,8 @@ import Domain
 public final class KeyboardEditorViewModel {
     public private(set) var activity: Activity?
     public private(set) var notice: Notice?
+    /// A switch to another keyboard the user asked for, waiting for them to agree that the changes not saved go.
+    public private(set) var pendingSwitch: KeyboardSwitch?
     /// The layout sheet is up — on its own when a keyboard that can't say its shape needs one set.
     public var isChoosingLayout = false
     public var tab: EditorTab = .keys
@@ -48,6 +50,10 @@ public final class KeyboardEditorViewModel {
     @ObservationIgnored private var connectionTask: Task<Void, Never>?
     @ObservationIgnored private var attachedTask: Task<Void, Never>?
     @ObservationIgnored private var noticeTask: Task<Void, Never>?
+    /// Goes up whenever the connection changes to another keyboard, or to none. Identifying, reading and saving note
+    /// it as they start, so what they bring back from one keyboard is never taken for the next's — two keyboards of
+    /// one USB ID look the same.
+    @ObservationIgnored private var connectionSerial = 0
 
     public init(
         observeConnection: ObserveConnectionUseCase, retryConnection: RetryConnectionUseCase,
@@ -87,7 +93,7 @@ public final class KeyboardEditorViewModel {
             }
             for await state in await observeConnection.execute() {
                 guard let self else { return }
-                await self.connectionChanged(state)
+                self.connectionChanged(state)
             }
         }
     }
@@ -135,18 +141,23 @@ public final class KeyboardEditorViewModel {
 
     // MARK: - Connection
 
-    private func connectionChanged(_ state: ConnectionState) async {
+    /// Takes each state as it comes, even while work with the keyboard is under way — the work sees the change when
+    /// it ends. A keyboard that comes is identified on its own, without holding up the states after it.
+    private func connectionChanged(_ state: ConnectionState) {
         let previous = connection.keyboard
         connection = state
         guard state.keyboard != previous else { return }
+        connectionSerial += 1
         identification = nil
         selection = nil
         held = []
-        // A sheet for the keyboard that went goes with it; the next one asks again if it needs to.
+        // A sheet for the keyboard that went goes with it; the next one asks again if it needs to. So does a
+        // question about leaving it.
         isChoosingLayout = false
+        pendingSwitch = nil
         if let keyboard = state.keyboard {
             if keyboard.usb != previous?.usb { resolvedLayout = nil }
-            await identify()
+            Task { [weak self] in await self?.identify() }
         }
     }
 
@@ -157,17 +168,23 @@ public final class KeyboardEditorViewModel {
     /// Settles the keyboard's commands and layout, then reads it if it reads back on its own.
     public func identify() async {
         guard let keyboard, identification == nil, activity == nil else { return }
+        let serial = connectionSerial
         activity = .identifying
-        let identified: KeyboardIdentification
+        let identified: KeyboardIdentification?
         do {
             identified = try await identifyKeyboard.execute(keyboard)
         } catch {
-            activity = nil
-            show(.identifyFailed)
+            identified = nil
+        }
+        guard serial == connectionSerial else {
+            await keyboardChangedDuringWork()
             return
         }
         activity = nil
-        guard connection.keyboard == keyboard else { return }
+        guard let identified else {
+            show(.identifyFailed)
+            return
+        }
         identification = identified
         let capabilities = KeyboardCapabilities(commands: identified.commands)
         let resolved = resolveLayout.execute(keyboard, identification: identified)
@@ -185,8 +202,13 @@ public final class KeyboardEditorViewModel {
 
     public func read(announce: Bool = true) async {
         guard canRead, let capabilities, let layout = resolvedLayout?.layout else { return }
+        let serial = connectionSerial
         activity = .reading
         let outcome = await readKeyboard.execute(configuration, capabilities: capabilities, layout: layout)
+        guard serial == connectionSerial else {
+            await keyboardChangedDuringWork()
+            return
+        }
         activity = nil
         configuration = outcome.configuration
         if outcome.error != nil {
@@ -202,23 +224,41 @@ public final class KeyboardEditorViewModel {
             show(.nothingToSave)
             return
         }
+        let serial = connectionSerial
         activity = .saving
-        defer { activity = nil }
+        let outcome: Result<SaveKeyboardUseCase.Outcome, KeyboardDeviceError>
         do {
-            switch try await saveKeyboard.execute(configuration, capabilities: capabilities, layout: layout) {
-            case .saved(let saved):
-                configuration = saved
-                show(.saved(simulated: activeSimulatorID != nil))
-            case .nothingToSave:
-                show(.nothingToSave)
-            }
+            outcome = .success(try await saveKeyboard.execute(configuration, capabilities: capabilities, layout: layout))
         } catch {
-            switch error {
-            case .writeFailed(let code): show(.writeFailed(code))
-            case .unsupported: show(.unsupported)
-            default: show(.keyboardGone)
-            }
+            outcome = .failure(error)
         }
+        // Not saved to the keyboard there now; the changes stay marked.
+        guard serial == connectionSerial else {
+            await keyboardChangedDuringWork()
+            return
+        }
+        activity = nil
+        switch outcome {
+        case .success(.saved(let saved)):
+            configuration = saved
+            show(.saved(simulated: activeSimulatorID != nil))
+        case .success(.nothingToSave):
+            show(.nothingToSave)
+        case .failure(.writeFailed(let code)):
+            show(.writeFailed(code))
+        case .failure(.unsupported):
+            show(.unsupported)
+        case .failure:
+            show(.keyboardGone)
+        }
+    }
+
+    /// Ends work whose keyboard changed while it was under way. What it brought back is the last keyboard's — or
+    /// part of each — so it is dropped, and the keyboard there now, which waited for the work, is identified.
+    private func keyboardChangedDuringWork() async {
+        activity = nil
+        show(.keyboardGone)
+        await identify()
     }
 
     // MARK: - Layout
@@ -366,24 +406,65 @@ public final class KeyboardEditorViewModel {
         return nil
     }
 
-    /// Opens another of the keyboards plugged in. The switch reports "searching" first, as after re-plugging.
+    /// Whether the app can go to another keyboard now — not while it identifies, reads or saves this one: the work
+    /// would end on the next.
+    public var canSwitchKeyboard: Bool { activity == nil }
+
+    /// Opens another of the keyboards plugged in. The switch reports "searching" first, as after re-plugging. With
+    /// changes not saved to the keyboard open, it waits for the user to agree (`pendingSwitch`).
     public func selectKeyboard(_ id: String) async {
-        await selectKeyboardUseCase?.execute(id)
+        guard canSwitchKeyboard, id != attached.selected, attached.keyboards.contains(where: { $0.id == id })
+        else { return }
+        await request(.keyboard(id))
     }
 
     /// Switches to a simulated keyboard, or with nil to the keyboard on USB. The switch reports "searching"
-    /// first, so the window starts over as after re-plugging.
+    /// first, so the window starts over as after re-plugging. With changes not saved to the keyboard open, it waits
+    /// for the user to agree (`pendingSwitch`).
     public func selectSimulator(_ id: String?) async {
-        let new: KeyboardSource
-        if let id {
-            guard let model = SimulatedModel.all.first(where: { $0.id == id }) else { return }
-            new = .simulated(model)
+        guard canSwitchKeyboard, keyboardSource != nil, let new = Self.source(simulator: id), new != source
+        else { return }
+        await request(.simulator(id))
+    }
+
+    /// Makes the switch waiting for an answer; the changes not saved go with the keyboard.
+    public func confirmSwitch() async {
+        guard let pending = pendingSwitch else { return }
+        pendingSwitch = nil
+        guard canSwitchKeyboard else { return }
+        await perform(pending)
+    }
+
+    /// Forgets the switch waiting for an answer: the keyboard and its changes stay.
+    public func cancelSwitch() {
+        pendingSwitch = nil
+    }
+
+    /// Asks first only when the changes could still be saved: once their keyboard has gone, or none opened, they
+    /// can't be, and the switch is made at once.
+    private func request(_ change: KeyboardSwitch) async {
+        if hasUnsavedChanges, keyboard != nil, identification != nil {
+            pendingSwitch = change
         } else {
-            new = .hardware
+            await perform(change)
         }
-        guard let keyboardSource, new != source else { return }
-        await keyboardSource.select(new)
-        source = new
+    }
+
+    private func perform(_ change: KeyboardSwitch) async {
+        switch change {
+        case .keyboard(let id):
+            await selectKeyboardUseCase?.execute(id)
+        case .simulator(let id):
+            guard let keyboardSource, let new = Self.source(simulator: id), new != source else { return }
+            await keyboardSource.select(new)
+            source = new
+        }
+    }
+
+    /// A simulated keyboard by its choice's ID, or with nil the keyboard on USB.
+    private static func source(simulator id: String?) -> KeyboardSource? {
+        guard let id else { return .hardware }
+        return SimulatedModel.all.first { $0.id == id }.map(KeyboardSource.simulated)
     }
 
     // MARK: - Notices

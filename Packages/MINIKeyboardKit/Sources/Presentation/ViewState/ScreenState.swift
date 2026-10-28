@@ -334,6 +334,14 @@ public struct KeyboardChoice: Hashable, Sendable, Identifiable {
     public let isSelected: Bool
 }
 
+/// A switch to another keyboard the user asked for — the window asks before one drops changes not saved.
+public enum KeyboardSwitch: Hashable, Sendable {
+    /// To another of the keyboards plugged in, by its choice's ID.
+    case keyboard(String)
+    /// To a simulated keyboard by its choice's ID, or with nil to the keyboard on USB.
+    case simulator(String?)
+}
+
 /// A keyboard the simulator can play.
 public struct SimulatorChoice: Hashable, Sendable, Identifiable {
     public enum Group: CaseIterable, Hashable, Sendable {

@@ -15,6 +15,9 @@ struct ActionPanel: View {
             }
             .pickerStyle(.segmented)
             .labelsHidden()
+            .disabled(!editor.isReady)
+            // The pages are disabled, not the scroll view: macOS hides a disabled scroll view's scroller, and a scroller
+            // that is always shown takes room, so the keys would grow and shrink around every read and save.
             ScrollView(.vertical) {
                 Group {
                     switch editor.tab {
@@ -27,10 +30,10 @@ struct ActionPanel: View {
                 }
                 .padding(.bottom, 8)
                 .frame(maxWidth: .infinity, alignment: .topLeading)
+                .disabled(!editor.isReady)
             }
         }
         .padding(16)
-        .disabled(!editor.isReady)
     }
 }
 

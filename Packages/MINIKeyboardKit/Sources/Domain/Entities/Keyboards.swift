@@ -74,8 +74,9 @@ public enum CommandSet: Hashable, Sendable {
 public struct KeyboardIdentity: Hashable, Sendable {
     public let keyCount: Int
     public let knobCount: Int
-    /// 10 for the standard record format, anything else for the legacy one. On a keyboard of four keys
-    /// and a knob it also picks between two layouts.
+    /// 10 for the standard record format — and 11, a twelve-key keyboard (514C:8850) that stores and reads standard
+    /// records though the cross-platform app takes it for legacy — anything else for the legacy one. On a keyboard of
+    /// four keys and a knob it also picks between two layouts.
     public let type: Int
 
     public init(keyCount: Int, knobCount: Int, type: Int) {
@@ -84,7 +85,7 @@ public struct KeyboardIdentity: Hashable, Sendable {
         self.type = type
     }
 
-    public var recordFormat: RecordFormat { type == 10 ? .standard : .legacy }
+    public var recordFormat: RecordFormat { type == 10 || type == 11 ? .standard : .legacy }
 }
 
 /// What the app learned about a keyboard once it was connected.

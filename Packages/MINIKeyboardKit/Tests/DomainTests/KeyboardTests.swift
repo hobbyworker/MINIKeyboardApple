@@ -18,6 +18,7 @@ struct KeyboardFamilyTests {
 
     @Test func identityPicksTheRecordFormat() {
         #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: 10).recordFormat == .standard)
+        #expect(KeyboardIdentity(keyCount: 12, knobCount: 2, type: 11).recordFormat == .standard)
         #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: 0).recordFormat == .legacy)
         #expect(KeyboardIdentity(keyCount: 6, knobCount: 1, type: 1).recordFormat == .legacy)
     }

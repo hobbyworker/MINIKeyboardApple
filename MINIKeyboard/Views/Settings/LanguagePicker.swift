@@ -15,6 +15,7 @@ enum UILanguage {
         ("zh-Hans", "简体中文"),
         ("zh-Hant", "繁體中文"),
         ("es", "Español"),
+        ("es-419", "Español (Latinoamérica)"),
         ("pt-BR", "Português (Brasil)"),
         ("pt-PT", "Português (Portugal)"),
         ("fr", "Français"),

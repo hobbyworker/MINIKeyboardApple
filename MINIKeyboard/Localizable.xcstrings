@@ -16,6 +16,12 @@
             "value" : "%@ debe reiniciarse para aplicar el cambio."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ debe reiniciarse para aplicar el cambio."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -106,6 +112,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ utiliza los siguientes paquetes de código abierto. A continuación aparece el texto original de la licencia que cada paquete publica en su repositorio."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ utiliza los siguientes paquetes de código abierto. A continuación aparece el texto original de la licencia que cada paquete publica en su repositorio."
@@ -227,6 +239,12 @@
             "value" : "%lld bytes"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld bytes"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -327,6 +345,12 @@
             "value" : "%1$lld de %2$lld pulsaciones"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld de %2$lld pulsaciones"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -421,6 +445,12 @@
             "value" : "884x · No responde qué es"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · No responde qué es"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -510,6 +540,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · Firmware antiguo"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "884x · Firmware antiguo"
@@ -610,6 +646,12 @@
             "value" : "884x · Firmware estándar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · Firmware estándar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -699,6 +741,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paquetes 8890 · %@"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paquetes 8890 · %@"
@@ -798,6 +846,12 @@
             "value" : "Una tecla admite hasta %lld pulsaciones."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una tecla admite hasta %lld pulsaciones."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -887,6 +941,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una luz recorre las teclas en orden, con un color nuevo en cada vuelta."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Una luz recorre las teclas en orden, con un color nuevo en cada vuelta."
@@ -986,6 +1046,12 @@
             "value" : "Una tecla multimedia sustituye lo que hacía la tecla."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una tecla multimedia sustituye lo que hacía la tecla."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1080,6 +1146,12 @@
             "value" : "Una acción del ratón sustituye lo que hacía la tecla."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una acción del mouse sustituye lo que hacía la tecla."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1169,6 +1241,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acerca de"
@@ -1269,6 +1347,12 @@
             "value" : "Acerca de %@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1358,6 +1442,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acción"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acción"
@@ -1458,6 +1548,12 @@
             "value" : "Después de guardar la iluminación, el teclado 1189:8890 repite sin parar el primer carácter de una tecla al pulsarla (el software del fabricante hace lo mismo). Si está activado, la app envía una orden de guardado más después de la iluminación para evitarlo; la configuración de las teclas no cambia. Si está desactivado, la app envía solo lo mismo que el software del fabricante."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Después de guardar la iluminación, el teclado 1189:8890 repite sin parar el primer carácter de una tecla al presionarla (el software del fabricante hace lo mismo). Si está activado, la app envía una orden de guardado más después de la iluminación para evitarlo; la configuración de las teclas no cambia. Si está desactivado, la app envía solo lo mismo que el software del fabricante."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1547,6 +1643,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permite %@ en “Privacidad y seguridad” ▸ “Monitorización de los dispositivos de entrada”."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permite %@ en “Privacidad y seguridad” ▸ “Monitorización de los dispositivos de entrada”."
@@ -1646,6 +1748,12 @@
             "value" : "Alt + Rueda del ratón hacia abajo"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + Rueda del mouse hacia abajo"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1740,6 +1848,12 @@
             "value" : "Alt + Rueda del ratón hacia arriba"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + Rueda del mouse hacia arriba"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1829,6 +1943,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "App"
@@ -1928,6 +2048,12 @@
             "value" : "Aspecto"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aspecto"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2017,6 +2143,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preguntando al teclado qué es…"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preguntando al teclado qué es…"
@@ -2117,6 +2249,12 @@
             "value" : "Volver al teclado por USB"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver al teclado por USB"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2206,6 +2344,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Graves +"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Graves +"
@@ -2305,6 +2449,12 @@
             "value" : "Graves -"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Graves -"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2394,6 +2544,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parpadeo de la última tecla"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Parpadeo de la última tecla"
@@ -2493,6 +2649,12 @@
             "value" : "Azul"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Azul"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2582,6 +2744,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brillo +"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brillo +"
@@ -2681,6 +2849,12 @@
             "value" : "Brillo -"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brillo -"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2775,6 +2949,12 @@
             "value" : "Calculadora"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calculadora"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2864,6 +3044,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
@@ -2964,6 +3150,12 @@
             "value" : "Bloqueo Mayúsculas"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloqueo Mayúsculas"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3053,6 +3245,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los cambios sin guardar se perderán."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Los cambios sin guardar se perderán."
@@ -3152,6 +3350,12 @@
             "value" : "Buscar actualizaciones…"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar actualizaciones…"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3246,6 +3450,12 @@
             "value" : "Buscar actualizaciones automáticamente"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar actualizaciones automáticamente"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3335,6 +3545,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chip"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chip"
@@ -3435,6 +3651,12 @@
             "value" : "Elegir un teclado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegir un teclado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3524,6 +3746,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige la forma del teclado"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elige la forma del teclado"
@@ -3623,6 +3851,12 @@
             "value" : "Borrar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3712,6 +3946,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar tecla"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Borrar tecla"
@@ -3811,6 +4051,12 @@
             "value" : "Borrar capa"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar capa"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3900,6 +4146,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cerrar"
@@ -3999,6 +4251,12 @@
             "value" : "Contraer"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contraer"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4088,6 +4346,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contraer todo"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contraer todo"
@@ -4187,6 +4451,12 @@
             "value" : "Color"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4276,6 +4546,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comando"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comando"
@@ -4375,6 +4651,12 @@
             "value" : "Comandos"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandos"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4464,6 +4746,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Canal de configuración"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Canal de configuración"
@@ -4563,6 +4851,12 @@
             "value" : "Conecta el teclado por USB."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conecta el teclado por USB."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4652,6 +4946,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conectado"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conectado"
@@ -4757,6 +5057,12 @@
             "value" : "Conectado a %1$@, interfaz %2$lld"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conectado a %1$@, interfaz %2$lld"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4846,6 +5152,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Control"
@@ -4945,6 +5257,12 @@
             "value" : "Copiar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5037,6 +5355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ctrl + Rueda del ratón hacia abajo"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + Rueda del mouse hacia abajo"
           }
         },
         "fr" : {
@@ -5133,6 +5457,12 @@
             "value" : "Ctrl + Rueda del ratón hacia arriba"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + Rueda del mouse hacia arriba"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5222,6 +5552,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cian"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cian"
@@ -5321,6 +5657,12 @@
             "value" : "Oscuro"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oscuro"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5410,6 +5752,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demora"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demora"
@@ -5510,6 +5858,12 @@
             "value" : "Retroceso (Delete)"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retroceso (Delete)"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5604,6 +5958,12 @@
             "value" : "Registro del dispositivo"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro del dispositivo"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5693,6 +6053,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceptar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aceptar"
@@ -5793,6 +6159,12 @@
             "value" : "Flecha abajo"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flecha abajo"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5887,6 +6259,12 @@
             "value" : "Cada pulsación puede esperar antes de enviarse. Primero, añade las pulsaciones a la tecla en la página “Teclas”."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cada pulsación puede esperar antes de enviarse. Primero, agrega las pulsaciones a la tecla en la página “Teclas”."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5976,6 +6354,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edición"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Edición"
@@ -6075,6 +6459,12 @@
             "value" : "Efecto"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Efecto"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6164,6 +6554,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correo electrónico"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Correo electrónico"
@@ -6264,6 +6660,12 @@
             "value" : "Fin"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6354,6 +6756,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escape"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escape"
@@ -6453,6 +6861,12 @@
             "value" : "Expandir"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expandir"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6547,6 +6961,12 @@
             "value" : "Expandir todo"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expandir todo"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6636,6 +7056,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firmware"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Firmware"
@@ -6736,6 +7162,12 @@
             "value" : "Soluciones para fallos del firmware"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soluciones para fallos del firmware"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6825,6 +7257,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguir el sistema"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seguir el sistema"
@@ -6925,6 +7363,12 @@
             "value" : "Suprimir"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suprimir"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7014,6 +7458,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclas de función"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclas de función"
@@ -7113,6 +7563,12 @@
             "value" : "General"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7202,6 +7658,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verde"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verde"
@@ -7302,6 +7764,12 @@
             "value" : "Inicio"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7391,6 +7859,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se necesita la monitorización de los dispositivos de entrada"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se necesita la monitorización de los dispositivos de entrada"
@@ -7486,6 +7960,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insert"
@@ -7591,6 +8071,12 @@
             "value" : "Interfaz %1$lld · %2$@ · %3$@ · %4$@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interfaz %1$lld · %2$@ · %3$@ · %4$@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7680,6 +8166,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interfaces"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Interfaces"
@@ -7779,6 +8271,12 @@
             "value" : "Tampoco se conoce su forma real. Indica cuántas teclas y botones giratorios tiene y cuántas teclas hay por fila, y gíralo para que quede como el teclado delante de ti."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampoco se conoce su forma real. Indica cuántas teclas y botones giratorios tiene y cuántas teclas hay por fila, y gíralo para que quede como el teclado delante de ti."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7868,6 +8366,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla %lld"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tecla %lld"
@@ -7967,6 +8471,12 @@
             "value" : "Disposición de teclas"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disposición de teclas"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8056,6 +8566,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclado"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclado"
@@ -8155,6 +8671,12 @@
             "value" : "Información del teclado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Información del teclado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8244,6 +8766,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclado por USB"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclado por USB"
@@ -8344,6 +8872,12 @@
             "value" : "Teclado numérico %@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclado numérico %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8439,6 +8973,12 @@
             "value" : "Intro (teclado numérico)"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter (teclado numérico)"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8528,6 +9068,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclas"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclas"
@@ -8627,6 +9173,12 @@
             "value" : "Las teclas aparecerán aquí cuando conectes el teclado."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las teclas aparecerán aquí cuando conectes el teclado."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8721,6 +9273,12 @@
             "value" : "Teclas por fila"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclas por fila"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8810,6 +9368,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclas: %1$lld · Botones giratorios: %2$lld"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclas: %1$lld · Botones giratorios: %2$lld"
@@ -8915,6 +9479,12 @@
             "value" : "Teclas: %1$lld · Botones giratorios: %2$lld · Tipo %3$lld"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclas: %1$lld · Botones giratorios: %2$lld · Tipo %3$lld"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9007,6 +9577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botón giratorio %lld · Pulsar"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón giratorio %lld · Presionar"
           }
         },
         "fr" : {
@@ -9103,6 +9679,12 @@
             "value" : "Botón giratorio %lld · Pulsar y girar a la izquierda"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón giratorio %lld · Presionar y girar a la izquierda"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9197,6 +9779,12 @@
             "value" : "Botón giratorio %lld · Pulsar y girar a la derecha"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón giratorio %lld · Presionar y girar a la derecha"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9286,6 +9874,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón giratorio %lld · Girar a la izquierda"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botón giratorio %lld · Girar a la izquierda"
@@ -9385,6 +9979,12 @@
             "value" : "Botón giratorio %lld · Girar a la derecha"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón giratorio %lld · Girar a la derecha"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9474,6 +10074,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botones giratorios"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botones giratorios"
@@ -9573,6 +10179,12 @@
             "value" : "LED"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LED"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9662,6 +10274,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Idioma"
@@ -9761,6 +10379,12 @@
             "value" : "Idioma y aspecto"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma y aspecto"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9855,6 +10479,12 @@
             "value" : "Se ha cambiado el idioma"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se cambió el idioma"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9944,6 +10574,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más tarde"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más tarde"
@@ -10043,6 +10679,12 @@
             "value" : "Capa"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capa"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10132,6 +10774,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capa %lld"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Capa %lld"
@@ -10232,6 +10880,12 @@
             "value" : "Flecha izquierda"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flecha izquierda"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10321,6 +10975,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letras"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Letras"
@@ -10420,6 +11080,12 @@
             "value" : "Claro"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claro"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10509,6 +11175,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La iluminación se configura por capa, así que no hace falta seleccionar ninguna tecla."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La iluminación se configura por capa, así que no hace falta seleccionar ninguna tecla."
@@ -10608,6 +11280,12 @@
             "value" : "Buscando el teclado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscando el teclado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10702,6 +11380,12 @@
             "value" : "La tecla mantiene pulsadas estas teclas de modificación, como una tecla de modificación."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tecla mantiene presionadas estas teclas de modificación, como una tecla de modificación."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10791,6 +11475,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fabricante"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fabricante"
@@ -10890,6 +11580,12 @@
             "value" : "Tecla multimedia %@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla multimedia %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10979,6 +11675,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproductor multimedia"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reproductor multimedia"
@@ -11079,6 +11781,12 @@
             "value" : "Tecla de menú"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla de menú"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11168,6 +11876,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo %lld"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modo %lld"
@@ -11267,6 +11981,12 @@
             "value" : "Teclas de modificación"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclas de modificación"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11356,6 +12076,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo modificadores"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Solo modificadores"
@@ -11455,6 +12181,12 @@
             "value" : "Solo modificadores convierten la tecla en una tecla de modificación, así que no pueden ir con otras pulsaciones."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo modificadores convierten la tecla en una tecla de modificación, así que no pueden ir con otras pulsaciones."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11544,6 +12276,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las teclas de modificación se aplican a la siguiente tecla."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las teclas de modificación se aplican a la siguiente tecla."
@@ -11643,6 +12381,12 @@
             "value" : "Las teclas de modificación se aplican a la siguiente tecla. Una tecla admite hasta %lld pulsaciones, contando cada modificador."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las teclas de modificación se aplican a la siguiente tecla. Una tecla admite hasta %lld pulsaciones, contando cada modificador."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11732,6 +12476,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las teclas de modificación se aplican a la siguiente tecla. Una tecla admite hasta %lld pulsaciones."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las teclas de modificación se aplican a la siguiente tecla. Una tecla admite hasta %lld pulsaciones."
@@ -11831,6 +12581,12 @@
             "value" : "Más teclas"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más teclas"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11923,6 +12679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ratón"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mouse"
           }
         },
         "fr" : {
@@ -12019,6 +12781,12 @@
             "value" : "Botón central del ratón"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón central del mouse"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12111,6 +12879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botón izquierdo del ratón"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón izquierdo del mouse"
           }
         },
         "fr" : {
@@ -12207,6 +12981,12 @@
             "value" : "Botón derecho del ratón"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botón derecho del mouse"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12299,6 +13079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rueda del ratón hacia abajo"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rueda del mouse hacia abajo"
           }
         },
         "fr" : {
@@ -12395,6 +13181,12 @@
             "value" : "Rueda del ratón hacia arriba"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rueda del mouse hacia arriba"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12484,6 +13276,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multimedia"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Multimedia"
@@ -12583,6 +13381,12 @@
             "value" : "Silenciar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Silenciar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12677,6 +13481,12 @@
             "value" : "Mi ordenador"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mi computadora"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12766,6 +13576,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre"
@@ -12865,6 +13681,12 @@
             "value" : "Navegación"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navegación"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12954,6 +13776,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Canción siguiente"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Canción siguiente"
@@ -13053,6 +13881,12 @@
             "value" : "Siguiente tecla con %@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siguiente tecla con %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13147,6 +13981,12 @@
             "value" : "Aún no hay paquetes."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no hay paquetes."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13236,6 +14076,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay cambios sin guardar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No hay cambios sin guardar"
@@ -13342,6 +14188,12 @@
             "value" : "Tecla no estadounidense %1$@ %2$@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla no estadounidense %1$@ %2$@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13431,6 +14283,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin conexión"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sin conexión"
@@ -13530,6 +14388,12 @@
             "value" : "Desconocido: este teclado no indica qué hacen sus teclas. Lo que configures aquí se escribe al guardar."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desconocido: este teclado no indica qué hacen sus teclas. Lo que configures aquí se escribe al guardar."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13619,6 +14483,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El teclado no lo indica"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El teclado no lo indica"
@@ -13719,6 +14589,12 @@
             "value" : "Aún no probado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no probado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13813,6 +14689,12 @@
             "value" : "Nada"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nada"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13902,6 +14784,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay nada que guardar: no ha cambiado ninguna tecla."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No hay nada que guardar: no ha cambiado ninguna tecla."
@@ -14002,6 +14890,12 @@
             "value" : "Bloq Num"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloq Num"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14091,6 +14985,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Números"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Números"
@@ -14190,6 +15090,12 @@
             "value" : "Teclado numérico"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclado numérico"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14279,6 +15185,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desactivado"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desactivado"
@@ -14378,6 +15290,12 @@
             "value" : "Una espera para toda la tecla. Sus pulsaciones se mantienen."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una espera para toda la tecla. Sus pulsaciones se mantienen."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14467,6 +15385,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo las teclas 1–%lld tienen color. Selecciona una de ellas."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Solo las teclas 1–%lld tienen color. Selecciona una de ellas."
@@ -14566,6 +15490,12 @@
             "value" : "Abrir “Privacidad y seguridad”"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir “Privacidad y seguridad”"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14655,6 +15585,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licencias de código abierto"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Licencias de código abierto"
@@ -14754,6 +15690,12 @@
             "value" : "Opción"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opción"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14843,6 +15785,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naranja"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naranja"
@@ -14942,6 +15890,12 @@
             "value" : "Otro"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otro"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15031,6 +15985,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paquetes: %lld"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paquetes: %lld"
@@ -15131,6 +16091,12 @@
             "value" : "Pág. abajo"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pág. abajo"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15221,6 +16187,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pág. arriba"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pág. arriba"
@@ -15320,6 +16292,12 @@
             "value" : "Elige la forma que coincida con el teclado y gírala para que quede como el teclado delante de ti."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige la forma que coincida con el teclado y gírala para que quede como el teclado delante de ti."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15409,6 +16387,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir/pausar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reproducir/pausar"
@@ -15508,6 +16492,12 @@
             "value" : "Alimentación"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alimentación"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15602,6 +16592,12 @@
             "value" : "Pulsación %lld"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulsación %lld"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15691,6 +16687,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Canción anterior"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Canción anterior"
@@ -15791,6 +16793,12 @@
             "value" : "Evitar la repetición de teclas tras cambiar la iluminación"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evitar la repetición de teclas tras cambiar la iluminación"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15881,6 +16889,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imprimir pantalla"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imprimir pantalla"
@@ -15980,6 +16994,12 @@
             "value" : "Morado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16069,6 +17089,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leer"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leer"
@@ -16168,6 +17194,12 @@
             "value" : "Leer del teclado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leer del teclado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16257,6 +17289,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leído del teclado."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leído del teclado."
@@ -16356,6 +17394,12 @@
             "value" : "No se ha podido leer del teclado."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo leer del teclado."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16445,6 +17489,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leyendo…"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leyendo…"
@@ -16544,6 +17594,12 @@
             "value" : "Rojo"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rojo"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16633,6 +17689,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reiniciar ahora"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reiniciar ahora"
@@ -16732,6 +17794,12 @@
             "value" : "Eliminar última pulsación"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar última pulsación"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16826,6 +17894,12 @@
             "value" : "ID de informe %lld"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ID de informe %lld"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16915,6 +17989,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reintentar"
@@ -17015,6 +18095,12 @@
             "value" : "Retorno"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retorno"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17105,6 +18191,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flecha derecha"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flecha derecha"
@@ -17204,6 +18296,12 @@
             "value" : "Comando derecha"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comando derecha"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17293,6 +18391,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control derecha"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Control derecha"
@@ -17392,6 +18496,12 @@
             "value" : "Opción derecha"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opción derecha"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17481,6 +18591,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mayúsculas derecha"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mayúsculas derecha"
@@ -17580,6 +18696,12 @@
             "value" : "Girar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Girar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17669,6 +18791,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luz en movimiento"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luz en movimiento"
@@ -17768,6 +18896,12 @@
             "value" : "Guardar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17862,6 +18996,12 @@
             "value" : "Guardar en el teclado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar en el teclado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17951,6 +19091,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado en el teclado."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardado en el teclado."
@@ -18051,6 +19197,12 @@
             "value" : "Guardado en el simulador: no se escribió nada en ningún teclado."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado en el simulador: no se escribió nada en ningún teclado."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18141,6 +19293,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado, pero al volver a leerlo algunas teclas o botones giratorios son distintos. Esos cambios siguen sin guardar."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardado, pero al volver a leerlo algunas teclas o botones giratorios son distintos. Esos cambios siguen sin guardar."
@@ -18241,6 +19399,12 @@
             "value" : "Guardado, pero no se ha podido volver a leer el teclado para comprobarlo."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardado, pero no se pudo volver a leer el teclado para comprobarlo."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18330,6 +19494,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardando…"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardando…"
@@ -18430,6 +19600,12 @@
             "value" : "Bloquear desplazamiento"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloquear desplazamiento"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18519,6 +19695,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona una tecla o un botón giratorio."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecciona una tecla o un botón giratorio."
@@ -18618,6 +19800,12 @@
             "value" : "Selecciona una de las teclas 1–%lld en el teclado y luego elige su color."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona una de las teclas 1–%lld en el teclado y luego elige su color."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18707,6 +19895,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Número de serie"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Número de serie"
@@ -18807,6 +20001,12 @@
             "value" : "Ajustes"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuración"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18902,6 +20102,12 @@
             "value" : "Ajustes…"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuración…"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18991,6 +20197,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forma…"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forma…"
@@ -19090,6 +20302,12 @@
             "value" : "Mayúsculas"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mayúsculas"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19182,6 +20400,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shift + Rueda del ratón hacia abajo"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + Rueda del mouse hacia abajo"
           }
         },
         "fr" : {
@@ -19278,6 +20502,12 @@
             "value" : "Shift + Rueda del ratón hacia arriba"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + Rueda del mouse hacia arriba"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19367,6 +20597,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Símbolos con Shift"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Símbolos con Shift"
@@ -19466,6 +20702,12 @@
             "value" : "Teclado simulado"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclado simulado"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19560,6 +20802,12 @@
             "value" : "Teclado simulado: %@"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teclado simulado: %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19649,6 +20897,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulador"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simulador"
@@ -19749,6 +21003,12 @@
             "value" : "Simulador en uso"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulador en uso"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19844,6 +21104,12 @@
             "value" : "No se han podido leer algunas teclas o botones giratorios. Se muestran como antes."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron leer algunas teclas o botones giratorios. Se muestran como antes."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19933,6 +21199,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detener"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Detener"
@@ -20032,6 +21304,12 @@
             "value" : "Cambiar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambiar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20126,6 +21404,12 @@
             "value" : "¿Cambiar de teclado?"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cambiar de teclado?"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20215,6 +21499,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Símbolos"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Símbolos"
@@ -20315,6 +21605,12 @@
             "value" : "Tabulador"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabulador"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20404,6 +21700,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El idioma base es el inglés. Puedes seguir el idioma del sistema o elegir uno tú mismo."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El idioma base es el inglés. Puedes seguir el idioma del sistema o elegir uno tú mismo."
@@ -20503,6 +21805,12 @@
             "value" : "No se ha podido preguntar al teclado qué es."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo preguntar al teclado qué es."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20595,6 +21903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se ha podido abrir el teclado"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo abrir el teclado"
           }
         },
         "fr" : {
@@ -20691,6 +22005,12 @@
             "value" : "No se ha podido abrir el teclado (%@)."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo abrir el teclado (%@)."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20780,6 +22100,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El teclado no indica cuántas teclas y botones giratorios tiene."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El teclado no indica cuántas teclas y botones giratorios tiene."
@@ -20879,6 +22205,12 @@
             "value" : "El teclado ya no está conectado."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El teclado ya no está conectado."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20968,6 +22300,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El teclado indica sus teclas y botones giratorios: %@"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El teclado indica sus teclas y botones giratorios: %@"
@@ -21067,6 +22405,12 @@
             "value" : "La última tecla pulsada sigue parpadeando, con un color nuevo en cada pulsación."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La última tecla presionada sigue parpadeando, con un color nuevo en cada pulsación."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21156,6 +22500,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tecla seleccionada no tiene pulsaciones."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La tecla seleccionada no tiene pulsaciones."
@@ -21256,6 +22606,12 @@
             "value" : "No es un teclado real. Lo que guardes aquí no se escribe en ningún teclado."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No es un teclado real. Lo que guardes aquí no se escribe en ningún teclado."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21350,6 +22706,12 @@
             "value" : "Este teclado no puede hacer eso."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este teclado no puede hacer eso."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21439,6 +22801,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta tecla no se puede asignar en este teclado."
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esta tecla no se puede asignar en este teclado."
@@ -21539,6 +22907,12 @@
             "value" : "El firmware de este teclado (tipo %lld) aún no se ha probado. Si las teclas se leen o se guardan mal, avísanos con el registro del dispositivo."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El firmware de este teclado (tipo %lld) aún no se ha probado. Si las teclas se leen o se guardan mal, avísanos con el registro del dispositivo."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21633,6 +23007,12 @@
             "value" : "Agudos +"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agudos +"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21722,6 +23102,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agudos -"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agudos -"
@@ -21825,6 +23211,12 @@
             "value" : "Cambios sin guardar"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambios sin guardar"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21915,6 +23307,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flecha arriba"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flecha arriba"
@@ -22021,6 +23419,12 @@
             "value" : "Versión %@ (compilación %@)"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versión %@ (compilación %@)"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22110,6 +23514,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volumen +"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volumen +"
@@ -22209,6 +23619,12 @@
             "value" : "Volumen -"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volumen -"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22298,6 +23714,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espera %lld ms"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Espera %lld ms"
@@ -22397,6 +23819,12 @@
             "value" : "Web: atrás"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web: atrás"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22486,6 +23914,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web: adelante"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Web: adelante"
@@ -22585,6 +24019,12 @@
             "value" : "Web: inicio"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web: inicio"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22674,6 +24114,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web: actualizar"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Web: actualizar"
@@ -22773,6 +24219,12 @@
             "value" : "No se ha podido escribir en el teclado (%@)."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo escribir en el teclado (%@)."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22862,6 +24314,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amarillo"
+          }
+        },
+        "es-419" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amarillo"

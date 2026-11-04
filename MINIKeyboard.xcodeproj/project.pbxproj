@@ -216,6 +216,7 @@
 				ko,
 				de,
 				es,
+				"es-419",
 				fr,
 				id,
 				it,

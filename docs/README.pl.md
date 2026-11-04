@@ -9,7 +9,7 @@
   <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"></a>
 </p>
 
-<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.id.md">Bahasa Indonesia</a> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <b>Polski</b> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
+<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <a href="README.id.md">Bahasa Indonesia</a> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <b>Polski</b> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.pt-PT.md">Português (Portugal)</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
 
 Aplikacja na macOS, która zapisuje ustawienia klawiszy w małych klawiaturach makro USB. Takie klawiatury sprzedaje
 się w wielu wersjach: od modeli z jednym pokrętłem po modele z 21 klawiszami, z maksymalnie czterema pokrętłami.
@@ -34,8 +34,8 @@ a narzędzie przeznaczone dla tej klawiatury nie rysuje żadnego kształtu, wię
 znany. Dlatego to ty podajesz, ile ma klawiszy i pokręteł oraz ile klawiszy jest w rzędzie, a aplikacja rysuje je
 dokładnie tak, w równym układzie.
 
-Aplikacja jest dostępna w 13 językach — angielskim, koreańskim, japońskim, chińskim (uproszczonym i tradycyjnym),
-niemieckim, hiszpańskim, francuskim, włoskim, portugalskim (Brazylia), polskim, indonezyjskim i wietnamskim — i
+Aplikacja jest dostępna w 14 językach — angielskim, koreańskim, japońskim, chińskim (uproszczonym i tradycyjnym),
+niemieckim, hiszpańskim, francuskim, włoskim, portugalskim (Brazylia i Portugalia), polskim, indonezyjskim i wietnamskim — i
 używa języka ustawionego w macOS. W pozostałych językach wyświetla się po angielsku.
 
 Kod źródłowy w tym repozytorium jest objęty licencją MIT. Niektóre elementy rozpowszechnianej aplikacji — jej nazwa
@@ -44,7 +44,7 @@ MIT i nie ma jej w aplikacji zbudowanej z tego repozytorium.
 
 ## macOS, Windows, Linux i przeglądarka
 
-MINIKeyboard ma cztery wydania zbudowane według tych samych zasad — te same polecenia, te same 13 języków. Trzy aplikacje obsługują te same klawiatury, a wydanie webowe, działające w przeglądarce, wszystkie oprócz `1189:8890`.
+MINIKeyboard ma cztery wydania zbudowane według tych samych zasad — te same polecenia, te same 14 języków. Trzy aplikacje obsługują te same klawiatury, a wydanie webowe, działające w przeglądarce, wszystkie oprócz `1189:8890`.
 
 | Repozytorium | GitHub |
 |---|---|
@@ -130,7 +130,7 @@ pokazuje wszystkie zapisane raporty i wszystkie odpowiedzi.
 5. **Zachowaj** (⌘S) zapisuje zmiany. **Odczytaj** (⌘R) pobiera bieżące ustawienia z klawiatury, która pozwala
    je odczytać.
 
-**Ustawienia** (⌘,) pozwalają wybrać język interfejsu (jeden z 13 lub język systemu) oraz tryb jasny lub ciemny,
+**Ustawienia** (⌘,) pozwalają wybrać język interfejsu (jeden z 14 lub język systemu) oraz tryb jasny lub ciemny,
 a w sekcji Informacje znajdziesz wersję i licencje open source. Jeśli jest kanał uaktualnień (patrz wyżej), polecenie
 **Sprawdź uaktualnienia…** znajduje się tuż pod poleceniem Ustawienia… w menu aplikacji.
 
@@ -156,7 +156,7 @@ MINIKeyboard/
 ├── App/                   punkt wejścia i menu aplikacji, composition root (jedyny plik, który widzi Domain i DataLayer), uaktualnienia (Sparkle), licencje
 ├── Views/                 SwiftUI (importuje tylko Presentation) — klawiatura tak, jak leży, strony akcji, arkusz układu, dziennik urządzenia; Settings/
 ├── Resources/Licenses/    licencje open source widoczne w Ustawienia ▸ Informacje
-└── Localizable.xcstrings  en (źródło), de, es, fr, id, it, ja, ko, pl, pt-BR, vi, zh-Hans, zh-Hant
+└── Localizable.xcstrings  en (źródło), de, es, fr, id, it, ja, ko, pl, pt-BR, pt-PT, vi, zh-Hans, zh-Hant
 MINIKeyboard-Info.plist    klucze Info.plist, których Xcode nie potrafi wygenerować — kanał i klucz Sparkle, wiersz z informacją o prawach autorskich
 MINIKeyboardTests/         przełącznik uaktualnień, licencje i menu aplikacji
 ```

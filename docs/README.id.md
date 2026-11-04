@@ -9,7 +9,7 @@
   <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"></a>
 </p>
 
-<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <b>Bahasa Indonesia</b> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <a href="README.pl.md">Polski</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
+<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.fr.md">Français</a> · <b>Bahasa Indonesia</b> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <a href="README.pl.md">Polski</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.pt-PT.md">Português (Portugal)</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
 
 Aplikasi macOS untuk menulis pengaturan tombol ke papan ketik makro USB berukuran kecil — papan ketik yang dijual
 mulai dari yang hanya punya satu kenop hingga yang punya 21 tombol, dengan kenop sampai empat buah. Untuk setiap
@@ -33,8 +33,8 @@ tahu memakai salah satu tata letak itu yang Anda pilih. `1189:8890` tidak dikena
 sendiri pun tidak menggambar bentuknya, jadi bentuk aslinya tidak diketahui. Karena itu, cukup tentukan jumlah tombol
 dan kenopnya serta jumlah tombol dalam satu baris, lalu aplikasi akan menggambarnya dengan rapi sesuai angka itu.
 
-Aplikasi ini tersedia dalam 13 bahasa — Inggris, Korea, Jepang, Tionghoa (Sederhana dan Tradisional), Jerman, Spanyol,
-Prancis, Italia, Portugis (Brasil), Polandia, Indonesia, dan Vietnam. Aplikasi mengikuti pengaturan bahasa macOS; untuk
+Aplikasi ini tersedia dalam 14 bahasa — Inggris, Korea, Jepang, Tionghoa (Sederhana dan Tradisional), Jerman, Spanyol,
+Prancis, Italia, Portugis (Brasil dan Portugal), Polandia, Indonesia, dan Vietnam. Aplikasi mengikuti pengaturan bahasa macOS; untuk
 bahasa lainnya, aplikasi tampil dalam bahasa Inggris.
 
 Kode sumber di repositori ini berlisensi MIT. Sebagian dari aplikasi yang didistribusikan — nama dan ikonnya — tidak
@@ -43,7 +43,7 @@ MIT dan tidak disertakan dalam aplikasi yang dibangun dari repositori ini.
 
 ## macOS, Windows, Linux, dan web
 
-MINIKeyboard hadir dalam empat edisi yang dibuat dengan aturan yang sama — perintah yang sama, 13 bahasa yang sama. Ketiga aplikasi menangani papan ketik yang sama, dan edisi web, yang berjalan di browser, menangani semuanya kecuali `1189:8890`.
+MINIKeyboard hadir dalam empat edisi yang dibuat dengan aturan yang sama — perintah yang sama, 14 bahasa yang sama. Ketiga aplikasi menangani papan ketik yang sama, dan edisi web, yang berjalan di browser, menangani semuanya kecuali `1189:8890`.
 
 | Repositori | GitHub |
 |---|---|
@@ -125,7 +125,7 @@ semua jawaban yang diterima.
    - **Tunda** — pada firmware yang menyimpan tunda.
 5. **Simpan** (⌘S) menulis perubahan. **Baca** (⌘R) mengambil pengaturan saat ini dari papan ketik yang bisa dibaca.
 
-Di **Pengaturan** (⌘,), Anda memilih bahasa antarmuka (salah satu dari 13 bahasa, atau bahasa sistem) serta tampilan
+Di **Pengaturan** (⌘,), Anda memilih bahasa antarmuka (salah satu dari 14 bahasa, atau bahasa sistem) serta tampilan
 terang atau gelap, dan di Tentang, Anda bisa melihat versi dan lisensi sumber terbuka. Jika ada feed pembaruan (lihat di
 atas), **Periksa Pembaruan…** muncul tepat di bawah Pengaturan… di menu aplikasi.
 
@@ -150,7 +150,7 @@ MINIKeyboard/
 ├── App/                   titik masuk aplikasi dan menu, composition root (satu-satunya file yang mengenal Domain dan DataLayer), pembaruan (Sparkle), lisensi
 ├── Views/                 SwiftUI (hanya mengimpor Presentation) — papan ketik sesuai posisinya, halaman tindakan, lembar tata letak, log perangkat; Settings/
 ├── Resources/Licenses/    lisensi sumber terbuka yang ditampilkan di Pengaturan ▸ Tentang
-└── Localizable.xcstrings  en (sumber), de, es, fr, id, it, ja, ko, pl, pt-BR, vi, zh-Hans, zh-Hant
+└── Localizable.xcstrings  en (sumber), de, es, fr, id, it, ja, ko, pl, pt-BR, pt-PT, vi, zh-Hans, zh-Hant
 MINIKeyboard-Info.plist    kunci Info.plist yang tidak bisa dibuat Xcode — feed dan kunci Sparkle, baris hak cipta
 MINIKeyboardTests/         sakelar pembaruan, lisensi, menu aplikasi
 ```

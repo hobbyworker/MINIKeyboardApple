@@ -223,6 +223,8 @@
 				pl,
 				"pt-BR",
 				"pt-PT",
+				ru,
+				th,
 				vi,
 				"zh-Hant",
 			);

@@ -64,6 +64,18 @@
             "value" : "O %@ tem de ser reaberto para aplicar a alteração."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы применить изменение, нужно перезапустить %@."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ต้องเปิดใช้ %@ อีกครั้งเพื่อให้การเปลี่ยนแปลงมีผล"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -145,6 +157,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O %@ utiliza os seguintes pacotes de código aberto. Abaixo está o texto original da licença que cada pacote publica no seu repositório de código-fonte."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ использует следующие пакеты с открытым исходным кодом. Ниже приведен оригинальный текст лицензии, который каждый пакет публикует в своем репозитории исходного кода."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ใช้ชุดโปรแกรมโอเพนซอร์สต่อไปนี้ ด้านล่างคือข้อความต้นฉบับของใบอนุญาตที่แต่ละชุดโปรแกรมเผยแพร่ไว้ในคลังซอร์สโค้ดของตน"
           }
         },
         "vi" : {
@@ -251,6 +275,18 @@
             "value" : "%lld bytes"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Б"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ไบต์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +375,18 @@
             "value" : "%1$lld de %2$lld toques"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld из %2$lld нажатий"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การกด %1$lld จาก %2$lld ครั้ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -421,6 +469,18 @@
             "value" : "884x · Não responde à identificação"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · Не отвечает на запрос типа"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · ไม่ตอบเมื่อถามประเภท"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -501,6 +561,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "884x · Firmware antigo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · Старая прошивка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · เฟิร์มแวร์รุ่นเก่า"
           }
         },
         "vi" : {
@@ -586,6 +658,18 @@
             "value" : "884x · Firmware padrão"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · Стандартная прошивка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · เฟิร์มแวร์มาตรฐาน"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -666,6 +750,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pacotes 8890 · %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пакеты 8890 · %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แพ็คเกต 8890 · %@"
           }
         },
         "vi" : {
@@ -750,6 +846,18 @@
             "value" : "Uma tecla pode ter até %lld toques."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На клавишу можно назначить до %lld нажатий."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหนึ่งปุ่มใส่การกดได้สูงสุด %lld ครั้ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -830,6 +938,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uma luz percorre as teclas por ordem, com uma cor nova em cada volta."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Огонек по очереди пробегает по клавишам, с каждым кругом меняя цвет."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสงไฟวิ่งผ่านปุ่มตามลำดับ และเปลี่ยนสีทุกรอบ"
           }
         },
         "vi" : {
@@ -914,6 +1034,18 @@
             "value" : "Uma tecla multimédia substitui o que a tecla fazia."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Медиаклавиша заменяет прежнее действие клавиши."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มสื่อจะแทนที่สิ่งที่ปุ่มเคยทำ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -996,6 +1128,18 @@
             "value" : "Uma ação do rato substitui o que a tecla fazia."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Действие мыши заменяет прежнее действие клавиши."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การทำงานของเมาส์จะแทนที่สิ่งที่ปุ่มเคยทำ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1076,6 +1220,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Informações"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О приложении"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เกี่ยวกับ"
           }
         },
         "vi" : {
@@ -1161,6 +1317,18 @@
             "value" : "Acerca do %@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О приложении «%@»"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เกี่ยวกับ %@"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1241,6 +1409,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ação"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Действие"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การทำงาน"
           }
         },
         "vi" : {
@@ -1326,6 +1506,18 @@
             "value" : "Depois de a iluminação ser guardada, o teclado 1189:8890 repete sem parar o primeiro carácter de uma tecla quando esta é premida (o software do fabricante faz o mesmo). Com esta opção ativada, a app envia mais um comando de guardar depois da iluminação para o evitar; as definições das teclas não mudam. Desativada, a app envia apenas o mesmo que o software do fabricante."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После сохранения подсветки клавиатура 1189:8890 при нажатии клавиши бесконечно повторяет ее первый символ (с программой производителя происходит то же самое). Если этот параметр включен, приложение после подсветки отправляет еще одну команду сохранения, чтобы это предотвратить; назначения клавиш не меняются. Если он выключен, приложение отправляет только то же, что и программа производителя."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หลังบันทึกแสงไฟ แป้นพิมพ์ 1189:8890 จะพิมพ์อักขระแรกของปุ่มซ้ำไม่หยุดเมื่อกดปุ่มนั้น (ซอฟต์แวร์ของผู้ผลิตก็เป็นเช่นนี้) เมื่อเปิด แอปจะส่งคำสั่งบันทึกอีกหนึ่งครั้งหลังแสงไฟเพื่อป้องกันปัญหานี้ โดยการตั้งค่าปุ่มจะไม่เปลี่ยน เมื่อปิด แอปจะส่งเฉพาะสิ่งที่ซอฟต์แวร์ของผู้ผลิตส่ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1406,6 +1598,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permita o %@ em “Privacidade e segurança” ▸ “Monitorização de entrada”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешите доступ для %@ в разделе «Конфиденциальность и безопасность» ▸ «Мониторинг ввода»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อนุญาต %@ ในความเป็นส่วนตัวและความปลอดภัย ▸ การตรวจสอบสัญญาณเข้า"
           }
         },
         "vi" : {
@@ -1490,6 +1694,18 @@
             "value" : "Alt + roda do rato para baixo"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + колесико мыши вниз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + ล้อเมาส์ลง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1570,6 +1786,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alt + roda do rato para cima"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + колесико мыши вверх"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + ล้อเมาส์ขึ้น"
           }
         },
         "vi" : {
@@ -1654,6 +1882,18 @@
             "value" : "App"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอป"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1736,6 +1976,18 @@
             "value" : "Apresentação"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оформление"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รูปแบบ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1816,6 +2068,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A perguntar ao teclado o que é…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запрос типа клавиатуры…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังถามประเภทของแป้นพิมพ์…"
           }
         },
         "vi" : {
@@ -1901,6 +2165,18 @@
             "value" : "Voltar ao teclado ligado por USB"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вернуться к USB-клавиатуре"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กลับไปใช้แป้นพิมพ์ที่เชื่อมต่อผ่าน USB"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1981,6 +2257,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Graves +"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Низкие частоты +"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มเสียงทุ้ม"
           }
         },
         "vi" : {
@@ -2065,6 +2353,18 @@
             "value" : "Graves -"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Низкие частоты -"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดเสียงทุ้ม"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2145,6 +2445,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Última tecla a piscar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мигание последней клавиши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กะพริบปุ่มล่าสุด"
           }
         },
         "vi" : {
@@ -2229,6 +2541,18 @@
             "value" : "Azul"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синий"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีน้ำเงิน"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2309,6 +2633,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brilho +"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Яркость +"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มความสว่าง"
           }
         },
         "vi" : {
@@ -2393,6 +2729,18 @@
             "value" : "Brilho -"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Яркость -"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดความสว่าง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2473,6 +2821,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calculadora"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Калькулятор"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เครื่องคิดเลข"
           }
         },
         "vi" : {
@@ -2557,6 +2917,18 @@
             "value" : "Cancelar"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยกเลิก"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2635,6 +3007,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caps Lock"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caps Lock"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caps Lock"
@@ -2722,6 +3106,18 @@
             "value" : "As alterações que não guardou serão perdidas."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Несохраненные изменения будут потеряны."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การเปลี่ยนแปลงที่คุณยังไม่ได้บันทึกจะหายไป"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2802,6 +3198,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Procurar atualizações…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверить наличие обновлений…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตรวจหารายการอัปเดต…"
           }
         },
         "vi" : {
@@ -2886,6 +3294,18 @@
             "value" : "Procurar atualizações automaticamente"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автоматически проверять наличие обновлений"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตรวจหารายการอัปเดตโดยอัตโนมัติ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2966,6 +3386,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chip"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чип"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชิป"
           }
         },
         "vi" : {
@@ -3051,6 +3483,18 @@
             "value" : "Escolher um teclado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать клавиатуру"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกแป้นพิมพ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3131,6 +3575,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escolher a forma do teclado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите форму клавиатуры"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกรูปทรงของแป้นพิมพ์"
           }
         },
         "vi" : {
@@ -3215,6 +3671,18 @@
             "value" : "Limpar"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้าง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3295,6 +3763,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Limpar tecla"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить клавишу"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้างปุ่ม"
           }
         },
         "vi" : {
@@ -3379,6 +3859,18 @@
             "value" : "Limpar camada"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить слой"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้างเลเยอร์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3459,6 +3951,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fechar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
           }
         },
         "vi" : {
@@ -3543,6 +4047,18 @@
             "value" : "Comprimir"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Свернуть"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยุบ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3623,6 +4139,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comprimir tudo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Свернуть все"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยุบทั้งหมด"
           }
         },
         "vi" : {
@@ -3707,6 +4235,18 @@
             "value" : "Cor"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цвет"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สี"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3787,6 +4327,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comando"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Command"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Command"
           }
         },
         "vi" : {
@@ -3871,6 +4423,18 @@
             "value" : "Comandos"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Набор команд"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชุดคำสั่ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3951,6 +4515,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Canal de configuração"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Канал настройки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช่องทางการตั้งค่า"
           }
         },
         "vi" : {
@@ -4035,6 +4611,18 @@
             "value" : "Ligue o teclado por USB."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подключите клавиатуру по USB."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เชื่อมต่อแป้นพิมพ์ผ่าน USB"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4115,6 +4703,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ligado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подключено"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เชื่อมต่ออยู่"
           }
         },
         "vi" : {
@@ -4205,6 +4805,18 @@
             "value" : "Ligado a %1$@, interface %2$lld"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подключено к %1$@, интерфейс %2$lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เชื่อมต่อกับ %1$@ อินเทอร์เฟซ %2$lld"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4285,6 +4897,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Controlo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control"
           }
         },
         "vi" : {
@@ -4369,6 +4993,18 @@
             "value" : "Copiar"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопировать"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คัดลอก"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4449,6 +5085,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ctrl + roda do rato para baixo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + колесико мыши вниз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + ล้อเมาส์ลง"
           }
         },
         "vi" : {
@@ -4533,6 +5181,18 @@
             "value" : "Ctrl + roda do rato para cima"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + колесико мыши вверх"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + ล้อเมาส์ขึ้น"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4613,6 +5273,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ciano"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Голубой"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีไซอัน"
           }
         },
         "vi" : {
@@ -4697,6 +5369,18 @@
             "value" : "Tons escuros"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Темное"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มืด"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4779,6 +5463,18 @@
             "value" : "Atraso"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Задержка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน่วงเวลา"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4857,6 +5553,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete (Backspace)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete (Backspace)"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete (Backspace)"
@@ -4944,6 +5652,18 @@
             "value" : "Registo do dispositivo"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журнал устройства"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ประวัติอุปกรณ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5024,6 +5744,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสร็จสิ้น"
           }
         },
         "vi" : {
@@ -5109,6 +5841,18 @@
             "value" : "Seta para baixo"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стрелка вниз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลูกศรชี้ลง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5189,6 +5933,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cada toque pode esperar antes de ser enviado. Primeiro, adicione os toques da tecla na página “Teclas”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перед отправкой каждого нажатия можно добавить ожидание. Сначала назначьте клавише нажатия на вкладке «Клавиши»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งให้การกดแต่ละครั้งรอก่อนส่งได้ ใส่การกดให้ปุ่มในหน้า “ปุ่ม” ก่อน"
           }
         },
         "vi" : {
@@ -5273,6 +6029,18 @@
             "value" : "Edição"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактирование"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การแก้ไข"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5353,6 +6121,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Efeito"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Эффект"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เอฟเฟ็กต์"
           }
         },
         "vi" : {
@@ -5437,6 +6217,18 @@
             "value" : "E-mail"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E‑mail"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อีเมล"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5515,6 +6307,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "End"
@@ -5603,6 +6407,18 @@
             "value" : "Escape"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escape"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escape"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5683,6 +6499,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Expandir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Развернуть"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขยาย"
           }
         },
         "vi" : {
@@ -5767,6 +6595,18 @@
             "value" : "Expandir tudo"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Развернуть все"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขยายทั้งหมด"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5847,6 +6687,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Firmware"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прошивка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เฟิร์มแวร์"
           }
         },
         "vi" : {
@@ -5932,6 +6784,18 @@
             "value" : "Contornar erros do firmware"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обход ошибок прошивки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วิธีเลี่ยงข้อบกพร่องของเฟิร์มแวร์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6012,6 +6876,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seguir o sistema"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как в системе"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตามระบบ"
           }
         },
         "vi" : {
@@ -6097,6 +6973,18 @@
             "value" : "Apagar para a frente"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete (удаление вперед)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete ไปข้างหน้า"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6177,6 +7065,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclas de função"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Функциональные клавиши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มฟังก์ชั่น"
           }
         },
         "vi" : {
@@ -6261,6 +7161,18 @@
             "value" : "Geral"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основные"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทั่วไป"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6343,6 +7255,18 @@
             "value" : "Verde"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зеленый"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีเขียว"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6421,6 +7345,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Home"
@@ -6508,6 +7444,18 @@
             "value" : "É necessária a monitorização de entrada"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Требуется разрешение «Мониторинг ввода»"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ต้องได้รับสิทธิ์การตรวจสอบสัญญาณเข้า"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6586,6 +7534,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insert"
@@ -6679,6 +7639,18 @@
             "value" : "Interface %1$lld · %2$@ · %3$@ · %4$@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интерфейс %1$lld · %2$@ · %3$@ · %4$@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อินเทอร์เฟซ %1$lld · %2$@ · %3$@ · %4$@"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6759,6 +7731,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Interfaces"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интерфейсы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อินเทอร์เฟซ"
           }
         },
         "vi" : {
@@ -6843,6 +7827,18 @@
             "value" : "A forma real também não é conhecida. Defina quantas teclas e botões rotativos tem e quantas teclas há em cada fila e, depois, rode-o para ficar como o teclado está à sua frente."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настоящая форма клавиатуры тоже неизвестна. Укажите, сколько у нее клавиш и ручек и сколько клавиш в ряду, затем поверните ее так же, как она лежит перед вами."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่ทราบรูปทรงจริงของแป้นพิมพ์เช่นกัน ตั้งจำนวนปุ่มและปุ่มหมุน และจำนวนปุ่มในหนึ่งแถว แล้วหมุนให้ตรงกับแป้นพิมพ์ที่วางอยู่ตรงหน้าคุณ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6923,6 +7919,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tecla %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиша %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม %lld"
           }
         },
         "vi" : {
@@ -7007,6 +8015,18 @@
             "value" : "Disposição das teclas"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Расположение клавиш"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การเรียงปุ่ม"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7087,6 +8107,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์"
           }
         },
         "vi" : {
@@ -7171,6 +8203,18 @@
             "value" : "Informações do teclado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Информация о клавиатуре"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อมูลแป้นพิมพ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7251,6 +8295,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclado ligado por USB"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "USB-клавиатура"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์ที่เชื่อมต่อผ่าน USB"
           }
         },
         "vi" : {
@@ -7336,6 +8392,18 @@
             "value" : "Teclado numérico %@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ на цифровой клавиатуре"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นตัวเลข %@"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7417,6 +8485,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enter (teclado numérico)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter на цифровой клавиатуре"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นตัวเลข Enter"
           }
         },
         "vi" : {
@@ -7501,6 +8581,18 @@
             "value" : "Teclas"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7581,6 +8673,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "As teclas aparecem aqui quando ligar o teclado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиши появятся здесь после подключения клавиатуры."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มจะแสดงที่นี่เมื่อเชื่อมต่อแป้นพิมพ์"
           }
         },
         "vi" : {
@@ -7665,6 +8769,18 @@
             "value" : "Teclas por fila"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиш в ряду"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มต่อแถว"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7745,6 +8861,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclas: %1$lld · Botões rotativos: %2$lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиши: %1$lld · Ручки: %2$lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม: %1$lld · ปุ่มหมุน: %2$lld"
           }
         },
         "vi" : {
@@ -7835,6 +8963,18 @@
             "value" : "Teclas: %1$lld · Botões rotativos: %2$lld · Tipo %3$lld"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиши: %1$lld · Ручки: %2$lld · Тип %3$lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม: %1$lld · ปุ่มหมุน: %2$lld · ประเภท %3$lld"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7915,6 +9055,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botão rotativo %lld · Premir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручка %lld · Нажать"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหมุน %lld · กด"
           }
         },
         "vi" : {
@@ -7999,6 +9151,18 @@
             "value" : "Botão rotativo %lld · Premir e rodar para a esquerda"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручка %lld · Нажать и повернуть влево"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหมุน %lld · กดค้างแล้วหมุนซ้าย"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8079,6 +9243,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botão rotativo %lld · Premir e rodar para a direita"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручка %lld · Нажать и повернуть вправо"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหมุน %lld · กดค้างแล้วหมุนขวา"
           }
         },
         "vi" : {
@@ -8163,6 +9339,18 @@
             "value" : "Botão rotativo %lld · Rodar para a esquerda"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручка %lld · Повернуть влево"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหมุน %lld · หมุนซ้าย"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8243,6 +9431,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botão rotativo %lld · Rodar para a direita"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручка %lld · Повернуть вправо"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหมุน %lld · หมุนขวา"
           }
         },
         "vi" : {
@@ -8327,6 +9527,18 @@
             "value" : "Botões rotativos"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มหมุน"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8404,6 +9616,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LED"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LED"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "LED"
@@ -8491,6 +9715,18 @@
             "value" : "Idioma"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภาษา"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8571,6 +9807,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Idioma e apresentação"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык и оформление"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภาษาและรูปแบบ"
           }
         },
         "vi" : {
@@ -8655,6 +9903,18 @@
             "value" : "Idioma alterado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык изменен"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปลี่ยนภาษาแล้ว"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8735,6 +9995,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mais tarde"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Позже"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภายหลัง"
           }
         },
         "vi" : {
@@ -8819,6 +10091,18 @@
             "value" : "Camada"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слой"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลเยอร์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8899,6 +10183,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Camada %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слой %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลเยอร์ %lld"
           }
         },
         "vi" : {
@@ -8984,6 +10280,18 @@
             "value" : "Seta para a esquerda"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стрелка влево"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลูกศรชี้ซ้าย"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9064,6 +10372,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Letras"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Буквы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวอักษร"
           }
         },
         "vi" : {
@@ -9148,6 +10468,18 @@
             "value" : "Tons claros"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Светлое"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สว่าง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9228,6 +10560,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A iluminação é definida por camada, por isso não é preciso selecionar uma tecla."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подсветка задается для каждого слоя, выбирать клавишу не нужно."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสงไฟตั้งค่าแยกตามเลเยอร์ จึงไม่ต้องเลือกปุ่ม"
           }
         },
         "vi" : {
@@ -9312,6 +10656,18 @@
             "value" : "A procurar o teclado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск клавиатуры"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังค้นหาแป้นพิมพ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9392,6 +10748,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A tecla mantém estas teclas modificadoras premidas, como uma tecla modificadora."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиша будет удерживать эти модификаторы, как клавиша-модификатор."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทำให้ปุ่มนี้กดปุ่มปรับค่าเหล่านี้ค้างไว้ เช่นเดียวกับปุ่มปรับค่า"
           }
         },
         "vi" : {
@@ -9476,6 +10844,18 @@
             "value" : "Fabricante"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Производитель"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ผู้ผลิต"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9558,6 +10938,18 @@
             "value" : "Tecla multimédia %@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Медиаклавиша %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มสื่อ %@"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9638,6 +11030,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leitor multimédia"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Медиаплеер"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เครื่องเล่นสื่อ"
           }
         },
         "vi" : {
@@ -9723,6 +11127,18 @@
             "value" : "Tecla Menu"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиша меню"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มเมนู"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9803,6 +11219,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modo %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมด %lld"
           }
         },
         "vi" : {
@@ -9887,6 +11315,18 @@
             "value" : "Teclas modificadoras"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модификаторы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มปรับค่า"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9967,6 +11407,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Só modificadoras"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только модификаторы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มปรับค่าเท่านั้น"
           }
         },
         "vi" : {
@@ -10051,6 +11503,18 @@
             "value" : "Só com modificadoras, a tecla passa a ser uma tecla modificadora, por isso não podem ir com outros toques."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одни модификаторы превращают клавишу в клавишу-модификатор, поэтому их нельзя сочетать с другими нажатиями."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถ้าใส่เฉพาะปุ่มปรับค่า ปุ่มนี้จะกลายเป็นปุ่มปรับค่า จึงใส่ร่วมกับการกดอื่นไม่ได้"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10131,6 +11595,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "As teclas modificadoras aplicam-se à tecla seguinte."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модификаторы применяются к следующей клавише."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มปรับค่าจะใช้กับปุ่มถัดไป"
           }
         },
         "vi" : {
@@ -10215,6 +11691,18 @@
             "value" : "As teclas modificadoras aplicam-se à tecla seguinte. Uma tecla pode ter até %lld toques, contando cada modificadora como um."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модификаторы применяются к следующей клавише. На клавишу можно назначить до %lld нажатий, и каждый модификатор считается отдельным нажатием."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มปรับค่าจะใช้กับปุ่มถัดไป ปุ่มหนึ่งปุ่มใส่การกดได้สูงสุด %lld ครั้ง โดยนับปุ่มปรับค่าแต่ละปุ่มเป็นหนึ่งครั้ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10295,6 +11783,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "As teclas modificadoras aplicam-se à tecla seguinte. Uma tecla pode ter até %lld toques."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модификаторы применяются к следующей клавише. На клавишу можно назначить до %lld нажатий."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มปรับค่าจะใช้กับปุ่มถัดไป ปุ่มหนึ่งปุ่มใส่การกดได้สูงสุด %lld ครั้ง"
           }
         },
         "vi" : {
@@ -10379,6 +11879,18 @@
             "value" : "Mais teclas"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Другие клавиши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มอื่นๆ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10459,6 +11971,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rato"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мышь"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมาส์"
           }
         },
         "vi" : {
@@ -10543,6 +12067,18 @@
             "value" : "Botão central do rato"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Средняя кнопка мыши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มเมาส์กลาง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10623,6 +12159,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Botão esquerdo do rato"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Левая кнопка мыши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มเมาส์ซ้าย"
           }
         },
         "vi" : {
@@ -10707,6 +12255,18 @@
             "value" : "Botão direito do rato"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правая кнопка мыши"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มเมาส์ขวา"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10787,6 +12347,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Roda do rato para baixo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колесико мыши вниз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้อเมาส์ลง"
           }
         },
         "vi" : {
@@ -10871,6 +12443,18 @@
             "value" : "Roda do rato para cima"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колесико мыши вверх"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้อเมาส์ขึ้น"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10951,6 +12535,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Multimédia"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мультимедиа"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มัลติมีเดีย"
           }
         },
         "vi" : {
@@ -11035,6 +12631,18 @@
             "value" : "Tirar o som"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключить звук"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดเสียง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11115,6 +12723,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O meu computador"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой компьютер"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คอมพิวเตอร์ของฉัน"
           }
         },
         "vi" : {
@@ -11199,6 +12819,18 @@
             "value" : "Nome"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชื่อ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11279,6 +12911,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navegação"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Навигация"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การนำทาง"
           }
         },
         "vi" : {
@@ -11363,6 +13007,18 @@
             "value" : "Faixa seguinte"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующая дорожка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพลงถัดไป"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11443,6 +13099,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tecla seguinte com %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующая клавиша с %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มถัดไปพร้อม %@"
           }
         },
         "vi" : {
@@ -11527,6 +13195,18 @@
             "value" : "Ainda não há pacotes."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пакетов пока нет."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่มีแพ็คเกต"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11607,6 +13287,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nenhuma alteração por guardar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет несохраненных изменений"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก"
           }
         },
         "vi" : {
@@ -11698,6 +13390,18 @@
             "value" : "Tecla não americana %1$@ %2$@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиша %1$@ %2$@ (не US)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม %1$@ %2$@ ของแป้นพิมพ์ที่ไม่ใช่แบบสหรัฐฯ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11778,6 +13482,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não ligado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не подключено"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่ได้เชื่อมต่อ"
           }
         },
         "vi" : {
@@ -11862,6 +13578,18 @@
             "value" : "Desconhecido — este teclado não indica o que as teclas fazem. O que definir aqui é escrito no teclado ao guardar."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неизвестно — эта клавиатура не сообщает, что делают ее клавиши. Все, что вы зададите здесь, будет записано при сохранении."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่ทราบ — แป้นพิมพ์นี้ไม่ได้บอกว่าปุ่มทำอะไร สิ่งที่คุณตั้งค่าไว้ที่นี่จะถูกเขียนลงแป้นพิมพ์เมื่อบันทึก"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11942,6 +13670,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não indicado pelo teclado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура не сообщает"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์ไม่ได้ระบุ"
           }
         },
         "vi" : {
@@ -12027,6 +13767,18 @@
             "value" : "Ainda não testado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Еще не проверено"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่ได้ทดสอบ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12107,6 +13859,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nada"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не назначено"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มี"
           }
         },
         "vi" : {
@@ -12191,6 +13955,18 @@
             "value" : "Nada para guardar — nenhuma tecla foi alterada."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нечего сохранять — ни одна клавиша не изменилась."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มีอะไรต้องบันทึก — ไม่มีปุ่มใดเปลี่ยนแปลง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12269,6 +14045,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Num Lock"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Num Lock"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Num Lock"
@@ -12356,6 +14144,18 @@
             "value" : "Números"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цифры"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวเลข"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12436,6 +14236,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclado numérico"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цифровая клавиатура"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นตัวเลข"
           }
         },
         "vi" : {
@@ -12520,6 +14332,18 @@
             "value" : "Desativado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выкл."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12600,6 +14424,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uma espera para a tecla inteira. Os toques mantêm-se."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одно ожидание на всю клавишу. Ее нажатия остаются прежними."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รอครั้งเดียวสำหรับทั้งปุ่ม การกดของปุ่มยังอยู่เหมือนเดิม"
           }
         },
         "vi" : {
@@ -12684,6 +14520,18 @@
             "value" : "Só as teclas 1–%lld têm cor. Selecione uma delas."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цвет есть только у клавиш 1–%lld. Выберите одну из них."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มีเพียงปุ่ม 1–%lld ที่มีสี เลือกปุ่มใดปุ่มหนึ่งในนั้น"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12764,6 +14612,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir “Privacidade e segurança”"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть «Конфиденциальность и безопасность»"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดความเป็นส่วนตัวและความปลอดภัย"
           }
         },
         "vi" : {
@@ -12848,6 +14708,18 @@
             "value" : "Licenças de código aberto"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лицензии открытого ПО"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใบอนุญาตโอเพนซอร์ส"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12928,6 +14800,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opção"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option"
           }
         },
         "vi" : {
@@ -13012,6 +14896,18 @@
             "value" : "Laranja"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оранжевый"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีส้ม"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13094,6 +14990,18 @@
             "value" : "Outro"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Другое"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อื่นๆ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13174,6 +15082,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pacotes: %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пакеты: %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แพ็คเกต: %lld"
           }
         },
         "vi" : {
@@ -13259,6 +15179,18 @@
             "value" : "Página seguinte"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страница вниз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page Down"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13340,6 +15272,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Página anterior"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страница вверх"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page Up"
           }
         },
         "vi" : {
@@ -13424,6 +15368,18 @@
             "value" : "Escolha a forma que corresponde ao teclado e, depois, rode-a para ficar como o teclado está à sua frente."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите подходящую форму клавиатуры, затем поверните ее так же, как клавиатура лежит перед вами."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกรูปทรงที่ตรงกับแป้นพิมพ์ แล้วหมุนให้ตรงกับแป้นพิมพ์ที่วางอยู่ตรงหน้าคุณ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13504,6 +15460,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reproduzir/pausar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизведение/Пауза"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่น/หยุดพัก"
           }
         },
         "vi" : {
@@ -13588,6 +15556,18 @@
             "value" : "Alimentação"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Питание"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พลังงานไฟฟ้า"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13670,6 +15650,18 @@
             "value" : "Toque %lld"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажатие %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การกดครั้งที่ %lld"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13750,6 +15742,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Faixa anterior"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предыдущая дорожка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพลงก่อนหน้า"
           }
         },
         "vi" : {
@@ -13835,6 +15839,18 @@
             "value" : "Evitar a repetição de teclas após alterar a iluminação"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предотвращать повтор клавиш после изменения подсветки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ป้องกันการกดปุ่มซ้ำหลังเปลี่ยนแสงไฟ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13913,6 +15929,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Print Screen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напечатать экран"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Print Screen"
@@ -14000,6 +16028,18 @@
             "value" : "Roxo"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лиловый"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีม่วง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14080,6 +16120,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ler"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Считать"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่าน"
           }
         },
         "vi" : {
@@ -14164,6 +16216,18 @@
             "value" : "Ler do teclado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Считать с клавиатуры"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านจากแป้นพิมพ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14244,6 +16308,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lido do teclado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Считано с клавиатуры."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านจากแป้นพิมพ์แล้ว"
           }
         },
         "vi" : {
@@ -14328,6 +16404,18 @@
             "value" : "Não foi possível ler do teclado."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось считать данные с клавиатуры."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านจากแป้นพิมพ์ไม่สำเร็จ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14408,6 +16496,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A ler…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Считывание…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังอ่าน…"
           }
         },
         "vi" : {
@@ -14492,6 +16592,18 @@
             "value" : "Vermelho"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Красный"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีแดง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14572,6 +16684,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reabrir agora"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перезапустить сейчас"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้อีกครั้งตอนนี้"
           }
         },
         "vi" : {
@@ -14656,6 +16780,18 @@
             "value" : "Remover último toque"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить последнее нажатие"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เอาการกดล่าสุดออก"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14736,6 +16872,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ID do relatório %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ID отчета %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Report ID %lld"
           }
         },
         "vi" : {
@@ -14820,6 +16968,18 @@
             "value" : "Voltar a tentar"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повторить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลองอีกครั้ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14898,6 +17058,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Return"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Return"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Return"
@@ -14986,6 +17158,18 @@
             "value" : "Seta para a direita"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стрелка вправо"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลูกศรชี้ขวา"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15066,6 +17250,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comando da direita"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правая клавиша Command"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Command ทางด้านขวา"
           }
         },
         "vi" : {
@@ -15150,6 +17346,18 @@
             "value" : "Controlo da direita"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правая клавиша Control"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control ทางด้านขวา"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15230,6 +17438,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opção da direita"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правая клавиша Option"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option ทางด้านขวา"
           }
         },
         "vi" : {
@@ -15314,6 +17534,18 @@
             "value" : "Shift da direita"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правая клавиша Shift"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift ทางด้านขวา"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15394,6 +17626,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повернуть"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หมุน"
           }
         },
         "vi" : {
@@ -15478,6 +17722,18 @@
             "value" : "Luz em movimento"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бегущий огонь"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไฟวิ่ง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15558,6 +17814,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึก"
           }
         },
         "vi" : {
@@ -15642,6 +17910,18 @@
             "value" : "Guardar no teclado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить на клавиатуру"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกลงแป้นพิมพ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15722,6 +18002,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardado no teclado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено на клавиатуре."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกลงแป้นพิมพ์แล้ว"
           }
         },
         "vi" : {
@@ -15807,6 +18099,18 @@
             "value" : "Guardado no simulador — nada foi escrito em nenhum teclado."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено в симуляторе — на клавиатуру ничего не записано."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกลงโปรแกรมจำลองแล้ว — ไม่ได้เขียนอะไรลงแป้นพิมพ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15888,6 +18192,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardado, mas ao ler novamente algumas teclas ou botões rotativos estão diferentes. Essas alterações continuam por guardar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено, но при повторном считывании некоторые клавиши или ручки отличаются. Эти изменения остаются несохраненными."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกแล้ว แต่เมื่ออ่านกลับมา ปุ่มหรือปุ่มหมุนบางปุ่มไม่ตรงกับที่บันทึก การเปลี่ยนแปลงเหล่านั้นจึงยังถือว่าไม่ได้บันทึก"
           }
         },
         "vi" : {
@@ -15973,6 +18289,18 @@
             "value" : "Guardado, mas não foi possível ler novamente o teclado para confirmar."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено, но для проверки не удалось повторно считать данные с клавиатуры."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกแล้ว แต่ไม่สามารถอ่านกลับจากแป้นพิมพ์เพื่อตรวจสอบได้"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16055,6 +18383,18 @@
             "value" : "A guardar…"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранение…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังบันทึก…"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16133,6 +18473,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll Lock"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll Lock"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scroll Lock"
@@ -16220,6 +18572,18 @@
             "value" : "Selecione uma tecla ou um botão rotativo."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите клавишу или ручку."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกปุ่มหรือปุ่มหมุน"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16302,6 +18666,18 @@
             "value" : "Selecione uma das teclas 1–%lld no teclado e, depois, escolha a cor."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите на клавиатуре одну из клавиш 1–%lld, затем задайте ей цвет."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกปุ่มใดปุ่มหนึ่งจากปุ่ม 1–%lld บนแป้นพิมพ์ แล้วเลือกสีของปุ่ม"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16382,6 +18758,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Número de série"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Серийный номер"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลขประจำอุปกรณ์"
           }
         },
         "vi" : {
@@ -16467,6 +18855,18 @@
             "value" : "Definições"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การตั้งค่า"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16548,6 +18948,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Definições…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การตั้งค่า…"
           }
         },
         "vi" : {
@@ -16632,6 +19044,18 @@
             "value" : "Forma…"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Форма…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รูปทรง…"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16709,6 +19133,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shift"
@@ -16796,6 +19232,18 @@
             "value" : "Shift + roda do rato para baixo"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + колесико мыши вниз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + ล้อเมาส์ลง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16876,6 +19324,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shift + roda do rato para cima"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + колесико мыши вверх"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + ล้อเมาส์ขึ้น"
           }
         },
         "vi" : {
@@ -16960,6 +19420,18 @@
             "value" : "Símbolos com Shift"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Символы с Shift"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สัญลักษณ์ที่ใช้ Shift"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17040,6 +19512,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teclado simulado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура симулятора"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์จำลอง"
           }
         },
         "vi" : {
@@ -17124,6 +19608,18 @@
             "value" : "Teclado simulado: %@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура симулятора: %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์จำลอง: %@"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17204,6 +19700,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simulador"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Симулятор"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โปรแกรมจำลอง"
           }
         },
         "vi" : {
@@ -17289,6 +19797,18 @@
             "value" : "Simulador em utilização"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используется симулятор"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังใช้โปรแกรมจำลอง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17370,6 +19890,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não foi possível ler algumas teclas ou botões rotativos. Aparecem como antes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось считать некоторые клавиши или ручки. Они показаны как прежде."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านปุ่มหรือปุ่มหมุนบางปุ่มไม่ได้ ส่วนที่อ่านไม่ได้จะแสดงเหมือนเดิม"
           }
         },
         "vi" : {
@@ -17454,6 +19986,18 @@
             "value" : "Parar"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остановить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุด"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17534,6 +20078,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mudar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переключить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับ"
           }
         },
         "vi" : {
@@ -17618,6 +20174,18 @@
             "value" : "Mudar de teclado?"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переключить клавиатуру?"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับแป้นพิมพ์หรือไม่"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17700,6 +20268,18 @@
             "value" : "Símbolos"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Символы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สัญลักษณ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17778,6 +20358,18 @@
           }
         },
         "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tab"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tab"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tab"
@@ -17865,6 +20457,18 @@
             "value" : "O idioma base é o inglês. Pode seguir o idioma do sistema ou escolher outro."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основной язык — английский. Можно использовать язык системы или выбрать язык самостоятельно."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภาษาพื้นฐานคือภาษาอังกฤษ คุณสามารถใช้ภาษาของระบบหรือเลือกภาษาเองได้"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17945,6 +20549,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não foi possível perguntar ao teclado o que é."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось запросить тип клавиатуры."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่สามารถถามประเภทของแป้นพิมพ์ได้"
           }
         },
         "vi" : {
@@ -18029,6 +20645,18 @@
             "value" : "Não foi possível abrir o teclado"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось открыть клавиатуру"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่สามารถเปิดแป้นพิมพ์ได้"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18109,6 +20737,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não foi possível abrir o teclado (%@)."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось открыть клавиатуру (%@)."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่สามารถเปิดแป้นพิมพ์ได้ (%@)"
           }
         },
         "vi" : {
@@ -18193,6 +20833,18 @@
             "value" : "O teclado não indica quantas teclas e botões rotativos tem."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура не сообщает, сколько у нее клавиш и ручек."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์ไม่ได้บอกจำนวนปุ่มและปุ่มหมุน"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18273,6 +20925,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O teclado já não está ligado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура больше не подключена."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์ไม่ได้เชื่อมต่ออยู่แล้ว"
           }
         },
         "vi" : {
@@ -18357,6 +21021,18 @@
             "value" : "O teclado indica as suas teclas e botões rotativos: %@"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатура сообщает число клавиш и ручек: %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์แจ้งจำนวนปุ่มและปุ่มหมุน: %@"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18439,6 +21115,18 @@
             "value" : "A última tecla premida continua a piscar, com uma cor nova a cada toque."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последняя нажатая клавиша продолжает мигать, меняя цвет при каждом нажатии."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มที่กดล่าสุดจะกะพริบต่อเนื่อง และเปลี่ยนสีทุกครั้งที่กด"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18519,6 +21207,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A tecla selecionada não tem toques."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У выбранной клавиши нет нажатий."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่มที่เลือกยังไม่มีการกด"
           }
         },
         "vi" : {
@@ -18604,6 +21304,18 @@
             "value" : "Este não é um teclado verdadeiro. O que guardar aqui não é escrito em nenhum teclado."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это не настоящая клавиатура. То, что вы здесь сохраните, не записывается ни на одну клавиатуру."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นี่ไม่ใช่แป้นพิมพ์จริง สิ่งที่คุณบันทึกที่นี่จะไม่ถูกเขียนลงแป้นพิมพ์ใดๆ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18686,6 +21398,18 @@
             "value" : "Este teclado não consegue fazer isso."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Эта клавиатура этого не поддерживает."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์นี้ไม่รองรับการทำงานนี้"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18766,6 +21490,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esta tecla não pode ser atribuída neste teclado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Эту клавишу нельзя назначить на этой клавиатуре."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นพิมพ์นี้ไม่รองรับปุ่มนี้"
           }
         },
         "vi" : {
@@ -18851,6 +21587,18 @@
             "value" : "O firmware deste teclado (tipo %lld) ainda não foi testado. Se as teclas forem lidas ou guardadas de forma errada, comunique-o com o registo do dispositivo."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прошивка этой клавиатуры (тип %lld) еще не проверялась. Если клавиши неправильно считываются или сохраняются, сообщите об этом, приложив журнал устройства."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เฟิร์มแวร์ของแป้นพิมพ์นี้ (ประเภท %lld) ยังไม่ได้ทดสอบ หากอ่านหรือบันทึกปุ่มไม่ถูกต้อง โปรดแจ้งปัญหาพร้อมแนบประวัติอุปกรณ์"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18933,6 +21681,18 @@
             "value" : "Agudos +"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Высокие частоты +"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มเสียงแหลม"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19013,6 +21773,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agudos -"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Высокие частоты -"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดเสียงแหลม"
           }
         },
         "vi" : {
@@ -19101,6 +21873,18 @@
             "value" : "Alterações por guardar"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Несохраненные изменения"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การเปลี่ยนแปลงที่ยังไม่ได้บันทึก"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19182,6 +21966,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seta para cima"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стрелка вверх"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลูกศรชี้ขึ้น"
           }
         },
         "vi" : {
@@ -19273,6 +22069,18 @@
             "value" : "Versão %@ (compilação %@)"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия %@ (сборка %@)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวอร์ชั่น %@ (บิลด์ %@)"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19353,6 +22161,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume +"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Громкость +"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มเสียง"
           }
         },
         "vi" : {
@@ -19437,6 +22257,18 @@
             "value" : "Volume -"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Громкость -"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดเสียง"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19517,6 +22349,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Espera %lld ms"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ожидание %lld мс"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รอ %lld ms"
           }
         },
         "vi" : {
@@ -19601,6 +22445,18 @@
             "value" : "Web: Retroceder"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веб: назад"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เว็บ: ย้อนกลับ"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19681,6 +22537,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Web: Avançar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веб: вперед"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เว็บ: ไปข้างหน้า"
           }
         },
         "vi" : {
@@ -19765,6 +22633,18 @@
             "value" : "Web: Página inicial"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веб: домашняя страница"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เว็บ: หน้าหลัก"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19845,6 +22725,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Web: Recarregar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веб: обновить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เว็บ: โหลดใหม่"
           }
         },
         "vi" : {
@@ -19929,6 +22821,18 @@
             "value" : "Não foi possível escrever no teclado (%@)."
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось записать данные на клавиатуру (%@)."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เขียนลงแป้นพิมพ์ไม่สำเร็จ (%@)"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20009,6 +22913,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amarelo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Желтый"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีเหลือง"
           }
         },
         "vi" : {

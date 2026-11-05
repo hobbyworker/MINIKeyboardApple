@@ -26,6 +26,7 @@ enum UILanguage {
         ("id", "Bahasa Indonesia"),
         ("vi", "Tiếng Việt"),
         ("th", "ไทย"),
+        ("ar", "العربية"),
     ]
 }
 

@@ -34,7 +34,9 @@ private struct ModesLighting: View {
                         editor.setLightingMode(mode)
                     } label: {
                         VStack(spacing: 6) {
+                            // The keyboard's light, flowing as it does in every language.
                             Image(systemName: LightingModeNames.systemImage(mode)).font(.system(size: 18))
+                                .environment(\.layoutDirection, .leftToRight)
                             Text(LightingModeNames.title(mode, k8890: true)).font(.system(size: 13, weight: .semibold))
                             if let detail = LightingModeNames.detail(mode) {
                                 Text(detail).font(.caption).foregroundStyle(.secondary)
@@ -167,7 +169,7 @@ struct DelayPageView: View {
                         ForEach(presses) { press in
                             GridRow {
                                 Text("Press \(press.index + 1)").foregroundStyle(.secondary)
-                                Text(verbatim: press.text)
+                                Text(verbatim: press.text.leftToRight)
                                     .font(.body.weight(.medium))
                                     .frame(minWidth: 90, alignment: .leading)
                                 MillisecondsField(value: press.delay, range: range) {

@@ -1,5 +1,40 @@
 import SwiftUI
 
+extension Locale {
+    /// The language the app shows — the catalog's language macOS picked for it ("ar", "ko" …).
+    static let interfaceLanguage = Bundle.main.preferredLocalizations.first ?? "en"
+
+    /// Whether the app's language is written right to left — Arabic.
+    static let interfaceIsRightToLeft = Locale.Language(identifier: interfaceLanguage).characterDirection == .rightToLeft
+
+    /// Arabic as the app writes it: the digits 0–9 rather than the region's, the user's region otherwise. `nil` in every
+    /// other language, where the digits already are 0–9.
+    static let westernDigits: Locale? = {
+        guard interfaceLanguage.hasPrefix("ar") else { return nil }
+        var components = Locale.Components(locale: .current)
+        components.languageComponents = Locale.Language.Components(identifier: interfaceLanguage)
+        components.numberingSystem = Locale.NumberingSystem("latn")
+        return Locale(components: components)
+    }()
+}
+
+extension String {
+    /// Key names and presses as the keys print them, left to right — in Arabic a lone "(" would turn round and "⇧("
+    /// read ")⇧". Unchanged in the other languages.
+    var leftToRight: String { Locale.interfaceIsRightToLeft ? "\u{2066}\(self)\u{2069}" : self }
+}
+
+extension View {
+    /// Numbers in Western digits in Arabic (see `Locale.westernDigits`); nothing changes in other languages.
+    @ViewBuilder func westernDigits() -> some View {
+        if let locale = Locale.westernDigits {
+            environment(\.locale, locale)
+        } else {
+            self
+        }
+    }
+}
+
 /// A key cap in the action pages.
 struct KeyCapStyle: ButtonStyle {
     var isActive = false

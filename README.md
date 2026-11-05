@@ -9,7 +9,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"></a>
 </p>
 
-<p align="center"><b>English</b> · <a href="docs/README.ko.md">한국어</a> · <a href="docs/README.de.md">Deutsch</a> · <a href="docs/README.es.md">Español</a> · <a href="docs/README.es-419.md">Español (Latinoamérica)</a> · <a href="docs/README.fr.md">Français</a> · <a href="docs/README.id.md">Bahasa Indonesia</a> · <a href="docs/README.it.md">Italiano</a> · <a href="docs/README.ja.md">日本語</a> · <a href="docs/README.pl.md">Polski</a> · <a href="docs/README.pt-BR.md">Português (Brasil)</a> · <a href="docs/README.pt-PT.md">Português (Portugal)</a> · <a href="docs/README.ru.md">Русский</a> · <a href="docs/README.th.md">ไทย</a> · <a href="docs/README.vi.md">Tiếng Việt</a> · <a href="docs/README.zh-Hans.md">简体中文</a> · <a href="docs/README.zh-Hant.md">繁體中文</a></p>
+<p align="center"><b>English</b> · <a href="docs/README.ko.md">한국어</a> · <a href="docs/README.ar.md">العربية</a> · <a href="docs/README.de.md">Deutsch</a> · <a href="docs/README.es.md">Español</a> · <a href="docs/README.es-419.md">Español (Latinoamérica)</a> · <a href="docs/README.fr.md">Français</a> · <a href="docs/README.id.md">Bahasa Indonesia</a> · <a href="docs/README.it.md">Italiano</a> · <a href="docs/README.ja.md">日本語</a> · <a href="docs/README.pl.md">Polski</a> · <a href="docs/README.pt-BR.md">Português (Brasil)</a> · <a href="docs/README.pt-PT.md">Português (Portugal)</a> · <a href="docs/README.ru.md">Русский</a> · <a href="docs/README.th.md">ไทย</a> · <a href="docs/README.vi.md">Tiếng Việt</a> · <a href="docs/README.zh-Hans.md">简体中文</a> · <a href="docs/README.zh-Hant.md">繁體中文</a></p>
 
 A macOS app that writes key settings to small USB macro keyboards — the ones sold with anything
 from a single knob to 21 keys, and up to four knobs. For each key and knob action
@@ -33,9 +33,9 @@ layouts you pick. The vendor's app doesn't know the `1189:8890` and its own tool
 real shape isn't known: you tell the app how many keys and knobs it has and how many keys are in a
 row, and it draws a tidy arrangement of that.
 
-The app is available in 17 languages — English, Korean, Japanese, Chinese (Simplified and Traditional), German, Spanish
-(Spain and Latin America), French, Italian, Portuguese (Brazil and Portugal), Polish, Russian, Indonesian, Vietnamese
-and Thai — and follows the language settings of macOS. Other languages get English.
+The app is available in 18 languages — English, Korean, Japanese, Chinese (Simplified and Traditional), German, Spanish
+(Spain and Latin America), French, Italian, Portuguese (Brazil and Portugal), Polish, Russian, Indonesian, Vietnamese,
+Thai and Arabic — and follows the language settings of macOS. Other languages get English.
 
 The source in this repository is MIT licensed. A few parts of the shipped app are not part of
 this source — its name and its icon. The icon at the top is shown for reference only: it is not
@@ -43,7 +43,7 @@ covered by the MIT license, and builds from this repository don't include it.
 
 ## macOS, Windows, Linux and the web
 
-MINIKeyboard comes in four editions built on the same rules — the same commands, the same 17 languages. The three apps take the same keyboards; the web edition, which runs in the browser, takes them all but the `1189:8890`.
+MINIKeyboard comes in four editions built on the same rules — the same commands, the same 18 languages. The three apps take the same keyboards; the web edition, which runs in the browser, takes them all but the `1189:8890`.
 
 | Repository | GitHub |
 |---|---|
@@ -126,7 +126,7 @@ shows every report written and every answer.
    - **Delay** — on firmware that keeps waits.
 5. **Save** (⌘S) writes what changed. **Read** (⌘R) asks a keyboard that reads back what it holds.
 
-**Settings** (⌘,) picks the interface language (one of the 17, or the system's) and light or dark,
+**Settings** (⌘,) picks the interface language (one of the 18, or the system's) and light or dark,
 and has About — the version and the open source licenses. With an update feed (above), **Check
 for Updates…** sits right under Settings… in the app menu.
 
@@ -151,7 +151,7 @@ MINIKeyboard/
 ├── App/                   app entry point and menus, the composition root (the only file that sees Domain and DataLayer), updates (Sparkle), licenses
 ├── Views/                 SwiftUI (imports Presentation only) — the keyboard as it sits, the action pages, the layout sheet, the device log; Settings/
 ├── Resources/Licenses/    open source licenses, shown in Settings ▸ About
-└── Localizable.xcstrings  en (source), de, es, fr, id, it, ja, ko, pl, pt-BR, pt-PT, ru, th, vi, zh-Hans, zh-Hant
+└── Localizable.xcstrings  en (source), ar, de, es, es-419, fr, id, it, ja, ko, pl, pt-BR, pt-PT, ru, th, vi, zh-Hans, zh-Hant
 MINIKeyboard-Info.plist    the Info.plist keys Xcode can't generate — Sparkle's feed and key, the copyright line
 MINIKeyboardTests/         the update switch, the licenses and the app menu
 ```

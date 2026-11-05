@@ -13,6 +13,7 @@ struct KeyboardCanvas: View {
             }
             .opacity(editor.isReady ? 1 : 0.45)
             .disabled(!editor.isReady)
+            .environment(\.layoutDirection, .leftToRight)
         } else {
             VStack(spacing: 8) {
                 Image(systemName: "keyboard")

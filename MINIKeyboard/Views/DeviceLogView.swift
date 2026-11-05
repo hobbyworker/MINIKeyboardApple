@@ -10,7 +10,8 @@ struct DeviceLogView: View {
     /// Opens with every report shown in full.
     var startsExpanded = false
 
-    static let timeFormat = Date.FormatStyle(date: .omitted, time: .standard).secondFraction(.fractional(3))
+    static let timeFormat = Date.FormatStyle(date: .omitted, time: .standard, locale: Locale.westernDigits ?? .autoupdatingCurrent)
+        .secondFraction(.fractional(3))
 
     var body: some View {
         let entries = log.entries
@@ -57,6 +58,7 @@ struct DeviceLogView: View {
         .onAppear {
             if startsExpanded { expanded = Set(expandable) }
         }
+        .environment(\.layoutDirection, .leftToRight)
     }
 
     /// A report with more to show than its one line.
@@ -80,7 +82,11 @@ struct DeviceLogView: View {
             case .input: "IN "
             case .event: "-- "
             }
-            let body = entry.event.map { String(localized: $0.message) } ?? entry.hex
+            let body = entry.event.map { event in
+                var message = event.message
+                if let locale = Locale.westernDigits { message.locale = locale }
+                return String(localized: message)
+            } ?? entry.hex
             return "\(entry.date.formatted(Self.timeFormat)) \(mark) \(body)"
         }
         .joined(separator: "\n")
@@ -113,7 +119,9 @@ private struct LogRow: View {
                 .disabled(!canExpand)
                 .help(isExpanded ? Text("Collapse") : Text("Expand"))
                 .accessibilityLabel(isExpanded ? Text("Collapse") : Text("Expand"))
-                Text(line.date, format: DeviceLogView.timeFormat)
+                // The time and the bytes left to right — in Arabic a row of digits alone would read backwards. A
+                // message is a sentence, written its language's way.
+                Text(verbatim: line.date.formatted(DeviceLogView.timeFormat).leftToRight)
                     .foregroundStyle(.secondary)
                 Image(systemName: symbol)
                     .foregroundStyle(color)
@@ -121,7 +129,7 @@ private struct LogRow: View {
                 if let event = line.event {
                     Text(event.message)
                 } else {
-                    Text(verbatim: line.summary)
+                    Text(verbatim: line.summary.leftToRight)
                         .textSelection(.enabled)
                     if line.isShortened {
                         HStack(spacing: 3) {
@@ -135,7 +143,7 @@ private struct LogRow: View {
             if isExpanded && canExpand {
                 VStack(alignment: .leading, spacing: 1) {
                     ForEach(Array(line.rows.enumerated()), id: \.offset) { _, row in
-                        Text(verbatim: row)
+                        Text(verbatim: row.leftToRight)
                     }
                 }
                 .foregroundStyle(.secondary)

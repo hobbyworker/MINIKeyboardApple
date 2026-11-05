@@ -8,12 +8,17 @@ struct MINIKeyboardApp: App {
     @State private var container = AppContainer()
     @AppStorage(AppearanceMode.userDefaultsKey) private var appearance = AppearanceMode.system
 
+    init() {
+        InterfaceDirection.apply()
+    }
+
     var body: some Scene {
         let editor = container.editor
         Window(AppDisplayName.current, id: "main") {
             ContentView()
                 .environment(editor)
                 .preferredColorScheme(appearance.colorScheme)
+                .westernDigits()
         }
         .windowResizability(.contentMinSize)
         .commands {
@@ -41,12 +46,14 @@ struct MINIKeyboardApp: App {
             DeviceLogView()
                 .environment(container.deviceLog)
                 .preferredColorScheme(appearance.colorScheme)
+                .westernDigits()
         }
         .defaultSize(width: 760, height: 420)
 
         Window(Text("Settings"), id: PreferenceView.windowID) {
             PreferenceView()
                 .preferredColorScheme(appearance.colorScheme)
+                .westernDigits()
         }
         .windowResizability(.contentSize)
         .defaultPosition(.center)

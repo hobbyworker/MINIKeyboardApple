@@ -9,7 +9,7 @@
   <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"></a>
 </p>
 
-<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.es-419.md">Español (Latinoamérica)</a> · <a href="README.fr.md">Français</a> · <a href="README.id.md">Bahasa Indonesia</a> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <a href="README.pl.md">Polski</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.pt-PT.md">Português (Portugal)</a> · <a href="README.ru.md">Русский</a> · <a href="README.th.md">ไทย</a> · <b>Tiếng Việt</b> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
+<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.ar.md">العربية</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.es-419.md">Español (Latinoamérica)</a> · <a href="README.fr.md">Français</a> · <a href="README.id.md">Bahasa Indonesia</a> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <a href="README.pl.md">Polski</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.pt-PT.md">Português (Portugal)</a> · <a href="README.ru.md">Русский</a> · <a href="README.th.md">ไทย</a> · <b>Tiếng Việt</b> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
 
 Ứng dụng macOS dùng để ghi thiết lập phím vào những bàn phím macro USB cỡ nhỏ — loại được bán từ bản chỉ có một núm
 xoay cho đến bản 21 phím, với tối đa bốn núm xoay. Với từng phím và từng thao tác của núm xoay (xoay sang trái, nhấn,
@@ -33,10 +33,10 @@ nên ứng dụng vẽ đúng bố cục mà ứng dụng của nhà sản xuấ
 biết hình dạng thực tế. Vì vậy, bạn chỉ cần đặt số phím, số núm xoay và số phím trên mỗi hàng, ứng dụng sẽ vẽ ra một
 bố cục ngay ngắn đúng như vậy.
 
-Ứng dụng có 17 ngôn ngữ — tiếng Anh, tiếng Hàn, tiếng Nhật, tiếng Trung (Giản thể và Phồn thể), tiếng Đức, tiếng Tây Ban
+Ứng dụng có 18 ngôn ngữ — tiếng Anh, tiếng Hàn, tiếng Nhật, tiếng Trung (Giản thể và Phồn thể), tiếng Đức, tiếng Tây Ban
 Nha (Tây Ban Nha và Mỹ Latinh), tiếng Pháp, tiếng Ý, tiếng Bồ Đào Nha (Brazil và Bồ Đào Nha), tiếng Ba Lan, tiếng Nga,
-tiếng Indonesia, tiếng Việt và tiếng Thái. Ứng dụng theo cài đặt ngôn ngữ của macOS; với các ngôn ngữ khác, ứng dụng
-hiển thị bằng tiếng Anh.
+tiếng Indonesia, tiếng Việt, tiếng Thái và tiếng Ả Rập. Ứng dụng theo cài đặt ngôn ngữ của macOS; với các ngôn ngữ khác,
+ứng dụng hiển thị bằng tiếng Anh.
 
 Mã nguồn trong kho này được cấp phép MIT. Một số phần của ứng dụng phát hành — tên và biểu tượng — không nằm trong mã
 nguồn này. Biểu tượng ở đầu trang chỉ để minh họa: biểu tượng này không thuộc phạm vi giấy phép MIT và cũng không có
@@ -44,7 +44,7 @@ trong ứng dụng được build từ kho này.
 
 ## macOS, Windows, Linux và web
 
-MINIKeyboard có bốn phiên bản làm theo cùng quy tắc — cùng lệnh, cùng 17 ngôn ngữ. Ba ứng dụng dùng cùng các bàn phím, còn phiên bản web, chạy trong trình duyệt, dùng tất cả trừ `1189:8890`.
+MINIKeyboard có bốn phiên bản làm theo cùng quy tắc — cùng lệnh, cùng 18 ngôn ngữ. Ba ứng dụng dùng cùng các bàn phím, còn phiên bản web, chạy trong trình duyệt, dùng tất cả trừ `1189:8890`.
 
 | Kho mã | GitHub |
 |---|---|
@@ -123,7 +123,7 @@ Trong **Cửa sổ ▸ Nhật ký thiết bị**, bạn có thể xem mọi báo
    - **Độ trễ** — trên chương trình cơ sở có ghi nhớ độ trễ.
 5. **Lưu** (⌘S) ghi những gì đã thay đổi. **Đọc** (⌘R) lấy thiết lập hiện tại từ bàn phím đọc được.
 
-Trong **Cài đặt** (⌘,), bạn chọn ngôn ngữ giao diện (một trong 17 ngôn ngữ, hoặc ngôn ngữ hệ thống) và chế độ sáng hoặc
+Trong **Cài đặt** (⌘,), bạn chọn ngôn ngữ giao diện (một trong 18 ngôn ngữ, hoặc ngôn ngữ hệ thống) và chế độ sáng hoặc
 tối; trong Giới thiệu, bạn xem được phiên bản và giấy phép nguồn mở. Nếu có feed cập nhật (xem ở trên),
 **Kiểm tra bản cập nhật…** nằm ngay dưới Cài đặt… trong menu ứng dụng.
 
@@ -147,7 +147,7 @@ MINIKeyboard/
 ├── App/                   điểm vào ứng dụng và menu, composition root (tệp duy nhất biết Domain và DataLayer), cập nhật (Sparkle), giấy phép
 ├── Views/                 SwiftUI (chỉ import Presentation) — bàn phím theo hướng đặt, các trang tác vụ, sheet bố cục, nhật ký thiết bị; Settings/
 ├── Resources/Licenses/    giấy phép nguồn mở hiển thị trong Cài đặt ▸ Giới thiệu
-└── Localizable.xcstrings  en (gốc), de, es, fr, id, it, ja, ko, pl, pt-BR, pt-PT, ru, th, vi, zh-Hans, zh-Hant
+└── Localizable.xcstrings  en (gốc), ar, de, es, es-419, fr, id, it, ja, ko, pl, pt-BR, pt-PT, ru, th, vi, zh-Hans, zh-Hant
 MINIKeyboard-Info.plist    các khóa Info.plist mà Xcode không tạo được — feed và khóa của Sparkle, dòng bản quyền
 MINIKeyboardTests/         công tắc cập nhật, giấy phép, menu ứng dụng
 ```

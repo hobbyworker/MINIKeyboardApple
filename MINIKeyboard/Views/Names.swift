@@ -74,6 +74,15 @@ extension MediaChoice {
         case .webRefresh: "arrow.clockwise"
         }
     }
+
+    /// The key's symbol. Only back and forward turn round in right-to-left text; every other media key keeps its
+    /// shape, a speaker too — SF Symbols would turn it round.
+    @ViewBuilder var symbol: some View {
+        switch self {
+        case .webBack, .webForward: Image(systemName: systemImage)
+        default: Image(systemName: systemImage).environment(\.layoutDirection, .leftToRight)
+        }
+    }
 }
 
 extension MouseChoice {
@@ -246,7 +255,7 @@ extension ActionCaption {
     var text: Text {
         switch self {
         case .unknown, .nothing: Text(verbatim: "")
-        case .presses(let text): Text(verbatim: text)
+        case .presses(let text): Text(verbatim: text.leftToRight)
         case .media(let key): Text(key.title)
         case .otherMedia(let usage): Text("Media Key \(String(format: "0x%03X", usage))")
         case .mouse(let action): Text(action.title)

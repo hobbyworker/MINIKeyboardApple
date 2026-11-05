@@ -48,7 +48,7 @@ struct Inspector: View {
             case .presses(let strokes, let keyDelay, let used, let limit):
                 presses(strokes, keyDelay: keyDelay, used: used, limit: limit)
             case .media(let key):
-                Label { Text(key.title) } icon: { Image(systemName: key.systemImage) }
+                Label { Text(key.title) } icon: { key.symbol }
                     .font(.title3)
             case .otherMedia(let usage):
                 ActionCaption.otherMedia(usage).text.font(.title3)
@@ -57,7 +57,7 @@ struct Inspector: View {
                     .font(.title3)
             }
             if let held = editor.heldModifierText {
-                Text("Next key with \(held)")
+                Text("Next key with \(held.leftToRight)")
                     .font(.caption)
                     .foregroundStyle(Color.accentColor)
             }
@@ -68,13 +68,15 @@ struct Inspector: View {
         VStack(alignment: .leading, spacing: 8) {
             FlowLayout(spacing: 4) {
                 ForEach(Array(strokes.enumerated()), id: \.offset) { _, stroke in
-                    Text(verbatim: stroke)
+                    Text(verbatim: stroke.leftToRight)
                         .font(.system(.title3, design: .rounded).weight(.medium))
                         .padding(.horizontal, 7)
                         .padding(.vertical, 3)
                         .background(RoundedRectangle(cornerRadius: 5).fill(Color.primary.opacity(0.08)))
                 }
             }
+            // In the order they're typed, as on the key cap — left to right in every language.
+            .environment(\.layoutDirection, .leftToRight)
             .textSelection(.enabled)
             if keyDelay > 0 {
                 Text("Waits \(keyDelay) ms").font(.caption).foregroundStyle(.secondary)

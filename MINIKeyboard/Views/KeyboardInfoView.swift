@@ -5,6 +5,7 @@ import Presentation
 /// not provided.
 struct KeyboardInfoView: View {
     let info: KeyboardInfo
+    @Environment(\.layoutDirection) private var layoutDirection
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -86,7 +87,8 @@ struct KeyboardInfoView: View {
                         Text(role.title)
                     }
                     if interface.isConfiguration {
-                        Text(verbatim: "  ←").foregroundStyle(.secondary)
+                        // Points back at the interface, whichever way the line reads.
+                        Text(verbatim: layoutDirection == .rightToLeft ? "  →" : "  ←").foregroundStyle(.secondary)
                     }
                 }
             }

@@ -4,6 +4,12 @@
     "%@ needs to relaunch to apply the change." : {
       "comment" : "Alert after the language changes. %@ is the app name.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب إعادة تشغيل %@ حتى يسري التغيير."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -105,6 +111,12 @@
     "%@ uses the following open source packages. Below is the original license each package publishes in its source repository." : {
       "comment" : "Opening line of the licenses sheet. %@ is the app name.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم %@ الحزم مفتوحة المصدر التالية. فيما يلي النص الأصلي للترخيص الذي تنشره كل حزمة في مستودع مصدرها."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -227,6 +239,12 @@
     },
     "%lld bytes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld بايت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -327,6 +345,12 @@
     },
     "%lld of %lld presses" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الضغطات: %1$lld من %2$lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -433,6 +457,12 @@
     },
     "884x · Doesn’t Answer Identification" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · لا استجابة لاستعلام النوع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -533,6 +563,12 @@
     },
     "884x · Legacy Firmware" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · برنامج ثابت قديم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -634,6 +670,12 @@
     "884x · Standard Firmware" : {
       "comment" : "Keyboard info, the commands a 884x keyboard of the standard record format takes (type 10 or above).",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "884x · برنامج ثابت قياسي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -734,6 +776,12 @@
     },
     "8890 Packets · %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حزم 8890 · %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -834,6 +882,12 @@
     },
     "A key holds up to %lld presses." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن أن يصل عدد الضغطات في المفتاح الواحد إلى %lld."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -934,6 +988,12 @@
     },
     "A light runs across the keys in order, in a new color each round." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمر ضوء على المفاتيح بالترتيب، بلون جديد في كل دورة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1034,6 +1094,12 @@
     },
     "A media key replaces what the key did." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحل مفتاح الوسائط محل الإجراء السابق للمفتاح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1134,6 +1200,12 @@
     },
     "A mouse action replaces what the key did." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحل إجراء الماوس محل الإجراء السابق للمفتاح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1234,6 +1306,12 @@
     },
     "About" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حول"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1335,6 +1413,12 @@
     "About %@" : {
       "comment" : "App menu item. %@ is the app name.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حول %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1435,6 +1519,12 @@
     },
     "Action" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإجراء"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1536,6 +1626,12 @@
     "After its lighting is saved, the 1189:8890 keyboard repeats a key's first stroke without end when the key is pressed (its maker's software does the same). With this on, the app sends one more save after the lighting to stop that; the keys stay as they were. Off, the app sends just what the maker's software sends." : {
       "comment" : "Settings ▸ General ▸ Firmware Workarounds: what the switch above does.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بعد حفظ الإضاءة في لوحة المفاتيح 1189:8890، يتكرر أول حرف في المفتاح بلا توقف عند الضغط عليه (ويحدث الأمر نفسه مع برنامج الشركة المصنعة). عند تشغيل هذا الخيار، يرسل التطبيق أمر حفظ إضافيًا بعد الإضاءة لمنع ذلك، ولا تتغير إعدادات المفاتيح. وعند إيقافه، يرسل التطبيق ما يرسله برنامج الشركة المصنعة فقط."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1636,6 +1732,12 @@
     },
     "Allow %@ in Privacy & Security ▸ Input Monitoring." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسمح لتطبيق %@ في «الخصوصية والأمن» ▸ «مراقبة الإدخال»."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1736,6 +1838,12 @@
     },
     "Alt + Mouse wheel Down" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + عجلة الماوس لأسفل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1836,6 +1944,12 @@
     },
     "Alt + Mouse wheel Up" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt + عجلة الماوس لأعلى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1936,6 +2050,12 @@
     },
     "App" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التطبيق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2036,6 +2156,12 @@
     },
     "Appearance" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المظهر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2136,6 +2262,12 @@
     },
     "Asking the keyboard what it is…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجري الاستعلام عن نوع لوحة المفاتيح…"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2237,6 +2369,12 @@
     "Back to the Keyboard on USB" : {
       "comment" : "A button on the simulator's bar: leaves the simulator.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العودة إلى لوحة مفاتيح USB"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2337,6 +2475,12 @@
     },
     "Bass+" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الباس +"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2437,6 +2581,12 @@
     },
     "Bass-" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الباس -"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2537,6 +2687,12 @@
     },
     "Blink Last Key" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وميض آخر مفتاح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2637,6 +2793,12 @@
     },
     "Blue" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أزرق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2737,6 +2899,12 @@
     },
     "Brightness+" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السطوع +"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2837,6 +3005,12 @@
     },
     "Brightness-" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السطوع -"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2937,6 +3111,12 @@
     },
     "Calculator" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الحاسبة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3037,6 +3217,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3138,6 +3324,12 @@
     "Caps Lock" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caps Lock"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3238,6 +3430,12 @@
     },
     "Changes you haven’t saved will be lost." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستفقد التغييرات التي لم تحفظها."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3338,6 +3536,12 @@
     },
     "Check for Updates…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التحقق من وجود تحديثات…"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3438,6 +3642,12 @@
     },
     "Check for updates automatically" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التحقق من وجود تحديثات تلقائيًا"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3538,6 +3748,12 @@
     },
     "Chip" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشريحة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3639,6 +3855,12 @@
     "Choose a Keyboard" : {
       "comment" : "Header bar menu, with more than one keyboard plugged in: which one the app opens.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختيار لوحة مفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3739,6 +3961,12 @@
     },
     "Choose the Keyboard’s Shape" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختيار شكل لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3839,6 +4067,12 @@
     },
     "Clear" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3939,6 +4173,12 @@
     },
     "Clear Key" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح المفتاح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4039,6 +4279,12 @@
     },
     "Clear Layer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح الطبقة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4139,6 +4385,12 @@
     },
     "Close" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4239,6 +4491,12 @@
     },
     "Collapse" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4339,6 +4597,12 @@
     },
     "Collapse All" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طي الكل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4439,6 +4703,12 @@
     },
     "Color" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللون"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4539,6 +4809,12 @@
     },
     "Command" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Command"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4639,6 +4915,12 @@
     },
     "Commands" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مجموعة الأوامر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4739,6 +5021,12 @@
     },
     "Configuration Channel" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قناة التكوين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4839,6 +5127,12 @@
     },
     "Connect the keyboard via USB." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وصّل لوحة المفاتيح عبر USB."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4939,6 +5233,12 @@
     },
     "Connected" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متصل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5039,6 +5339,12 @@
     },
     "Connected to %@, interface %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متصل بالجهاز %1$@، الواجهة %2$lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5145,6 +5451,12 @@
     },
     "Control" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5245,6 +5557,12 @@
     },
     "Copy" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسخ"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5345,6 +5663,12 @@
     },
     "Ctrl + Mouse wheel Down" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + عجلة الماوس لأسفل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5445,6 +5769,12 @@
     },
     "Ctrl + Mouse wheel Up" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ctrl + عجلة الماوس لأعلى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5545,6 +5875,12 @@
     },
     "Cyan" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سماوي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5645,6 +5981,12 @@
     },
     "Dark" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داكن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5745,6 +6087,12 @@
     },
     "Delay" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التأخير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5846,6 +6194,12 @@
     "Delete (Backspace)" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete (Backspace)"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5946,6 +6300,12 @@
     },
     "Device Log" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل الجهاز"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6046,6 +6406,12 @@
     },
     "Done" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6147,6 +6513,12 @@
     "Down Arrow" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سهم لأسفل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6247,6 +6619,12 @@
     },
     "Each press can wait before it is sent. Give the key its presses on the Keys page first." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن أن تنتظر كل ضغطة قبل إرسالها. أضف أولًا ضغطات المفتاح في صفحة «المفاتيح»."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6347,6 +6725,12 @@
     },
     "Editing" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التحرير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6447,6 +6831,12 @@
     },
     "Effect" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التأثير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6547,6 +6937,12 @@
     },
     "Email" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البريد الإلكتروني"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6648,6 +7044,12 @@
     "End" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6749,6 +7151,12 @@
     "Escape" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escape"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6849,6 +7257,12 @@
     },
     "Expand" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توسيع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6949,6 +7363,12 @@
     },
     "Expand All" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توسيع الكل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7049,6 +7469,12 @@
     },
     "Firmware" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البرنامج الثابت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7150,6 +7576,12 @@
     "Firmware Workarounds" : {
       "comment" : "Settings ▸ General: the heading over the ways the app works around keyboards' firmware bugs.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تجاوز أخطاء البرنامج الثابت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7250,6 +7682,12 @@
     },
     "Follow System" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسب النظام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7351,6 +7789,12 @@
     "Forward Delete" : {
       "comment" : "A keyboard key: deletes the character after the cursor",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete (حذف ما بعد المؤشر)"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7451,6 +7895,12 @@
     },
     "Function Keys" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفاتيح الوظائف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7551,6 +8001,12 @@
     },
     "General" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7651,6 +8107,12 @@
     },
     "Green" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أخضر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7752,6 +8214,12 @@
     "Home" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7852,6 +8320,12 @@
     },
     "Input Monitoring is needed" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يلزم إذن «مراقبة الإدخال»"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7953,6 +8427,12 @@
     "Insert" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8053,6 +8533,12 @@
     },
     "Interface %lld · %@ · %@ · %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الواجهة %1$lld · %2$@ · %3$@ · %4$@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8159,6 +8645,12 @@
     },
     "Interfaces" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الواجهات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8259,6 +8751,12 @@
     },
     "Its real shape isn’t known either. Set how many keys and knobs it has and how many keys are in a row, then rotate it to match how it sits in front of you." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شكلها الحقيقي غير معروف أيضًا. حدد عدد المفاتيح والمقابض فيها وعدد المفاتيح في كل صف، ثم دوّر الشكل ليطابق وضعها أمامك."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8359,6 +8857,12 @@
     },
     "Key %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفتاح %lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8459,6 +8963,12 @@
     },
     "Key Layout" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ترتيب المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8559,6 +9069,12 @@
     },
     "Keyboard" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8659,6 +9175,12 @@
     },
     "Keyboard Information" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معلومات لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8759,6 +9281,12 @@
     },
     "Keyboard on USB" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحة مفاتيح USB"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8860,6 +9388,12 @@
     "Keypad %@" : {
       "comment" : "A key of the numeric keypad: “Keypad 7”, “Keypad /”",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ في لوحة الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8961,6 +9495,12 @@
     "Keypad Enter" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter في لوحة الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9061,6 +9601,12 @@
     },
     "Keys" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9161,6 +9707,12 @@
     },
     "Keys appear here once the keyboard is connected." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستظهر المفاتيح هنا بعد توصيل لوحة المفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9261,6 +9813,12 @@
     },
     "Keys per row" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفاتيح في كل صف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9361,6 +9919,12 @@
     },
     "Keys: %lld · Knobs: %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفاتيح: %1$lld · المقابض: %2$lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9461,6 +10025,12 @@
     },
     "Keys: %lld · Knobs: %lld · Type %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفاتيح: %1$lld · المقابض: %2$lld · النوع %3$lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9567,6 +10137,12 @@
     },
     "Knob %lld · Press" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقبض %lld · ضغط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9667,6 +10243,12 @@
     },
     "Knob %lld · Press and rotate left" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقبض %lld · ضغط وتدوير إلى اليسار"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9767,6 +10349,12 @@
     },
     "Knob %lld · Press and rotate right" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقبض %lld · ضغط وتدوير إلى اليمين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9867,6 +10455,12 @@
     },
     "Knob %lld · Rotate left" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقبض %lld · تدوير إلى اليسار"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9967,6 +10561,12 @@
     },
     "Knob %lld · Rotate right" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقبض %lld · تدوير إلى اليمين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10067,6 +10667,12 @@
     },
     "Knobs" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقابض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10167,6 +10773,12 @@
     },
     "LED" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LED"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10267,6 +10879,12 @@
     },
     "Language" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللغة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10367,6 +10985,12 @@
     },
     "Language & Appearance" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللغة والمظهر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10467,6 +11091,12 @@
     },
     "Language Changed" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تغيير اللغة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10567,6 +11197,12 @@
     },
     "Later" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاحقًا"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10667,6 +11303,12 @@
     },
     "Layer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الطبقة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10767,6 +11409,12 @@
     },
     "Layer %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الطبقة %lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10868,6 +11516,12 @@
     "Left Arrow" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سهم اليسار"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10968,6 +11622,12 @@
     },
     "Letters" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأحرف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11068,6 +11728,12 @@
     },
     "Light" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فاتح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11168,6 +11834,12 @@
     },
     "Lighting is set per layer; no key selection is needed." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تُضبط الإضاءة لكل طبقة على حدة، فلا داعي لتحديد مفتاح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11268,6 +11940,12 @@
     },
     "Looking for the keyboard" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجري البحث عن لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11368,6 +12046,12 @@
     },
     "Makes the key hold these modifiers, as a modifier key does." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُبقي مفاتيح التعديل هذه مضغوطة ما دام المفتاح مضغوطًا، كما يفعل مفتاح التعديل."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11468,6 +12152,12 @@
     },
     "Manufacturer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشركة المصنعة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11568,6 +12258,12 @@
     },
     "Media Key %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح وسائط %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11668,6 +12364,12 @@
     },
     "Media Player" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشغل الوسائط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11769,6 +12471,12 @@
     "Menu Key" : {
       "comment" : "A keyboard key: the application or context menu key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح القائمة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11869,6 +12577,12 @@
     },
     "Mode %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوضع %lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11969,6 +12683,12 @@
     },
     "Modifiers" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفاتيح التعديل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12069,6 +12789,12 @@
     },
     "Modifiers Only" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفاتيح التعديل فقط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12169,6 +12895,12 @@
     },
     "Modifiers alone make the key a modifier key, so they can’t go with other presses." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند إضافة مفاتيح التعديل وحدها يصبح المفتاح مفتاح تعديل، لذا لا يمكن جمعها مع ضغطات أخرى."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12269,6 +13001,12 @@
     },
     "Modifiers apply to the next key." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنطبق مفاتيح التعديل على المفتاح التالي."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12369,6 +13107,12 @@
     },
     "Modifiers apply to the next key. A key holds up to %lld presses, each modifier counting as one." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنطبق مفاتيح التعديل على المفتاح التالي. يمكن أن يصل عدد الضغطات في المفتاح الواحد إلى %lld، ويُحسب كل مفتاح تعديل ضغطة واحدة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12469,6 +13213,12 @@
     },
     "Modifiers apply to the next key. A key holds up to %lld presses." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنطبق مفاتيح التعديل على المفتاح التالي. يمكن أن يصل عدد الضغطات في المفتاح الواحد إلى %lld."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12569,6 +13319,12 @@
     },
     "More Keys" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفاتيح أخرى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12669,6 +13425,12 @@
     },
     "Mouse" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الماوس"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12769,6 +13531,12 @@
     },
     "Mouse Centre" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر الماوس الأوسط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12869,6 +13637,12 @@
     },
     "Mouse Left" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر الماوس الأيسر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12969,6 +13743,12 @@
     },
     "Mouse Right" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر الماوس الأيمن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13069,6 +13849,12 @@
     },
     "Mouse wheel Down" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عجلة الماوس لأسفل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13169,6 +13955,12 @@
     },
     "Mouse wheel Up" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عجلة الماوس لأعلى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13269,6 +14061,12 @@
     },
     "Multimedia" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوسائط المتعددة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13369,6 +14167,12 @@
     },
     "Mute" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كتم الصوت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13469,6 +14273,12 @@
     },
     "My Computer" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جهاز الكمبيوتر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13569,6 +14379,12 @@
     },
     "Name" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاسم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13669,6 +14485,12 @@
     },
     "Navigation" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التنقل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13769,6 +14591,12 @@
     },
     "Next Song" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المسار التالي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13869,6 +14697,12 @@
     },
     "Next key with %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المفتاح التالي مع %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13969,6 +14803,12 @@
     },
     "No packets yet." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد حزم بعد."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14069,6 +14909,12 @@
     },
     "No unsaved changes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد تغييرات غير محفوظة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14170,6 +15016,12 @@
     "Non-US Key %@ %@" : {
       "comment" : "A key ISO keyboards have and US ones don’t: “Non-US Key # ~”",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح %1$@ %2$@ في التخطيطات غير الأمريكية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14276,6 +15128,12 @@
     },
     "Not Connected" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غير متصل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14376,6 +15234,12 @@
     },
     "Not known — this keyboard doesn’t tell what its keys do. Whatever you set here is written when you save." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غير معروف — لا تكشف لوحة المفاتيح هذه عن وظائف مفاتيحها. يُكتب كل ما تضبطه هنا على لوحة المفاتيح عند الحفظ."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14476,6 +15340,12 @@
     },
     "Not provided by the keyboard" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توفره لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14577,6 +15447,12 @@
     "Not tested yet" : {
       "comment" : "Keyboard info, under the firmware: the keyboard's type byte is one the app has not seen.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يتم اختباره بعد"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14677,6 +15553,12 @@
     },
     "Nothing" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14777,6 +15659,12 @@
     },
     "Nothing to save — no key has changed." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يوجد ما يُحفظ — لم يتغير أي مفتاح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14878,6 +15766,12 @@
     "Num Lock" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Num Lock"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14978,6 +15872,12 @@
     },
     "Numbers" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15078,6 +15978,12 @@
     },
     "Numpad" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحة الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15178,6 +16084,12 @@
     },
     "Off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيقاف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15278,6 +16190,12 @@
     },
     "One wait for the whole key. Its presses stay." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتظار واحد للمفتاح كله، وتبقى ضغطاته كما هي."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15378,6 +16296,12 @@
     },
     "Only keys 1–%lld have a color. Select one of them." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللون متاح للمفاتيح 1–%lld فقط. حدد أحدها."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15478,6 +16402,12 @@
     },
     "Open Privacy & Security" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فتح «الخصوصية والأمن»"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15578,6 +16508,12 @@
     },
     "Open Source Licenses" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تراخيص البرامج مفتوحة المصدر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15678,6 +16614,12 @@
     },
     "Option" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15778,6 +16720,12 @@
     },
     "Orange" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "برتقالي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15878,6 +16826,12 @@
     },
     "Other" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أخرى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15978,6 +16932,12 @@
     },
     "Packets: %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الحزم: %lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16079,6 +17039,12 @@
     "Page Down" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page Down"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16180,6 +17146,12 @@
     "Page Up" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page Up"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16280,6 +17252,12 @@
     },
     "Pick the shape that matches the keyboard, then rotate it to match how it sits in front of you." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر الشكل الذي يطابق لوحة المفاتيح، ثم دوّره ليطابق وضعها أمامك."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16380,6 +17358,12 @@
     },
     "Play/Pause" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل/إيقاف مؤقت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16480,6 +17464,12 @@
     },
     "Power" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الطاقة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16580,6 +17570,12 @@
     },
     "Press %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الضغطة %lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16680,6 +17676,12 @@
     },
     "Prev Song" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المسار السابق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16781,6 +17783,12 @@
     "Prevent key repeat after changing the lighting" : {
       "comment" : "Settings ▸ General ▸ Firmware Workarounds: a switch, on by default.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منع تكرار المفاتيح بعد تغيير الإضاءة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16882,6 +17890,12 @@
     "Print Screen" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Print Screen"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16982,6 +17996,12 @@
     },
     "Purple" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أرجواني"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17082,6 +18102,12 @@
     },
     "Read" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قراءة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17182,6 +18208,12 @@
     },
     "Read from Keyboard" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قراءة من لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17282,6 +18314,12 @@
     },
     "Read from the keyboard." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تمت القراءة من لوحة المفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17382,6 +18420,12 @@
     },
     "Reading from the keyboard failed." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذرت القراءة من لوحة المفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17482,6 +18526,12 @@
     },
     "Reading…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تجري القراءة…"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17582,6 +18632,12 @@
     },
     "Red" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أحمر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17682,6 +18738,12 @@
     },
     "Relaunch Now" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة التشغيل الآن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17782,6 +18844,12 @@
     },
     "Remove Last Press" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إزالة آخر ضغطة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17882,6 +18950,12 @@
     },
     "Report ID %lld" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معرّف التقرير %lld"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17982,6 +19056,12 @@
     },
     "Retry" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة المحاولة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18083,6 +19163,12 @@
     "Return" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Return"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18184,6 +19270,12 @@
     "Right Arrow" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سهم اليمين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18284,6 +19376,12 @@
     },
     "Right Command" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Command الأيمن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18384,6 +19482,12 @@
     },
     "Right Control" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control الأيمن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18484,6 +19588,12 @@
     },
     "Right Option" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option الأيمن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18584,6 +19694,12 @@
     },
     "Right Shift" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift الأيمن"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18684,6 +19800,12 @@
     },
     "Rotate" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تدوير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18784,6 +19906,12 @@
     },
     "Running Light" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضوء متحرك"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18884,6 +20012,12 @@
     },
     "Save" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18984,6 +20118,12 @@
     },
     "Save to Keyboard" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ في لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19084,6 +20224,12 @@
     },
     "Saved to the keyboard." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم الحفظ في لوحة المفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19185,6 +20331,12 @@
     "Saved to the simulator — nothing was written to a keyboard." : {
       "comment" : "The notice after saving while a simulated keyboard is in use.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم الحفظ في المحاكي — لم يُكتب شيء على أي لوحة مفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19286,6 +20438,12 @@
     "Saved, but some keys or knobs read back differently. Those changes stay unsaved." : {
       "comment" : "Notice after saving: reading the saved layers back found keys or knobs that differ from what was written.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم الحفظ، لكن القراءة مجددًا أظهرت اختلافًا في بعض المفاتيح أو المقابض. تبقى تلك التغييرات غير محفوظة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19387,6 +20545,12 @@
     "Saved, but the keyboard couldn’t be read back to check." : {
       "comment" : "Notice after saving: the saved layers could not be read back to compare.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم الحفظ، لكن تعذرت القراءة مجددًا من لوحة المفاتيح للتحقق."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19487,6 +20651,12 @@
     },
     "Saving…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجري الحفظ…"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19588,6 +20758,12 @@
     "Scroll Lock" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll Lock"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19688,6 +20864,12 @@
     },
     "Select a key or knob." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد مفتاحًا أو مقبضًا."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19788,6 +20970,12 @@
     },
     "Select one of keys 1–%lld on the keyboard, then pick its color." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد أحد المفاتيح 1–%lld على لوحة المفاتيح، ثم اختر لونه."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19888,6 +21076,12 @@
     },
     "Serial Number" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرقم التسلسلي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19989,6 +21183,12 @@
     "Settings" : {
       "comment" : "The settings window's title — macOS's own name for it in each language.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20090,6 +21290,12 @@
     "Settings…" : {
       "comment" : "The app menu's Settings item — macOS's own name for it in each language.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات…"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20190,6 +21396,12 @@
     },
     "Shape…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشكل…"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20290,6 +21502,12 @@
     },
     "Shift" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20390,6 +21608,12 @@
     },
     "Shift + Mouse wheel Down" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + عجلة الماوس لأسفل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20490,6 +21714,12 @@
     },
     "Shift + Mouse wheel Up" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shift + عجلة الماوس لأعلى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20590,6 +21820,12 @@
     },
     "Shift Symbols" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رموز Shift"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20690,6 +21926,12 @@
     },
     "Simulated Keyboard" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحة مفاتيح المحاكي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20790,6 +22032,12 @@
     },
     "Simulated keyboard: %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحة مفاتيح المحاكي: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20890,6 +22138,12 @@
     },
     "Simulator" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المحاكي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20991,6 +22245,12 @@
     "Simulator in use" : {
       "comment" : "The heading of the bar across the window while a simulated keyboard is in use.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المحاكي قيد الاستخدام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21092,6 +22352,12 @@
     "Some keys or knobs couldn’t be read. They’re shown as before." : {
       "comment" : "Notice after reading: the keyboard stopped answering before every key and knob was read.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذرت قراءة بعض المفاتيح أو المقابض، وهي معروضة كما كانت من قبل."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21192,6 +22458,12 @@
     },
     "Stop" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيقاف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21292,6 +22564,12 @@
     },
     "Switch" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تبديل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21392,6 +22670,12 @@
     },
     "Switch Keyboards?" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل تريد تبديل لوحة المفاتيح؟"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21492,6 +22776,12 @@
     },
     "Symbols" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرموز"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21593,6 +22883,12 @@
     "Tab" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tab"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21693,6 +22989,12 @@
     },
     "The base language is English. You can follow the system language or choose one yourself." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللغة الأساسية هي الإنجليزية. يمكنك اتباع لغة النظام أو اختيار لغة بنفسك."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21793,6 +23095,12 @@
     },
     "The keyboard couldn’t be asked what it is." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذر الاستعلام عن نوع لوحة المفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21893,6 +23201,12 @@
     },
     "The keyboard couldn’t be opened" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذر فتح لوحة المفاتيح"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21993,6 +23307,12 @@
     },
     "The keyboard couldn’t be opened (%@)." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذر فتح لوحة المفاتيح (%@)."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22093,6 +23413,12 @@
     },
     "The keyboard doesn’t say how many keys and knobs it has." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا تذكر لوحة المفاتيح عدد مفاتيحها ومقابضها."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22193,6 +23519,12 @@
     },
     "The keyboard is no longer connected." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم تعد لوحة المفاتيح متصلة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22293,6 +23625,12 @@
     },
     "The keyboard reports its keys and knobs: %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تذكر لوحة المفاتيح مفاتيحها ومقابضها: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22393,6 +23731,12 @@
     },
     "The last key pressed keeps blinking, in a new color with each press." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يواصل آخر مفتاح مضغوط الوميض، بلون جديد مع كل ضغطة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22493,6 +23837,12 @@
     },
     "The selected key has no presses." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد ضغطات في المفتاح المحدد."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22594,6 +23944,12 @@
     "This isn't a real keyboard. Nothing you save here is written to any keyboard." : {
       "comment" : "The bar across the window while a simulated keyboard is in use.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذه ليست لوحة مفاتيح حقيقية. لا يُكتب أي شيء تحفظه هنا على أي لوحة مفاتيح."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22694,6 +24050,12 @@
     },
     "This keyboard can’t do that." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا تدعم لوحة المفاتيح هذه ذلك."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22794,6 +24156,12 @@
     },
     "This keyboard doesn’t take this key." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يمكن تعيين هذا المفتاح في لوحة المفاتيح هذه."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22895,6 +24263,12 @@
     "This keyboard’s firmware (type %lld) hasn’t been tested yet. If keys read or save wrong, please report it with the device log." : {
       "comment" : "Notice when a keyboard identifies with a type byte the app has not seen. %lld is that type.",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يتم اختبار البرنامج الثابت للوحة المفاتيح هذه (النوع %lld) بعد. إذا لم تُقرأ المفاتيح أو تُحفظ بشكل صحيح، فيُرجى الإبلاغ عن ذلك مع إرفاق سجل الجهاز."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22995,6 +24369,12 @@
     },
     "Treble+" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التريبل +"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23095,6 +24475,12 @@
     },
     "Treble-" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التريبل -"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23199,6 +24585,12 @@
     },
     "Unsaved changes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغييرات غير محفوظة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23300,6 +24692,12 @@
     "Up Arrow" : {
       "comment" : "A keyboard key",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سهم لأعلى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23401,6 +24799,12 @@
     "Version %@ (build %@)" : {
       "comment" : "Settings ▸ About. The first %@ is the version (\"1.0.0\"), the second the build number (\"1\").",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإصدار %@ (البنية %@)"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23507,6 +24911,12 @@
     },
     "Volume+" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستوى الصوت +"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23607,6 +25017,12 @@
     },
     "Volume-" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستوى الصوت -"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23707,6 +25123,12 @@
     },
     "Waits %lld ms" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتظار %lld ms"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23807,6 +25229,12 @@
     },
     "Web Back" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الويب: رجوع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23907,6 +25335,12 @@
     },
     "Web Forward" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الويب: تقدم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24007,6 +25441,12 @@
     },
     "Web Home" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الويب: الرئيسية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24107,6 +25547,12 @@
     },
     "Web Refresh" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الويب: تحديث"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24207,6 +25653,12 @@
     },
     "Writing to the keyboard failed (%@)." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذرت الكتابة على لوحة المفاتيح (%@)."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24307,6 +25759,12 @@
     },
     "Yellow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أصفر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",

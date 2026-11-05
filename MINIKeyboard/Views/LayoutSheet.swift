@@ -93,6 +93,7 @@ struct LayoutSheet: View {
         Group {
             if let preview = preview(sheet) {
                 ShapeThumbnail(drawing: preview)
+                    .environment(\.layoutDirection, .leftToRight)
             }
         }
         .padding(16)

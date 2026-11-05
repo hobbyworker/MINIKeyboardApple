@@ -9,7 +9,7 @@
   <a href="../LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"></a>
 </p>
 
-<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.es-419.md">Español (Latinoamérica)</a> · <a href="README.fr.md">Français</a> · <a href="README.id.md">Bahasa Indonesia</a> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <a href="README.pl.md">Polski</a> · <b>Português (Brasil)</b> · <a href="README.pt-PT.md">Português (Portugal)</a> · <a href="README.ru.md">Русский</a> · <a href="README.th.md">ไทย</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
+<p align="center"><a href="../README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.ar.md">العربية</a> · <a href="README.de.md">Deutsch</a> · <a href="README.es.md">Español</a> · <a href="README.es-419.md">Español (Latinoamérica)</a> · <a href="README.fr.md">Français</a> · <a href="README.id.md">Bahasa Indonesia</a> · <a href="README.it.md">Italiano</a> · <a href="README.ja.md">日本語</a> · <a href="README.pl.md">Polski</a> · <b>Português (Brasil)</b> · <a href="README.pt-PT.md">Português (Portugal)</a> · <a href="README.ru.md">Русский</a> · <a href="README.th.md">ไทย</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a></p>
 
 Um app para macOS que grava as configurações das teclas em pequenos teclados de macro USB. Eles são vendidos em
 vários tamanhos: desde os que têm só um botão giratório até os de 21 teclas, com até quatro botões giratórios. Para
@@ -34,9 +34,9 @@ própria ferramenta dele não desenha nenhuma forma, então não se sabe qual é
 quantas teclas e botões giratórios ele tem e quantas teclas há em cada fileira, e o app desenha tudo isso de
 forma organizada.
 
-O app está disponível em 17 idiomas — inglês, coreano, japonês, chinês (simplificado e tradicional), alemão, espanhol
-(Espanha e América Latina), francês, italiano, português (Brasil e Portugal), polonês, russo, indonésio, vietnamita e
-tailandês — e segue os ajustes de idioma do macOS. Em qualquer outro idioma, ele aparece em inglês.
+O app está disponível em 18 idiomas — inglês, coreano, japonês, chinês (simplificado e tradicional), alemão, espanhol
+(Espanha e América Latina), francês, italiano, português (Brasil e Portugal), polonês, russo, indonésio, vietnamita,
+tailandês e árabe — e segue os ajustes de idioma do macOS. Em qualquer outro idioma, ele aparece em inglês.
 
 O código-fonte deste repositório está sob a licença MIT. Algumas partes do app distribuído — o nome e o ícone — não
 fazem parte deste código. O ícone no topo é mostrado apenas como referência: ele não está coberto pela licença MIT,
@@ -44,7 +44,7 @@ e o app compilado a partir deste repositório não o inclui.
 
 ## macOS, Windows, Linux e a web
 
-O MINIKeyboard tem quatro edições feitas com as mesmas regras — os mesmos comandos, os mesmos 17 idiomas. Os três apps aceitam os mesmos teclados, e a edição web, que roda no navegador, todos menos o `1189:8890`.
+O MINIKeyboard tem quatro edições feitas com as mesmas regras — os mesmos comandos, os mesmos 18 idiomas. Os três apps aceitam os mesmos teclados, e a edição web, que roda no navegador, todos menos o `1189:8890`.
 
 | Repositório | GitHub |
 |---|---|
@@ -126,7 +126,7 @@ respostas.
    - **Atraso** — no firmware que guarda os atrasos.
 5. **Salvar** (⌘S) grava o que mudou. **Ler** (⌘R) traz a configuração atual dos teclados que permitem a leitura.
 
-Em **Ajustes** (⌘,), você escolhe o idioma da interface (um dos 17 ou o do sistema) e o modo claro ou escuro, e em
+Em **Ajustes** (⌘,), você escolhe o idioma da interface (um dos 18 ou o do sistema) e o modo claro ou escuro, e em
 Sobre vê a versão e as licenças de código aberto. Com um feed de atualizações (veja acima), **Buscar Atualizações…**
 aparece logo abaixo de Ajustes… no menu do app.
 
@@ -151,7 +151,7 @@ MINIKeyboard/
 ├── App/                   ponto de entrada e menus do app, a composition root (o único arquivo que vê Domain e DataLayer), atualizações (Sparkle), licenças
 ├── Views/                 SwiftUI (só importa Presentation) — o teclado na posição em que fica, as páginas de ação, o painel de disposição, o registro do dispositivo; Settings/
 ├── Resources/Licenses/    licenças de código aberto, mostradas em Ajustes ▸ Sobre
-└── Localizable.xcstrings  en (original), de, es, fr, id, it, ja, ko, pl, pt-BR, pt-PT, ru, th, vi, zh-Hans, zh-Hant
+└── Localizable.xcstrings  en (original), ar, de, es, es-419, fr, id, it, ja, ko, pl, pt-BR, pt-PT, ru, th, vi, zh-Hans, zh-Hant
 MINIKeyboard-Info.plist    as chaves do Info.plist que o Xcode não consegue gerar — o feed e a chave do Sparkle, a linha de copyright
 MINIKeyboardTests/         o interruptor de atualizações, as licenças e o menu do app
 ```

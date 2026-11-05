@@ -102,12 +102,14 @@ private struct FullKeyboardKeys: View {
                         .layoutValue(key: BoardPlace.self, value: BoardPlace.Value(row: cap.row, column: cap.column, width: cap.width))
                 }
             }
+            .keysLeftToRight()
             let more = editor.moreKeys
             if !more.isEmpty {
                 PanelSection(title: "More Keys") {
                     FlowLayout(spacing: 4) {
                         ForEach(more) { KeyButton(key: $0) }
                     }
+                    .keysLeftToRight()
                 }
             }
         }
@@ -157,26 +159,29 @@ private struct GroupedKeys: View {
                         .accessibilityLabel(Text(modifier.title))
                     }
                 }
+                .keysLeftToRight()
             }
             ForEach(editor.keyGroups) { group in
                 PanelSection(title: group.kind.title) {
                     FlowLayout(spacing: 4) {
                         ForEach(group.keys) { KeyButton(key: $0) }
                     }
+                    .keysLeftToRight()
                 }
             }
             PanelSection(title: "Shift Symbols") {
                 FlowLayout(spacing: 4) {
                     ForEach(editor.shiftSymbols) { key in
                         if let shifted = key.shifted {
-                            Button(shifted) { editor.press(shifted: key) }
+                            Button(shifted.leftToRight) { editor.press(shifted: key) }
                                 .buttonStyle(KeyCapStyle())
                                 .frame(minWidth: 38)
                                 .fixedSize()
-                                .help(Text(verbatim: "⇧\(key.label)"))
+                                .help(Text(verbatim: "⇧\(key.label)".leftToRight))
                         }
                     }
                 }
+                .keysLeftToRight()
             }
         }
     }
@@ -207,9 +212,9 @@ private struct KeyLabel: View {
     var body: some View {
         VStack(spacing: 0) {
             if let shifted = key.shifted {
-                Text(verbatim: shifted).font(.system(size: 9)).foregroundStyle(.secondary)
+                Text(verbatim: shifted.leftToRight).font(.system(size: 9)).foregroundStyle(.secondary)
             }
-            Text(verbatim: key.label)
+            Text(verbatim: key.label.leftToRight)
         }
     }
 }
@@ -262,7 +267,7 @@ private struct MediaPage: View {
                         editor.assign(key)
                     } label: {
                         VStack(spacing: 3) {
-                            Image(systemName: key.systemImage).font(.system(size: 15))
+                            key.symbol.font(.system(size: 15))
                             Text(key.title)
                         }
                     }
@@ -292,5 +297,12 @@ private struct MousePage: View {
                 }
             }
         }
+    }
+}
+
+private extension View {
+    /// Keys are laid out as on keyboards, left to right in every language; the titles above them read the app's way.
+    func keysLeftToRight() -> some View {
+        environment(\.layoutDirection, .leftToRight)
     }
 }
